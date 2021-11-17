@@ -63,6 +63,8 @@
                                        1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1,
                                        1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1, 1.0e-1)</param>
 	<!--        <param name="assume_fixed">root_link</param>-->
+        <param name="devicePeriodInSeconds">0.001</param>
+
 	<group name="HW_USE_MAS_IMU">
 	    <param name="accelerometer">rfeimu_acc</param>
 	    <param name="gyroscope">rfeimu_gyro</param>
