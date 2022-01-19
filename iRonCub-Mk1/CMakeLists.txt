@@ -2,7 +2,7 @@ file(GLOB xml ${CMAKE_CURRENT_SOURCE_DIR}/*.xml)
 file(GLOB ini ${CMAKE_CURRENT_SOURCE_DIR}/*.ini)
 
 # Option to install all iRonCub robots
-option(INSTALL_ALL_IRONCUB_VERSIONS "Install all variations of iRonCub robots." FALSE)
+option(INSTALL_ALL_IRONCUB_VERSIONS "Install all variations of iRonCub robots." TRUE)
 
 if(INSTALL_ALL_IRONCUB_VERSIONS)
     set(robot_list iRonCub-Mk1 iRonCub-Mk1_1) #Add to the list other iRonCub versions (that share the same configuration files)
