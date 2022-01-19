@@ -3,6 +3,6 @@
 
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-inertial" type="imuBosch_BNO055">
-      <param name="i2c">  /dev/icub-i2c-imu   </param>
+      <param name="i2c">  /dev/bosch-i2c-imu   </param>
 </device>
 
