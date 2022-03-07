@@ -3,28 +3,33 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="alljoints-mc_remapper" type="controlboardremapper">
     <paramlist name="networks">
-        <elem name="head_joints">       (  0   5   0  5 )</elem>
-        <elem name="face_joints">       (  0   1   0  1 )</elem>
-        <elem name="left_arm_joints">   (  6  12   0  6 )</elem>
-        <elem name="left_hand_joints">  ( 13  21   0  8 )</elem>
-        <elem name="right_arm_joints">  ( 22  28   0  6 )</elem>
-        <elem name="right_hand_joints"> ( 29  37   0  8 )</elem>
-        <elem name="torso_joints">      ( 38  40   0  2 )</elem>
-        <elem name="left_leg_joints">   ( 41  46   0  5 )</elem>
-        <elem name="right_leg_joints">  ( 47  52   0  5 )</elem>
+        <elem name="head_joints1">(  0  1  0  1 )</elem>
+        <elem name="head_joints2">(  2  2  0  0 )</elem>
+        <elem name="torso_joints">(  3  5  0  2 )</elem>
+        <elem name="left_arm_joints1">(  6  7  0  1 )</elem>
+        <elem name="left_arm_joints2">(  8  9  0  1 )</elem>
+        <elem name="right_arm_joints1">(  10  11  0  1 )</elem>
+        <elem name="right_arm_joints2">(  12  13  0  1 )</elem>
+        <elem name="left_leg_joints1">(  14  16   0  2 )</elem>
+        <elem name="left_leg_joints2">(  17  19   0  2 )</elem>
+        <elem name="right_leg_joints1">(  20  22  0  2 )</elem>
+        <elem name="right_leg_joints2">(  23  25  0  2 )</elem>
     </paramlist>
-    <param name="joints"> 53 </param>
+    <param name="joints"> 26 </param>
+
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
-            <elem name="head_joints">       head_mc </elem>
-            <elem name="face_joints">       face_mc </elem>
-            <elem name="left_arm_joints">   left_arm_mc </elem>
-            <elem name="left_hand_joints">  left_hand_mc </elem>
-            <elem name="right_arm_joints">  right_arm_mc </elem>
-            <elem name="right_hand_joints"> right_hand_mc </elem>
-            <elem name="torso_joints">      torso_mc </elem>
-            <elem name="left_leg_joints">   left_leg_mc </elem>
-            <elem name="right_leg_joints">  right_leg_mc </elem>
+            <elem name="head_joints1">  head-eb20-j0_1-mc </elem>
+            <elem name="head_joints2">  head-eb21-j2_5-mc </elem>
+            <elem name="left_arm_joints1"> left_arm-eb1-j0_1-mc </elem>
+            <elem name="left_arm_joints2"> left_arm-eb2-j2_3-mc </elem>
+            <elem name="torso_joints">  torso-eb5-j0_2-mc </elem>
+            <elem name="right_arm_joints1"> right_arm-eb3-j0_1-mc </elem>
+            <elem name="right_arm_joints2"> right_arm-eb4-j2_3-mc </elem>
+            <elem name="left_leg_joints1">  left_leg-eb7-j0_2-mc </elem>
+            <elem name="left_leg_joints2">  left_leg-eb8-j3_5-mc </elem>
+            <elem name="right_leg_joints1">  right_leg-eb11-j0_2-mc </elem>
+            <elem name="right_leg_joints2">  right_leg-eb12-j3_5-mc </elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />
