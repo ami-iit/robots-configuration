@@ -19,7 +19,7 @@
         <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="additionalConsideredFixedJoints">(l_foot_ft_sensor,r_foot_ft_sensor)</param> <!-- Feet FT sensors are removed from the URDF model so these fixed joints should be added explicitly-->
-        <param name="devicePeriodInSeconds">0.001</param>
+        <param name="devicePeriodInSeconds">0.002</param>
 
         <!-- map between iDynTree links (identified by a name)
              and skinDynLib links (identified by their frame name, a BodyPart enum
