@@ -38,7 +38,7 @@
             </group>
 
             <group name="SETTINGS">        
-                <param name="acquisitionRate">          2                      </param>
+                <param name="acquisitionRate">          1.5                      </param>
                 <param name="enabledSensors">           id_r_upper_arm_strain   </param>                
             </group>
             
