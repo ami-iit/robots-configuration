@@ -4,7 +4,7 @@
 
  <device xmlns:xi="http://www.w3.org/2001/XInclude" name="xsens_inertial" type="inertial">
       <param name="name">  /icub/xsens_inertial  </param>
-      <param name="period">  0.0015  </param>
+      <param name="period">  0.002  </param>
       <param name="subdevice">  xsensmt  </param>
       <param name="serial">  /dev/ttyXsens   </param>
 </device>
