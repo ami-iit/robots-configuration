@@ -103,7 +103,7 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.left_arm">
+        <board type='strain2' name="strain.left_arm">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.1" canbus="2" canadr="13"  />
             <connected bus="CAN" />
@@ -210,7 +210,7 @@
             <connected bus="CAN" />
         </board>
 
-        <board type='strain' name="strain.right_arm">
+        <board type='strain2' name="strain.right_arm">
             <ondevice>ETH</ondevice>
             <ataddress ip="10.0.1.3" canbus="2" canadr="13"  />
             <connected bus="CAN" />
