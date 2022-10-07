@@ -6,7 +6,7 @@
       <param name="name">  /icub/xsens_inertial  </param>
       <param name="period">  0.005  </param>
       <param name="subdevice">  xsensmt  </param>
-      <param name="xsensmt_period"> 5    </param>
+      <param name="xsensmt_period"> 0.005    </param>
       <param name="serial">  /dev/ttyXsens   </param>
 </device>
 
