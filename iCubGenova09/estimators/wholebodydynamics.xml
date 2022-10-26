@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
+    <device name="secondaryCalibrationLeftArm" type="ftSecondaryCalibImpl">
+        <param name="period">      0.002      </param> <!-- in seconds-->
+
+        <!--xi:include href="./FTCalibModels/LeftArmLinear.xml" /-->
+        <!--xi:include href="./FTCalibModels/LeftArmSecondOrder.xml" /-->
+        <xi:include href="./FTCalibModels/LeftArmThirdOrder.xml" />
+
+        <action phase="startup" level="6" type="attach">
+            <paramlist name="networks">
+                <!-- ft -->
+                <elem name="l_arm_ft_sensor">left_arm-eb1-j0_1-strain</elem>
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="2" type="detach" />
+    </device>
+    
+    <device name="secondaryCalibrationRightArm" type="ftSecondaryCalibImpl">
+        <param name="period">      0.002      </param> <!-- in seconds-->
+
+        <!--xi:include href="./FTCalibModels/RightArmLinear.xml" /-->
+        <!--xi:include href="./FTCalibModels/RightArmSecondOrder.xml" /-->
+        <xi:include href="./FTCalibModels/RightArmThirdOrder.xml" />
+
+        <action phase="startup" level="6" type="attach">
+            <paramlist name="networks">
+                <!-- ft -->
+                <elem name="r_arm_ft_sensor">right_arm-eb3-j0_1-strain</elem>
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="2" type="detach" />
+    </device>
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="wholebodydynamics" type="wholebodydynamics">
         <param name="axesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch, neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,l_wrist_prosup,l_wrist_pitch,l_wrist_yaw,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,r_wrist_prosup,r_wrist_pitch,r_wrist_yaw,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
@@ -128,7 +159,7 @@
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
                 <!-- motorcontrol and virtual torque sensors -->
-		<elem name="head-j0">head-eb20-j0_1-mc</elem>
+		        <elem name="head-j0">head-eb20-j0_1-mc</elem>
                 <elem name="head-j2">head-eb21-j2_5-mc</elem>
                 <elem name="torso">torso-eb5-j0_2-mc</elem>
                 <elem name="left_upper_arm-j0">left_arm-eb1-j0_1-mc</elem>
@@ -145,14 +176,16 @@
                 <!-- imu -->
                 <elem name="imu">head-inertial</elem>
                 <!-- imu_waist -->
-<!--            <elem name="imu">xsensmt-inertial</elem> -->
+                <!--            <elem name="imu">xsensmt-inertial</elem> -->
                 <!-- ft -->
-  		<elem name="l_arm_ft_sensor">left_arm-eb1-j0_1-strain</elem>
-                <elem name="r_arm_ft_sensor">right_arm-eb3-j0_1-strain</elem>
+                <elem name="secondaryCalibrationLeftArm">secondaryCalibrationLeftArm</elem>
+                <elem name="secondaryCalibrationRightArm">secondaryCalibrationRightArm</elem>
+          		<!--elem name="l_arm_ft_sensor">left_arm-eb1-j0_1-strain</elem-->
+                <!--elem name="r_arm_ft_sensor">right_arm-eb3-j0_1-strain</elem-->
                 <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem> <!-- left_rear, left_front -->
-		<elem name="l_leg_ft_sensor">left_leg-eb7-j0_2-strain</elem>    <!-- left_upper_leg -->
+		        <elem name="l_leg_ft_sensor">left_leg-eb7-j0_2-strain</elem>    <!-- left_upper_leg -->
                 <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem> <!-- right_rear, right_front -->
-		<elem name="r_leg_ft_sensor">right_leg-eb11-j0_2-strain</elem>    <!-- right_upper_leg -->
+		        <elem name="r_leg_ft_sensor">right_leg-eb11-j0_2-strain</elem>    <!-- right_upper_leg -->
 
             </paramlist>
         </action>
