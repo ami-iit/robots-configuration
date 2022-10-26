@@ -113,7 +113,7 @@
             <param name="gravityCompensationAxesNames">(torso_roll,torso_pitch,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         </group>
 
-	<group name="FT_SECONDARY_CALIBRATION">
+	<!--group name="FT_SECONDARY_CALIBRATION">
             <param name="l_arm_ft_sensor">
                    (0.724989928595808,-0.177582271955334,0.033407194609838,-0.340684193624232,0.077156574527783,0.075203475051307,
                     0.216406315095285,0.681317093086863,0.095682667446599,-0.490967338286256,0.195797286653800,-0.089594839874625,
@@ -131,9 +131,9 @@
                     0.000471068156428,0.022745520574837,-0.006448547444577,-0.012385371036635,0.937413904365554,-0.065360176579440,
                     -0.006437481106495,-0.006632744841387,0.005000810887091,0.022918420572894,0.071080838345348,1.011184967613884)
             </param>
-        </group>
+        </group-->
 
-        <group name="FT_OFFSET">
+        <!--group name="FT_OFFSET">
             <param name="l_arm_ft_sensor">
                    (-56.313339766690369,-18.185390370927294,-10.712646278489530,1.480638949441511,2.069548822128459,-0.213645436119204)
             </param>
@@ -141,7 +141,7 @@
             <param name="r_arm_ft_sensor">
                     (-73.639860156269819,24.072660497240438,-28.817082293698117,-1.928682746629074,1.760186171442543,0.723043880391045)
             </param>
-        </group>
+        </group-->
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
 	     <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand,l_hand,root_link)</param>
