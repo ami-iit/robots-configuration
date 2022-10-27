@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-
+<devices>
     <device name="secondaryCalibrationLeftArm" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
 
@@ -193,3 +193,4 @@
 	<action phase="shutdown" level="2" type="detach" />
 
     </device>
+</devices>
