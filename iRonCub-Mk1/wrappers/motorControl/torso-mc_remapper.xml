@@ -5,12 +5,9 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-mc_remapper" type="controlboardremapper">
         <paramlist name="networks">
             <!-- elem name hereafter are custom names that live only in this file, they are used in the attach phase -->
-            <elem name="FirstSetOfJoints">  0  2  0  2 </elem>
+            <elem name="FirstSetOfJoints">(  0  2  0  2 )</elem>
         </paramlist>
 
-        <param name="period"> 2            </param>
-        <param name="name">   /icub/torso   </param>
-        <param name="ports">  torso         </param>
         <param name="joints"> 3             </param>
 
 
@@ -22,7 +19,7 @@
             </paramlist>
         </action>
 
-        <action phase="shutdown" level="5" type="detach" />
+        <action phase="shutdown" level="20" type="detach" />
 
     </device>
 

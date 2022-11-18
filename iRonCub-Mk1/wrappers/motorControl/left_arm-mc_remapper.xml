@@ -5,12 +5,9 @@
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-mc_remapper" type="controlboardremapper">
         <paramlist name="networks">
             <!-- when we'll use entire arm we should use following sets -->
-            <elem name="FirstSetOfJoints">  0  3   0  3 </elem>
+            <elem name="FirstSetOfJoints">(  0  3   0  3 )</elem>
         </paramlist>
 
-        <param name="period"> 2                        </param>
-        <param name="name">   /icub/left_arm            </param>
-        <param name="ports">  left_arm                  </param>
         <param name="joints"> 4                         </param>
 
         <action phase="startup" level="5" type="attach">
@@ -21,7 +18,7 @@
             </paramlist>
         </action>
 
-        <action phase="shutdown" level="5" type="detach" />
+        <action phase="shutdown" level="20" type="detach" />
 
     </device>
 

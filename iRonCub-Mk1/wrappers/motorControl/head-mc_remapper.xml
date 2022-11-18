@@ -4,13 +4,10 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-mc_remapper" type="controlboardremapper">
         <paramlist name="networks">
-            <elem name="FirstSetOfJoints">  0  1  0  1 </elem>
-            <elem name="SecondSetOfJoints"> 2  5  0  3 </elem>
+            <elem name="FirstSetOfJoints">(  0  1  0  1 )</elem>
+            <elem name="SecondSetOfJoints">( 2  5  0  3 )</elem>
         </paramlist>
 
-        <param name="period"> 2                        </param>
-        <param name="name">   /icub/head                </param>
-        <param name="ports">  head                      </param>
         <param name="joints"> 6                         </param>
 
         <action phase="startup" level="5" type="attach">
@@ -22,7 +19,7 @@
             </paramlist>
         </action>
 
-        <action phase="shutdown" level="5" type="detach" />
+        <action phase="shutdown" level="20" type="detach" />
 
     </device>
 
