@@ -74,7 +74,7 @@
     <xi:include href="wrappers/skin/right_leg-skin_wrapper.xml" />
     <xi:include href="hardware/skin/right_leg-eb11-skin.xml" />
     <xi:include href="wrappers/skin/torso-skin_wrapper.xml" />
-    <xi:include href="hardware/skin/torso-eb22-skin.xml" /> -->
+    <xi:include href="hardware/skin/torso-eb22-skin.xml" / -->
 
     <!-- ANALOG SENSOR FT -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
@@ -104,7 +104,7 @@
     <xi:include href="wrappers/VFT/torso-VFT_wrapper.xml" /> -->
 
     <!--  CALIBRATORS -->
-    <xi:include href="calibrators/left_arm-calib_iRonCub.xml" />
+    <xi:include href="calibrators/left_arm-calib.xml" />
     <xi:include href="calibrators/right_arm-calib_iRonCub.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
@@ -116,7 +116,7 @@
     <xi:include href="cartesian/right_arm-cartesian.xml" /> -->
 
     <!-- ESTIMATORS -->
-    <xi:include href="estimators/wholebodydynamics_iRonCub.xml" />
+    <xi:include href="estimators/wholebodydynamics_iRonCub_noFeet.xml" />
 
     <!-- ROS -->
 <!--    <xi:include href="wrappers/motorControl/icub_ros_wrapper.xml" /> -->
