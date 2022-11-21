@@ -105,7 +105,7 @@
 
     <!--  CALIBRATORS -->
     <xi:include href="calibrators/left_arm-calib.xml" />
-    <xi:include href="calibrators/right_arm-calib_iRonCub.xml" />
+    <xi:include href="calibrators/right_arm-calib.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
     <xi:include href="calibrators/right_leg-calib.xml" />
     <xi:include href="calibrators/torso-calib.xml" />
