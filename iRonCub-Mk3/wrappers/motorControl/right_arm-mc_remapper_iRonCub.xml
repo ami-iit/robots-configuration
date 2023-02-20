@@ -3,8 +3,8 @@
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_arm-mc_remapper" type="controlboardremapper">
     <paramlist name="networks">
-        <elem name="right_arm_joints1">(  0  3 0 1 )</elem>
-        <!-- <elem name="right_arm_joints2">(  2  3 0 1 )</elem> -->
+        <elem name="right_arm_joints1">(  0  1 0 1 )</elem>
+        <elem name="right_arm_joints2">(  2  3 0 1 )</elem>
         <!-- <elem name="right_arm_joints3">(  4 7 0 3 )</elem> -->
         <!-- <elem name="right_arm_joints4">(  8  11 0 3 )</elem> -->
         <!-- <elem name="right_arm_joints5">(  12  15 0 3 )</elem> -->
