@@ -9,7 +9,7 @@
         <!-- <elem name="right_arm_joints4">(  8  11 0 3 )</elem> -->
         <!-- <elem name="right_arm_joints5">(  12  15 0 3 )</elem> -->
     </paramlist>
-    <param name="joints"> 16 </param>
+    <param name="joints"> 4 </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
             <elem name="right_arm_joints1"> right_arm-eb3-j0_1-mc </elem>
