@@ -1,4 +1,4 @@
-<cluster name="ironcubmk3" user="hosameldin">
+<cluster name="ironcubmk3" user="icub">
 
 <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
 <nameserver namespace="/iRonCub3" node="10.0.0.150" type="yarpserver"> </nameserver>
@@ -6,7 +6,7 @@
 <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
 this is usually the value of the DISPLAY variable when logged on -->
 
-<node user="ironcub" display=":0" address="10.0.0.150">icub-console</node>
+<node user="icub" display=":0" address="10.0.0.150">icub-console</node>
 <node user="icub" address="10.0.0.2">icub-head</node>
 <node user="icub" address="10.0.0.3">icub-cam-head</node>
 
