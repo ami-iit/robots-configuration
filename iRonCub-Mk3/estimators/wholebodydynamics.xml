@@ -113,8 +113,8 @@
         </group>
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
-	     <!-- <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand,l_hand,root_link)</param> -->
-	     <!-- <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand,r_hand,root_link)</param> -->
+            <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_elbow_1,l_elbow_1,root_link)</param>
+            <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_elbow_1,r_elbow_1,root_link)</param>
             <param name="/wholeBodyDynamics/left_upper_leg/cartesianEndEffectorWrench:o">(l_upper_leg,l_upper_leg,root_link)</param>
             <param name="/wholeBodyDynamics/right_upper_leg/cartesianEndEffectorWrench:o">(r_upper_leg,r_upper_leg,root_link)</param>
             <param name="/wholeBodyDynamics/left_lower_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param>
