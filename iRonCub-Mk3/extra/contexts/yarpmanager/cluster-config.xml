@@ -6,7 +6,7 @@
 <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
 this is usually the value of the DISPLAY variable when logged on -->
 
-<node user="icub" display=":0" address="10.0.0.150">icub-console</node>
+<node user="icub" display=":1" address="10.0.0.150">icub-console</node>
 <node user="icub" address="10.0.0.2">icub-head</node>
 <node user="icub" address="10.0.0.3">icub-cam-head</node>
 
