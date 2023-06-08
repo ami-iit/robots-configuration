@@ -130,7 +130,7 @@
         <param name="kff">            1          1         </param>
         <param name="kbemf">         -0.0001     0.0002    </param>
         <param name="filterType">     0          0         </param>
-        <param name="ktau">          -50         300       </param>
+        <param name="ktau">          -282        282       </param>
     </group>
     <!-- custom PIDs: end -->
 

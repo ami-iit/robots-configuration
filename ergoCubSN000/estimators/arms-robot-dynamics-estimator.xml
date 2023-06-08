@@ -150,13 +150,13 @@ BSD-3-Clause license. -->
              <group name="LEFT_ARM_ACC">
                 <param name="name">l_arm_ft_acc</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
-                <param name="use_bias">true</param>
+                <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
              <group name="RIGHT_ARM_ACC">
                 <param name="name">r_arm_ft_acc</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
-                <param name="use_bias">true</param>
+                <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
              <group name="LEFT_ARM_GYRO">

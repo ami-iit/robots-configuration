@@ -88,8 +88,12 @@
     <xi:include href="wrappers/FT/arms-FT_remapper.xml" />
     <xi:include href="wrappers/FT/legs-FT_remapper.xml" />
     <xi:include href="wrappers/FT/FT_remapper.xml" />
+    <xi:include href="wrappers/FT/right_arm-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/left_arm-FT_remapper.xml" />
 
     <!-- IMU SENSORS - REMAPPERS -->
+    <xi:include href="wrappers/inertials/left_arm-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/right_arm-imu_remapper.xml" />
     <xi:include href="wrappers/inertials/left_leg-imu_remapper.xml" />
     <xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" />
     <xi:include href="wrappers/inertials/arms-imu_remapper.xml" />
@@ -138,12 +142,12 @@
     <xi:include href="calibrators/head-calib.xml" />
 
     <!-- estimators -->
-    <xi:include href="estimators/right_arm-robot-dynamics-estimator.xml" />
-    <xi:include href="estimators/left_arm-robot-dynamics-estimator.xml" />
     <!--xi:include href="estimators/arms-robot-dynamics-estimator.xml" /-->
     <xi:include href="estimators/torso-robot-dynamics-estimator.xml" />
     <xi:include href="estimators/left_leg-robot-dynamics-estimator.xml" />
     <xi:include href="estimators/right_leg-robot-dynamics-estimator.xml" />
+    <xi:include href="estimators/right_arm-robot-dynamics-estimator.xml" />
+    <xi:include href="estimators/left_arm-robot-dynamics-estimator.xml" />
 
   </devices>
 </robot>

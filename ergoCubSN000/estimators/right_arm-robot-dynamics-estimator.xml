@@ -131,7 +131,7 @@ BSD-3-Clause license. -->
              <group name="RIGHT_ARM_ACC">
                 <param name="name">r_arm_ft_acc</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
-                <param name="use_bias">true</param>
+                <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
              <group name="RIGHT_ARM_GYRO">
@@ -149,7 +149,7 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">right_arm-mc_remapper</elem>
             <elem name="r_arm_ft_sensors">right_arm-FT_remapper</elem>
-            <elem name="r_arm_imu_sensors">left_arm-imu_remapper</elem>
+            <elem name="r_arm_imu_sensors">right_arm-imu_remapper</elem>
             <elem name="right_arm-eb1-j0">right_arm-eb1-j0_1-mc</elem>
             <elem name="right_arm-eb3-j2">right_arm-eb3-j2_3-mc</elem>
         </paramlist>
