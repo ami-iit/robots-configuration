@@ -33,7 +33,7 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="frames">("l_upperarm", "r_upperarm")</param>
+            <param name="frames">("l_arm_ft", "r_arm_ft")</param>
         </group>
     </group>
 
@@ -65,7 +65,7 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
-                  "LEFT_ARM_FT", "RIGHT_ARM_FT", "LEFT_UPPER_ARM_CONTACT", "RIGHT_UPPER_ARM_CONTACT")
+                  "LEFT_ARM_FT", "RIGHT_ARM_FT", "LEFT_ARM_CONTACT", "RIGHT_ARM_CONTACT")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITY">
@@ -101,14 +101,14 @@ BSD-3-Clause license. -->
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
-             <group name="LEFT_UPPER_ARM_CONTACT">
-                <param name="name">l_upperarm</param>
+             <group name="LEFT_ARM_CONTACT">
+                <param name="name">l_arm_ft</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
-             <group name="RIGHT_UPPER_ARM_CONTACT">
-                <param name="name">r_upperarm</param>
+             <group name="RIGHT_ARM_CONTACT">
+                <param name="name">r_arm_ft</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>

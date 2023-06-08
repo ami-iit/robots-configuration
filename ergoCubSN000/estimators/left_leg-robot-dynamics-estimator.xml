@@ -33,7 +33,7 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="frames">("l_sole")</param>
+            <param name="frames">("l_foot_front_ft", "l_foot_rear_ft")</param>
         </group>
     </group>
 
@@ -66,7 +66,7 @@ BSD-3-Clause license. -->
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
                   "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT",
-                  "LEFT_SOLE_CONTACT",
+                  "LEFT_FOOT_FRONT_CONTACT", "LEFT_FOOT_REAR_CONTACT",
                   "LEFT_LEG_ACC_BIAS")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
@@ -136,8 +136,14 @@ BSD-3-Clause license. -->
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
-             <group name="LEFT_SOLE_CONTACT">
-                <param name="name">l_sole</param>
+             <group name="LEFT_FOOT_FRONT_CONTACT">
+                <param name="name">l_foot_front_ft</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+             </group>
+             <group name="LEFT_FOOT_REAR_CONTACT">
+                <param name="name">l_foot_rear_ft</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
