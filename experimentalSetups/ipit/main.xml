@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE robot PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="ipit" build="1" portprefix="ipit" xmlns:xi="http://www.w3.org/2001/XInclude">
+<devices>
+    <!-- BOARD MC4PLUS -->
+    <!-- LM1 -->
+    <xi:include href="./hardware/motorControl/lm1_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm1_mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm1_mc_remapper.xml" /> 
+
+	<!-- LM2 -->
+	<xi:include href="./hardware/motorControl/lm2_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm2_mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/lm2_mc_remapper.xml" /> 
+
+	<!-- SM -->
+	<xi:include href="./hardware/motorControl/sm_mc_hardware.xml" /> 
+    <xi:include href="./wrappers/motorControl/sm_mc_wrapper.xml" /> 
+    <xi:include href="./wrappers/motorControl/sm_mc_remapper.xml" /> 
+
+    <!-- CALIBRATORS -->
+    <xi:include href="./calibrators/sm_calib.xml" />
+    <xi:include href="./calibrators/lm1_calib.xml" />
+    <xi:include href="./calibrators/lm2_calib.xml" />
+
+    
+</devices>
+</robot> 
+

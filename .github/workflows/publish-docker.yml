@@ -1,0 +1,30 @@
+name: Publish Docker Image
+
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+        
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@v5
+      env:
+        DEPENDENCIES_DIR: '/dependencies'
+      with:
+        name: robotology/robots-configuration
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        workdir: tests/dockerfiles
+        buildargs: DEPENDENCIES_DIR
+        registry: ghcr.io
+    - name: Clean up Registry from untagged images
+      uses: actions/delete-package-versions@v4.1.1
+      with: 
+        package-name: 'robots-configuration'
+        package-type: 'container'
+        min-versions-to-keep: 0
+        delete-only-untagged-versions: "true"
