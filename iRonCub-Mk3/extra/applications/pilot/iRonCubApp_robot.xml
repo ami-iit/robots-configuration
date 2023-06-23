@@ -18,7 +18,7 @@
 
         <module>
                 <name>yarpmotorgui</name>
-                <parameters>--from --from /usr/local/src/robot/component_ironcub/models/home-poses/homePoseiRonCub_Mk3.ini</parameters>
+                <parameters>--from homePoseiRonCub_Mk3.ini</parameters>
                 <node>icub-console</node>
         </module>
 
