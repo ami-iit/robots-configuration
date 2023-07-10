@@ -3,7 +3,7 @@
 
 <var name="generic_node_1">ironcub-pilot</var>
 <var name="logging_laptop">alienCub</var>
-<var name="webcam_station">ironpi</var>
+<var name="webcam_station">ironpiWebcam</var>
 
 <dependencies>
 </dependencies>
@@ -11,13 +11,13 @@
     <!-- _______________________Webcams related stuff_______________________ -->
 	<module>
 		<name>yarpdev</name>
-		<parameters>--dev opencv_grabber --name /image1:o --camera 0 --width 640 --height 480 </parameters>
+		<parameters>--device opencv_grabber --name /image1:o --camera 0 --width 640 --height 480 </parameters>
 		<node>${webcam_station}</node>
 	</module>
 
 	<module>
 		<name>yarpdev</name>
-		<parameters>--dev opencv_grabber --name /image2:o --camera 2 --width 640 --height 480 </parameters>
+		<parameters>--device opencv_grabber --name /image2:o --camera 2 --width 640 --height 480 </parameters>
 		<node>${webcam_station}</node>
 	</module>
 
