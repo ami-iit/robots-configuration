@@ -1,7 +1,7 @@
 <application>
 <name>iRonCubApp-turbines</name>
 
-<var name="generic_node_1">icub-console</var>
+<var name="generic_node_1">ironcub-pilot</var>
 <var name="logging_laptop">alienCub</var>
 <var name="webcam_station">ironpi</var>
 

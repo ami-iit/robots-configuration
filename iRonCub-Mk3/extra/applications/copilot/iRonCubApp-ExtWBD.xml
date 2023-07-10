@@ -1,7 +1,7 @@
 <application>
 <name>iRonCubApp-ExtWBD</name>
 
-<var name="generic_node_1">icub-console</var>
+<var name="generic_node_1">ironcub-pilot</var>
 
 <dependencies>
 </dependencies>

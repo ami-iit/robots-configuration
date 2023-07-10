@@ -7,7 +7,7 @@
         <module>
                 <name>yarplogger</name>
                 <parameters>--start --no_stop</parameters>
-                <node>icub-console</node>
+                <node>ironcub-pilot</node>
         </module>
 
         <module>
@@ -19,7 +19,7 @@
         <module>
                 <name>yarpmotorgui</name>
                 <parameters>--from homePoseiRonCub_Mk3.ini</parameters>
-                <node>icub-console</node>
+                <node>ironcub-pilot</node>
         </module>
 
 </application>
