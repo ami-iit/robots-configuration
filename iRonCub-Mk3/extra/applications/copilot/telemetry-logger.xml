@@ -1,0 +1,15 @@
+<application>
+
+  <name>iRonCubApp-Logger</name>
+
+  <var name="logging_laptop">alienCub</var>
+
+  <!-- Logger -->
+  <module>
+    <name>yarprobotinterface</name>
+    <parameters>--config launch-yarp-robot-logger.xml</parameters>
+    <node>${logging_laptop}</node>
+  </module>
+
+</application>
+

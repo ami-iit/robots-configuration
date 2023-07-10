@@ -20,4 +20,8 @@
     <application>
         <name>iRonCubApp-VIVE_trackers</name>
     </application>
+
+    <application>
+       <name>iRonCubApp-logger</name>
+    </application>
 </application>

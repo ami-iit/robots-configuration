@@ -10,7 +10,11 @@
     </application>
 
     <application>
-        <name>iRonCubApp_robot</name>
+        <name>iRonCubApp-robot</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-webcams</name>
     </application>
     
 </application>

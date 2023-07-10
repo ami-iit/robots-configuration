@@ -2,6 +2,8 @@
 <name>iRonCubApp-turbines</name>
 
 <var name="generic_node_1">icub-console</var>
+<var name="logging_laptop">alienCub</var>
+<var name="webcam_station">ironpi</var>
 
 <dependencies>
 </dependencies>
@@ -17,6 +19,11 @@
 	<module>
 		<name>jets-GUI</name>
 		<node>${generic_node_1}</node>
+	</module>
+
+	<module>
+		<name>TurbineLoggerModule</name>
+		<node>${logging_laptop}</node>
 	</module>
     
 </application>
