@@ -10,7 +10,7 @@
     <module>
 		<name>yarprobotinterface</name>
         <parameters>--config launch-wholebodydynamics-iRonCub-thrust-est.xml</parameters>
-        <environment>YARP_ROBOT_NAME=iRonCub-Mk1_1</environment>
+        <environment>YARP_ROBOT_NAME=iRonCub-Mk3</environment>
 		<node>${generic_node_1}</node>
 	</module>
 
