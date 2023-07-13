@@ -73,6 +73,9 @@
 
     <!-- ANALOG SENSORS FT -->
 
+   <xi:include href="wrappers/FT/left_arm-FT_remapper.xml" />
+   <xi:include href="wrappers/FT/right_arm-FT_remapper.xml" />
+
    <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
 
