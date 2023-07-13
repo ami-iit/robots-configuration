@@ -8,7 +8,7 @@
 
         <action phase="startup" level="10" type="attach">
             <paramlist name="networks">
-                <elem name="left_arm-FT_remapper"> left_arm-FT_remapper </elem>
+                <elem name="right_arm-FT_remapper"> right_arm-FT_remapper </elem>
             </paramlist>
         </action>
 
