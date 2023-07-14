@@ -7,7 +7,7 @@
         <module>
                 <name>yarplogger</name>
                 <parameters>--start --no_stop</parameters>
-                <node>ironcub-pilot</node>
+                <node>ironcub-copilot</node>
         </module>
 
         <module>

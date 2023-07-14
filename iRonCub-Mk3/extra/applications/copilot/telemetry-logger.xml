@@ -7,10 +7,9 @@
   <!-- Logger -->
   <module>
     <name>yarprobotinterface</name>
-    <parameters>--config launch_test.xml</parameters>
+    <parameters>--config launch-yarp-robot-logger.xml</parameters>
     <environment>YARP_ROBOT_NAME=iRonCub-Mk3</environment>
     <node>${logging_laptop}</node>
   </module>
 
 </application>
-
