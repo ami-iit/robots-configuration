@@ -10,8 +10,7 @@
     <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
     <module>
 		<name>yarpdev</name>
-        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial --period 1 --subdevice xsensmt --serial /dev/ttyUSB0 --xsensmt_period 0.001 --baud 230400 --xsensmt_mag_period 0.006</parameters>
-        <environment>YARP_CLOCK=/clock</environment>
+        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial_mas --period 1 --subdevice xsensmt --serial /dev/ttyUSB0 --xsensmt_period 0.001 --baud 230400 --xsensmt_mag_period 0.006</parameters>
 		<node>${generic_node_1}</node>
 	</module>
 

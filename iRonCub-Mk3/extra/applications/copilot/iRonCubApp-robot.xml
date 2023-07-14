@@ -1,25 +1,24 @@
 <application>
-<name>iRonCubApp-robot-pilot</name>
+<name>iRonCubApp-robot-copilot</name>
 
         <dependencies>
         </dependencies>
 
         <module>
-                <name>yarprobotinterface</name>
-                <environment>YARP_LOG_PROCESS_LABEL=robotinterface</environment>
-                <node>icub-head</node>
-        </module>
-
-        <module>
                 <name>yarpmotorgui</name>
                 <parameters>--from homePoseiRonCub_Mk3.ini</parameters>
-                <node>ironcub-pilot</node>
+                <node>ironcub-copilot</node>
         </module>
 
         <module>
                 <name>yarplogger</name>
                 <parameters>--start --no_stop</parameters>
-                <node>ironcub-pilot</node>
+                <node>ironcub-copilot</node>
         </module>
 
+        <module>
+                <name>ironcub-flight-control</name>
+                <node>icub-head</node>
+        </module>
+        
 </application>
