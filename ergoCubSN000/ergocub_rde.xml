@@ -83,11 +83,16 @@
     <!-- FT SENSORS - REMAPPERS -->
     <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
     <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/arms-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/legs-FT_remapper.xml" />
     <xi:include href="wrappers/FT/FT_remapper.xml" />
 
     <!-- IMU SENSORS - REMAPPERS -->
     <xi:include href="wrappers/inertials/left_leg-imu_remapper.xml" />
     <xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/arms-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/legs-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/no_feet-imu_remapper.xml" />
     <xi:include href="wrappers/inertials/imu_remapper.xml" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
@@ -132,6 +137,7 @@
 
     <!-- estimators -->
     <!--xi:include href="estimators/robot-dynamics-estimator.xml" /-->
+    <xi:include href="estimators/torso-robot-dynamics-estimator.xml" />
     <xi:include href="estimators/left_leg-robot-dynamics-estimator.xml" />
     <xi:include href="estimators/right_leg-robot-dynamics-estimator.xml" />
 

@@ -130,8 +130,8 @@
         <param name="ktau">               -63        -176          </param>
 	<param name="viscousPos">         -2         -0           </param>
 	<param name="viscousNeg">         -2         -0          </param>	
-        <param name="coulombPos">         -8        -1           </param>	
-	<param name="coulombNeg">         -8        -1           </param>		
+        <param name="coulombPos">         -7.8        -0.67           </param>	
+	<param name="coulombNeg">         -7.6        -0.7           </param>		
     </group>
     <!-- custom PIDs: end -->
 
