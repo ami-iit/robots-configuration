@@ -81,12 +81,16 @@
     <xi:include href="hardware/FT/right_leg-eb6-j0_3-strain.xml" />
 
     <!-- FT SENSORS - REMAPPERS -->
-    <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
+    <!--xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" /-->
     <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/FT_remapper.xml" />
 
     <!-- IMU SENSORS - REMAPPERS -->
+    <!--xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/left_leg-imu_remapper.xml" /-->
     <xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" />
-    <xi:include href="wrappers/inertials/left_leg-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/imu_remapper.xml" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
@@ -129,7 +133,7 @@
     <xi:include href="calibrators/head-calib.xml" />
 
     <!-- estimators -->
-    <xi:include href="estimators/robot-dynamics-estimator.xml" />
+    <xi:include href="estimators/right_leg-robot_dynamics_estimator.xml" />
 
   </devices>
 </robot>
