@@ -86,6 +86,7 @@
 
     <!-- IMU SENSORS - REMAPPERS -->
     <xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/left_leg-imu_remapper.xml" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />

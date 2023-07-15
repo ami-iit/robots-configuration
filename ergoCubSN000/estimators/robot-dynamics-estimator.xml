@@ -369,8 +369,12 @@ BSD-3-Clause license. -->
         <paramlist name="networks">
 
             <elem name="all_joints">alljoints-mc_remapper</elem>
+            <elem name="l_leg_ft_sensors">left_leg-FT_remapper</elem>
+            <elem name="l_leg_imu_sensors">left_leg-imu_remapper</elem>	    
+            <elem name="left_upper_leg-j0">left_leg-eb8-j0_3-mc</elem>
+            <elem name="left_lower_leg-j2">left_leg-eb9-j4_5-mc</elem>
             <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
-            <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem>	    
+            <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem>
             <elem name="right_upper_leg-j0">right_leg-eb6-j0_3-mc</elem>
             <elem name="right_lower_leg-j2">right_leg-eb7-j4_5-mc</elem>
         </paramlist>
