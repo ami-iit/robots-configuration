@@ -14,7 +14,7 @@ BSD-3-Clause license. -->
         <param name="base_link">root_link</param>
         <param name="joint_list">("l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee", "l_ankle_pitch", "l_ankle_roll")</param>
         <param name="gear_ratio">(-100.0, 160.0, -100.0, -100.0, -100.0, -160.0)</param>
-        <param name="torque_constant">(-0.111, 0.047, -0.047, -0.111, -0.111, -0.025)</param>
+        <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.025)</param>
 
         <group name="FT">
             <param name="names">("l_foot_front_ft_sensor", "l_foot_rear_ft_sensor")</param>
@@ -87,10 +87,10 @@ BSD-3-Clause license. -->
              <group name="FRICTION_TORQUE">
                 <param name="name">tau_F</param>
                 <!--param name="elements">("l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee", "l_ankle_pitch", "l_ankle_roll", "r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param-->
-                <param name="covariance">(1e-2, 1e-1, 1e-2, 1e-2, 1e-2, 1e-3)</param>
+                <param name="covariance">(1e-2, 1e-1, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="friction_k0">(7.5, 8.9, 4.4, 9.8, 1.3, 1.6)</param>
-                <param name="friction_k1">(1.2, 2.1, 0.5, 2.1, 1.1, 0.6)</param>
+                <param name="friction_k0">(7.5, 8.9, 4.4, 9.8, 1.3, 1.2)</param>
+                <param name="friction_k1">(1.2, 2.1, 0.5, 2.1, 1.1, 0.5)</param>
                 <param name="friction_k2">(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)</param>
                 <param name="dynamic_model">FrictionTorqueStateDynamics</param>
              </group>
@@ -155,14 +155,14 @@ BSD-3-Clause license. -->
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-4)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
              </group>
              <group name="MOTOR_CURRENT">
                 <param name="name">i_m</param>
                 <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="gear_ratio">(-100.0, 160.0, -100.0, -100.0, -100.0, -160.0)</param>
-                <param name="torque_constant">(-0.111, 0.047, -0.047, -0.111, -0.111, -0.025)</param>
+                <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.025)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
              </group>
              <group name="LEFT_LEG_FT">
