@@ -16,26 +16,6 @@ BSD-3-Clause license. -->
         <param name="gear_ratio">(160.0, 100.0, -100.0)</param>
         <param name="torque_constant">(0.047, 0.047, 0.047)</param>
 
-        <!-- <group name="FT">
-            <param name="names">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
-            <param name="frames">("l_arm_ft", "r_arm_ft")</param>
-            <param name="associated_joints">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
-        </group>
-
-        <group name="ACCELEROMETER">
-            <param name="names">("l_arm_ft_acc", "r_arm_ft_acc", "l_leg_ft_acc", "r_leg_ft_acc")</param>
-            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor", "l_leg_ft_sensor", "r_leg_ft_sensor")</param>
-        </group>
-
-        <group name="GYROSCOPE">
-            <param name="names">("l_arm_ft_gyro", "r_arm_ft_gyro", "l_leg_ft_gyro", "r_leg_ft_gyro")</param>
-            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor", "l_leg_ft_sensor", "r_leg_ft_sensor")</param>
-        </group>
-
-        <group name="EXTERNAL_CONTACT">
-            <param name="frames">("l_upperarm", "r_upperarm")</param>
-        </group> -->
-        
         <group name="FT">
             <param name="names">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
             <param name="frames">("l_arm_ft", "r_arm_ft")</param>
@@ -87,6 +67,7 @@ BSD-3-Clause license. -->
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
                   "LEFT_ARM_FT", "RIGHT_ARM_FT",
                   "LEFT_SHOULDER_CONTACT", "RIGHT_SHOULDER_CONTACT")
+
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITY">
@@ -142,6 +123,7 @@ BSD-3-Clause license. -->
                   "LEFT_ARM_FT", "RIGHT_ARM_FT"
                   "LEFT_ARM_ACC", "RIGHT_ARM_ACC", "LEFT_LEG_ACC", "RIGHT_LEG_ACC",
                   "LEFT_ARM_GYRO", "RIGHT_ARM_GYRO", "LEFT_LEG_GYRO", "RIGHT_LEG_GYRO")
+
               </param>
              <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
@@ -173,6 +155,7 @@ BSD-3-Clause license. -->
                 <param name="name">l_arm_ft_acc</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
+
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
              <group name="RIGHT_ARM_ACC">
@@ -190,6 +173,7 @@ BSD-3-Clause license. -->
              <group name="RIGHT_LEG_ACC">
                 <param name="name">r_leg_ft_acc</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
+
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
