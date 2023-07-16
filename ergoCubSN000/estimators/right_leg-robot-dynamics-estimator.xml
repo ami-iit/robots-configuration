@@ -17,9 +17,9 @@ BSD-3-Clause license. -->
         <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.025)</param>
 
         <group name="FT">
-            <param name="names">("r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
-            <param name="frames">("r_foot_front_ft", "r_foot_rear_ft")</param>
-            <param name="associated_joints">("r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
+            <param name="names">("r_leg_ft_sensor", "r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
+            <param name="frames">("r_leg_ft", "r_foot_front_ft", "r_foot_rear_ft")</param>
+            <param name="associated_joints">("r_leg_ft_sensor", "r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
         </group>
 
         <group name="ACCELEROMETER">
@@ -33,7 +33,7 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="frames">("r_sole")</param>
+            <param name="frames">("r_upper_leg", "r_sole")</param>
         </group>
     </group>
 
@@ -65,8 +65,8 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
-                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
-                  "RIGHT_SOLE_CONTACT",
+                  "RIGHT_LEG_FT", "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
+                  "RIGHT_LEG_CONTACT", "RIGHT_SOLE_CONTACT",
                   "RIGHT_LEG_ACC_BIAS")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
@@ -86,7 +86,7 @@ BSD-3-Clause license. -->
                 <param name="name">tau_F</param>
                 <param name="covariance">(1e-2, 1e-1, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="friction_k0">(7.5, 8.9, 4.4, 9.8, 1.3, 1.6)</param>
+                <param name="friction_k0">(7.5, 8.9, 1.4, 9.8, 1.3, 1.6)</param>
                 <param name="friction_k1">(1.2, 2.1, 0.5, 2.1, 1.1, 0.6)</param>
                 <param name="friction_k2">(0.0, 0.0, 0.0, 0.0, 0.0, 0.0)</param>
                 <param name="dynamic_model">FrictionTorqueStateDynamics</param>
@@ -162,7 +162,7 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_CURRENT",
-                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT"
+                  "RIGHT_LEG_FT", "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT"
                   "RIGHT_LEG_ACC", "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_REAR_ACC",
                   "RIGHT_LEG_GYRO", "RIGHT_FOOT_FRONT_GYRO", "RIGHT_FOOT_REAR_GYRO")
               </param>
@@ -170,7 +170,7 @@ BSD-3-Clause license. -->
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-3, 1e-3, 1e-3)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
              </group>
              <group name="MOTOR_CURRENT">
@@ -182,7 +182,7 @@ BSD-3-Clause license. -->
              </group>
              <group name="RIGHT_LEG_FT">
                 <param name="name">r_leg_ft_sensor</param>
-                <param name="covariance">(1e1, 1e1, 1e1, 1e1, 1e1, 1e1)</param>
+                <param name="covariance">(1e3, 1e3, 1e2, 1e2, 1e2, 1e2)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
              </group>

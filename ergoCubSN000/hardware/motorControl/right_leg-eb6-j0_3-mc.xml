@@ -119,7 +119,7 @@
         <param name="outputControlUnits">  machine_units                </param>
         <param name="kp">             500       -500       1000       1400       </param>
         <param name="kd">             0          0         10           0         </param>
-        <param name="ki">             50        -400        200        400       </param>
+        <param name="ki">             50        -300        200        400       </param>
         <param name="maxOutput">      2500       2500      7000      2500      </param>
         <param name="maxInt">         200        500       2000       200       </param>
         <param name="ko">             0          0         0         0         </param>
