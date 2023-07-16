@@ -34,6 +34,7 @@ BSD-3-Clause license. -->
 
         <group name="EXTERNAL_CONTACT">
             <param name="frames">("r_shoulder_2", "l_shoulder_2")</param>
+
         </group>
     </group>
 
@@ -67,6 +68,7 @@ BSD-3-Clause license. -->
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
                   "LEFT_ARM_FT", "RIGHT_ARM_FT",
                   "LEFT_SHOULDER_CONTACT", "RIGHT_SHOULDER_CONTACT")
+
 
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
@@ -155,7 +157,6 @@ BSD-3-Clause license. -->
                 <param name="name">l_arm_ft_acc</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
-
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
              <group name="RIGHT_ARM_ACC">

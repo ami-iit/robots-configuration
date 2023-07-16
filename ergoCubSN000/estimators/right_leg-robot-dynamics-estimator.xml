@@ -17,9 +17,9 @@ BSD-3-Clause license. -->
         <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.025)</param>
 
         <group name="FT">
-            <param name="names">("r_leg_ft_sensor", "r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
-            <param name="frames">("r_leg_ft", "r_foot_front_ft", "r_foot_rear_ft")</param>
-            <param name="associated_joints">("r_leg_ft_sensor", "r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
+            <param name="names">("r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
+            <param name="frames">("r_foot_front_ft", "r_foot_rear_ft")</param>
+            <param name="associated_joints">("r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
         </group>
 
         <group name="ACCELEROMETER">
@@ -33,7 +33,7 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="frames">("r_upper_leg", "r_sole")</param>
+            <param name="frames">("r_sole")</param>
         </group>
     </group>
 
@@ -65,8 +65,8 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
-                  "RIGHT_LEG_FT", "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
-                  "RIGHT_LEG_CONTACT", "RIGHT_SOLE_CONTACT",
+                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
+                  "RIGHT_SOLE_CONTACT",
                   "RIGHT_LEG_ACC_BIAS")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
@@ -162,7 +162,7 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_CURRENT",
-                  "RIGHT_LEG_FT", "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT"
+                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT"
                   "RIGHT_LEG_ACC", "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_REAR_ACC",
                   "RIGHT_LEG_GYRO", "RIGHT_FOOT_FRONT_GYRO", "RIGHT_FOOT_REAR_GYRO")
               </param>
