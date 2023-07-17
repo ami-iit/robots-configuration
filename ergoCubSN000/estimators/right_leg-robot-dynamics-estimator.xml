@@ -65,7 +65,7 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
-                  "RIGHT_LEG_FT", "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
+                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
                   "RIGHT_SOLE_CONTACT",
                   "RIGHT_LEG_ACC_BIAS")
               </param>
