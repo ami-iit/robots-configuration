@@ -1,0 +1,194 @@
+<!-- Copyright (C) 2019 Istituto Italiano di Tecnologia (IIT). All rights reserved.
+This software may be modified and distributed under the terms of the
+BSD-3-Clause license. -->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<device  xmlns:xi="http://www.w3.org/2001/XInclude" name="arms_arm-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
+    <group name="GENERAL">
+        <param name="sampling_time">0.01</param>
+        <param name="port_prefix">/robot-dynamics-estimator/arms</param>
+    </group>
+
+    <group name="MODEL">
+        <param name="model_file">model.urdf</param>
+        <param name="base_link">root_link</param>
+        <param name="joint_list">("l_shoulder_pitch", "l_shoulder_roll", "l_shoulder_yaw", "l_elbow", "r_shoulder_pitch", "r_shoulder_roll", "r_shoulder_yaw", "r_elbow")</param>
+        <param name="gear_ratio">(100.0, 100.0, 100.0, -100.0, -100.0, -100.0, -100.0, 100.0)</param>
+        <param name="torque_constant">(0.025, 0.025, 0.025, 0.025)</param>
+
+        <group name="FT">
+            <param name="names">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
+            <param name="frames">("l_arm_ft", "r_arm_ft")</param>
+            <param name="associated_joints">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
+        </group>
+
+        <group name="ACCELEROMETER">
+            <param name="names">("l_arm_ft_acc", "r_arm_ft_acc")</param>
+            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
+        </group>
+
+        <group name="GYROSCOPE">
+            <param name="names">("l_arm_ft_gyro", "r_arm_ft_gyro")</param>
+            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
+        </group>
+
+        <group name="EXTERNAL_CONTACT">
+            <param name="frames">("l_upperarm", "r_upperarm")</param>
+        </group>
+    </group>
+
+    <group name="RobotSensorBridge">
+        <param name="check_for_nan">false</param>
+        <param name="stream_joint_states">true</param>
+        <param name="stream_inertials">true</param>
+        <param name="stream_forcetorque_sensors">true</param>
+        <param name="stream_motor_states">true</param>
+
+        <group name="RemoteControlBoardRemapper">
+          <param name="joint_list">("l_shoulder_pitch", "l_shoulder_roll", "l_shoulder_yaw", "l_elbow", "r_shoulder_pitch", "r_shoulder_roll", "r_shoulder_yaw", "r_elbow")</param>
+        </group>
+
+        <group name="SixAxisForceTorqueSensors">
+          <param name="sixaxis_forcetorque_sensors_list">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
+        </group>
+
+        <group name="InertialSensors">
+          <param name="accelerometers_list">(l_arm_ft_acc, r_arm_ft_acc)</param>
+          <param name="gyroscopes_list">(l_arm_ft_gyro, r_arm_ft_gyro)</param>
+        </group>
+    </group>
+
+    <group name="UKF">
+        <param name="alpha">1.0</param>
+        <param name="beta">2.0</param>
+        <param name="kappa">0.0</param>
+        <group name="UKF_STATE">
+             <param name="dynamics_list">
+                 ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
+                  "LEFT_ARM_FT", "RIGHT_ARM_FT", "LEFT_UPPER_ARM_CONTACT", "RIGHT_UPPER_ARM_CONTACT")
+              </param>
+             <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
+             <group name="JOINT_VELOCITY">
+                <param name="name">ds</param>
+                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">JointVelocityStateDynamics</param>
+             </group>
+             <group name="MOTOR_TORQUE">
+                <param name="name">tau_m</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-3, 1e-3, 1e-3, 1e-4, 1e-3)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+             </group>
+             <group name="FRICTION_TORQUE">
+                <param name="name">tau_F</param>
+                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="friction_k0">(0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001)</param>
+                <param name="friction_k1">(0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001)</param>
+                <param name="friction_k2">(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)</param>
+                <param name="dynamic_model">FrictionTorqueStateDynamics</param>
+             </group>
+             <group name="LEFT_ARM_FT">
+                <param name="name">l_arm_ft_sensor</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-5, 1e-5, 1e-5)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+             </group>
+             <group name="RIGHT_ARM_FT">
+                <param name="name">r_arm_ft_sensor</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-5, 1e-5, 1e-5)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+             </group>
+             <group name="LEFT_UPPER_ARM_CONTACT">
+                <param name="name">l_upperarm</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+             </group>
+             <group name="RIGHT_UPPER_ARM_CONTACT">
+                <param name="name">r_upperarm</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+             </group>
+        </group>
+
+        <group name="UKF_MEASUREMENT">
+             <param name="dynamics_list">
+                 ("JOINT_VELOCITY", "MOTOR_CURRENT",
+                  "LEFT_ARM_FT", "LEFT_ARM_ACC", "LEFT_ARM_GYRO"
+                  "RIGHT_ARM_FT", "RIGHT_ARM_ACC", "RIGHT_ARM_GYRO")
+              </param>
+             <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
+                                      "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
+             <group name="JOINT_VELOCITY">
+                <param name="name">ds</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="dynamic_model">ConstantMeasurementModel</param>
+             </group>
+             <group name="MOTOR_CURRENT">
+                <param name="name">i_m</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="gear_ratio">(100, 100, 100, -100, -100.0, -100.0, -100.0, 100.0)</param>
+                <param name="torque_constant">(0.025, 0.025, 0.025, 0.025, 0.025, 0.025, 0.025, 0.025)</param>
+                <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
+             </group>
+             <group name="LEFT_ARM_FT">
+                <param name="name">l_arm_ft_sensor</param>
+                <param name="covariance">(1e1, 1e1, 1e1, 1e1, 1e1, 1e1)</param>
+                <param name="use_bias">false</param>
+                <param name="dynamic_model">ConstantMeasurementModel</param>
+             </group>
+             <group name="RIGHT_ARM_FT">
+                <param name="name">r_arm_ft_sensor</param>
+                <param name="covariance">(1e1, 1e1, 1e1, 1e1, 1e1, 1e1)</param>
+                <param name="use_bias">false</param>
+                <param name="dynamic_model">ConstantMeasurementModel</param>
+             </group>
+             <group name="LEFT_ARM_ACC">
+                <param name="name">l_arm_ft_acc</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
+                <param name="use_bias">true</param>
+                <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
+             </group>
+             <group name="RIGHT_ARM_ACC">
+                <param name="name">r_arm_ft_acc</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
+                <param name="use_bias">true</param>
+                <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
+             </group>
+             <group name="LEFT_ARM_GYRO">
+                <param name="name">l_arm_ft_gyro</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="use_bias">false</param>
+                <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
+             </group>
+             <group name="RIGHT_ARM_GYRO">
+                <param name="name">r_arm_ft_gyro</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="use_bias">false</param>
+                <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
+             </group>
+        </group>
+    </group>
+
+    <!-- ATTACH -->
+    <action phase="startup" level="15" type="attach">
+        <paramlist name="networks">
+
+            <elem name="all_joints">arms-mc_remapper</elem>
+            <elem name="arms_ft_sensors">arms-FT_remapper</elem>
+            <elem name="arms_imu_sensors">arms-imu_remapper</elem>
+            <elem name="left_arm-eb1">right_arm-eb2-j0_1-mc</elem>
+            <elem name="left_arm-eb3">right_arm-eb4-j2_3-mc</elem>
+            <elem name="right_arm-eb1">right_arm-eb1-j0_1-mc</elem>
+            <elem name="right_arm-eb3">right_arm-eb3-j2_3-mc</elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="2" type="detach" />
+    <!-- FINISH ATTACH-->
+
+</device>
