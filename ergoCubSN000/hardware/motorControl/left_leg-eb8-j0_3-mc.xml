@@ -117,9 +117,9 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">             -500       550       -1700       -1400       </param>
+        <param name="kp">             -500       550       -1700       -800       </param>
         <param name="kd">             0          0           -0           0         </param>
-        <param name="ki">             -50        200       -1000        -200       </param>
+        <param name="ki">             -50        200       -1000        -50       </param>
         <param name="maxOutput">      2500       2500       7000      2500      </param>
         <param name="maxInt">         200        500        2000       500       </param>
         <param name="ko">             0          0           0         0         </param>
@@ -129,10 +129,10 @@
         <param name="kbemf">          -0.0001    0.0001    -0.0005    -0.0003    </param>
         <param name="filterType">     0          0           0         0         </param>
         <param name="ktau">           -63         93        -149       -63        </param>
-	<param name="viscousPos">     -1          1.5         -1      -6      </param>
-	<param name="viscousNeg">     -1          1.5         -1      -7      </param>	
-        <param name="coulombPos">     -5          4          -3       -5       </param>	
-	<param name="coulombNeg">     -5          4          -3      -8       </param>	
+	<param name="viscousPos">     -1          1.5         -1      -4      </param>
+	<param name="viscousNeg">     -1          1.5         -1      -4      </param>	
+        <param name="coulombPos">     -5          4          -3       -7       </param>	
+	<param name="coulombNeg">     -5          4          -3      -13       </param>	
     </group>
 
     <!-- custom PIDs: end -->
