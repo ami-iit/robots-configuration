@@ -6,7 +6,7 @@
 	<xi:include href="../general.xml" />
 
 	<group name="GENERAL">
-		<param name="joints">13</param>		<!-- the number of joints of the robot part -->
+		<param name="joints">4</param>		<!-- the number of joints of the robot part -->
 		<param name="deviceName"> Left_Arm_Calibrator </param>
 	</group>
 
@@ -31,7 +31,7 @@
 	</group>
 
 <!--	<param name="CALIB_ORDER"> (4 5 6) (3) (2) (0) (1) (7 8) (9) (10 11 12) </param> --> <!-- Don't remove this line -->
-	<param name="CALIB_ORDER"> (4 5 6) (3) (2) (0) (1) (7 8) (10 11 12) </param> 
+	<param name="CALIB_ORDER"> (3) (2) (0) (1) </param> 
 
 	<action phase="startup" level="10" type="calibrate">
 		<param name="target">left_arm-mc_remapper</param>
