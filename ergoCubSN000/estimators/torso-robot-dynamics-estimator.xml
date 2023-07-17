@@ -104,13 +104,13 @@ BSD-3-Clause license. -->
              </group>
              <group name="RIGHT_SHOULDER_CONTACT">
                 <param name="name">r_shoulder_2</param>
-                <param name="covariance">(1e0, 1e0, 1e0, 1e0, 1e0, 1e0)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
              <group name="LEFT_SHOULDER_CONTACT">
                 <param name="name">l_shoulder_2</param>
-                <param name="covariance">(1e0, 1e0, 1e0, 1e0, 1e0, 1e0)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
