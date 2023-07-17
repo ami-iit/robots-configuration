@@ -65,9 +65,7 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
-                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
-                  "RIGHT_FOOT_FRONT_CONTACT", "RIGHT_FOOT_REAR_CONTACT",
-                  "RIGHT_LEG_ACC_BIAS")
+                  "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITY">
@@ -176,7 +174,7 @@ BSD-3-Clause license. -->
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
              </group>
              <group name="MOTOR_CURRENT">
@@ -207,7 +205,7 @@ BSD-3-Clause license. -->
              <group name="RIGHT_LEG_ACC">
                 <param name="name">r_leg_ft_acc</param>
                 <param name="covariance">(1e-0, 1e-0, 1e-0)</param>
-                <param name="use_bias">true</param>
+                <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
              </group>
              <group name="RIGHT_FOOT_FRONT_ACC">
