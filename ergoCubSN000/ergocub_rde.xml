@@ -138,10 +138,9 @@
     <xi:include href="calibrators/head-calib.xml" />
 
     <!-- estimators -->
-    <!--xi:include href="estimators/robot-dynamics-estimator.xml" /-->
-    <!--xi:include href="estimators/right_arm-robot-dynamics-estimator.xml" /-->
-    <!--xi:include href="estimators/left_arm-robot-dynamics-estimator.xml" /-->
-    <xi:include href="estimators/arms-robot-dynamics-estimator.xml" />
+    <xi:include href="estimators/right_arm-robot-dynamics-estimator.xml" />
+    <xi:include href="estimators/left_arm-robot-dynamics-estimator.xml" />
+    <!--xi:include href="estimators/arms-robot-dynamics-estimator.xml" /-->
     <xi:include href="estimators/torso-robot-dynamics-estimator.xml" />
     <xi:include href="estimators/left_leg-robot-dynamics-estimator.xml" />
     <xi:include href="estimators/right_leg-robot-dynamics-estimator.xml" />
