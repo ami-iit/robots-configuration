@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="sampling_time">0.01</param>
-        <param name="port_prefix">/torso-robot-dynamics-estimator</param>
+        <param name="port_prefix">/robot-dynamics-estimator/torso</param>
     </group>
 
     <group name="MODEL">
@@ -206,7 +206,7 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">torso-mc_remapper</elem>
             <elem name="arms_ft_sensors">arms-FT_remapper</elem>
-            <elem name="no_feet_imu_sensors">no_feet-imu_remapper</elem>	    
+            <elem name="no_feet_imu_sensors">no_feet-imu_remapper</elem>
             <elem name="torso-eb5-j0_2">torso-eb5-j0_2-mc</elem>
         </paramlist>
     </action>

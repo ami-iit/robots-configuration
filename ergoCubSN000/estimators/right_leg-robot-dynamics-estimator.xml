@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="sampling_time">0.01</param>
-        <param name="port_prefix">/right_leg-robot-dynamics-estimator</param>
+        <param name="port_prefix">/robot-dynamics-estimator/right_leg</param>
     </group>
 
     <group name="MODEL">
@@ -243,7 +243,7 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">right_leg-mc_remapper</elem>
             <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
-            <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem>	    
+            <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem>
             <elem name="right_upper_leg-j0">right_leg-eb6-j0_3-mc</elem>
             <elem name="right_lower_leg-j2">right_leg-eb7-j4_5-mc</elem>
         </paramlist>
