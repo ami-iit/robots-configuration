@@ -13,4 +13,7 @@
         <name>iRonCubApp-turbines-dumper</name>
     </application>
 
+    <application>
+        <name>iRonCubApp-noteTakerGUI</name>
+    </application>
 </application>

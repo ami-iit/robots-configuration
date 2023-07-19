@@ -11,14 +11,14 @@
     <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
     <module>
 		<name>yarpdev</name>
-        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial_mas --period 10 --subdevice xsensmt --serial /dev/ttyUSB4 --xsensmt_period 0.01 --baud 230400</parameters>
+        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial_mas --period 2 --subdevice xsensmt --serial /dev/ttyXsens --xsensmt_period 0.0025 --xsensmt_mag_period 0.01 --baud 230400</parameters>
 		<node>${generic_node_3}</node>
 	</module>
 
     <module>
 		<name>yarprobotinterface</name>
         <parameters> --config launch-fbe-imu-vive.xml</parameters>
-        <environment>YARP_CLOCK=/clock YARP_ROBOT_NAME=iRonCub-Mk3</environment>
+        <environment>YARP_ROBOT_NAME=iRonCub-Mk3</environment>
 		<node>icub-head</node>
 	</module>
     
