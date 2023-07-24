@@ -1,14 +1,8 @@
 <application>
-<name>iRonCubApp_robot</name>
+<name>iRonCubApp-robot-pilot</name>
 
         <dependencies>
         </dependencies>
-
-        <module>
-                <name>yarplogger</name>
-                <parameters>--start --no_stop</parameters>
-                <node>icub-console</node>
-        </module>
 
         <module>
                 <name>yarprobotinterface</name>
@@ -19,7 +13,13 @@
         <module>
                 <name>yarpmotorgui</name>
                 <parameters>--from homePoseiRonCub_Mk3.ini</parameters>
-                <node>icub-console</node>
+                <node>ironcub-pilot</node>
+        </module>
+
+        <module>
+                <name>yarplogger</name>
+                <parameters>--start --no_stop</parameters>
+                <node>ironcub-pilot</node>
         </module>
 
 </application>

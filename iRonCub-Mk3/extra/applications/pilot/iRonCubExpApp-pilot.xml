@@ -6,11 +6,15 @@
     <name>iRonCubExpApp-pilot</name>
 
     <application>
-        <name>iRonCubApp-turbines</name>
+        <name>iRonCubApp-turbines-pilot</name>
     </application>
 
     <application>
-        <name>iRonCubApp_robot</name>
+        <name>iRonCubApp-robot-pilot</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-webcams</name>
     </application>
     
 </application>

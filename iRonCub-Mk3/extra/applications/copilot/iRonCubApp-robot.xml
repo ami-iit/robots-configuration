@@ -1,0 +1,24 @@
+<application>
+<name>iRonCubApp-robot-copilot</name>
+
+        <dependencies>
+        </dependencies>
+
+        <module>
+                <name>yarpmotorgui</name>
+                <parameters>--from homePoseiRonCub_Mk3.ini</parameters>
+                <node>ironcub-copilot</node>
+        </module>
+
+        <module>
+                <name>yarplogger</name>
+                <parameters>--start --no_stop</parameters>
+                <node>ironcub-copilot</node>
+        </module>
+
+        <module>
+                <name>ironcub-flight-control</name>
+                <node>icub-head</node>
+        </module>
+        
+</application>

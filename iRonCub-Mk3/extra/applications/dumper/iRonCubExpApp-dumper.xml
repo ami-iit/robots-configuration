@@ -3,14 +3,17 @@
     <authors>
         <author email="hosameldin.mohamed@iit.it">Hosameldin A. O. Mohamed</author>
     </authors>
-    <name>iRonCubExpApp-copilot</name>
+    <name>iRonCubExpApp-dumper</name>
 
     <application>
-        <name>iRonCubApp-baseEstIMUVive</name>
+       <name>iRonCubApp-logger</name>
     </application>
 
     <application>
-        <name>iRonCubApp-robot-copilot</name>
+        <name>iRonCubApp-turbines-dumper</name>
     </application>
 
+    <application>
+        <name>iRonCubApp-noteTakerGUI</name>
+    </application>
 </application>

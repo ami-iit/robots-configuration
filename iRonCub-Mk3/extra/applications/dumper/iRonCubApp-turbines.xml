@@ -1,0 +1,43 @@
+<application>
+<name>iRonCubApp-turbines-dumper</name>
+
+<var name="generic_node_1">ironcub-pilot</var>
+<var name="logging_laptop">alienCub</var>
+<var name="webcam_station">ironpi</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________Turbines related stuff_______________________ -->
+
+	<module>
+		<name>TurbineLoggerModule</name>
+		<node>${logging_laptop}</node>
+	</module>
+
+	<module>
+		<name>bash</name>
+		<parameters>dumperScript_jet</parameters>
+		<node>${logging_laptop}</node>
+		<tag>data-dumperJetsFT</tag>
+	</module>
+
+	<connection>
+		<from>/iRonCubJets/body/stateExt:o</from>
+		<to>/dumper/jet/stateControlBoard</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<connection>
+		<from>/JetCatTurbines/data</from>
+		<to>/dumper/jet/data</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<connection>
+		<from>/iRonCub/jet/state:o</from>
+		<to>/dumper/jet/stateExt</to>
+		<protocol>udp</protocol>
+	</connection>
+
+</application>

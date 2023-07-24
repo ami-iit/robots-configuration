@@ -1,0 +1,18 @@
+<application>
+<name>iRonCubApp-noteTakerGUI</name>
+
+<var name="generic_node_1">ironcub-pilot</var>
+<var name="logging_laptop">alienCub</var>
+<var name="webcam_station">ironpi</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________notetaker-gui_______________________ -->
+
+	<module>
+		<name>notetaker-gui</name>
+		<node>${logging_laptop}</node>
+	</module>
+
+</application>
