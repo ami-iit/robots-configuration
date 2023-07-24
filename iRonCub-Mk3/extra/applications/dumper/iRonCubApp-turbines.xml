@@ -17,7 +17,7 @@
 
 	<module>
 		<name>bash</name>
-		<parameters>dumperScript_jet-FT</parameters>
+		<parameters>dumperScript_jet</parameters>
 		<node>${logging_laptop}</node>
 		<tag>data-dumperJetsFT</tag>
 	</module>
