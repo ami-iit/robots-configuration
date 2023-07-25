@@ -71,10 +71,12 @@
     <!-- <xi:include href="hardware/MAIS/left_arm-eb26-j12_15-mais.xml" /> -->
     <!-- <xi:include href="hardware/MAIS/right_arm-eb29-j12_15-mais.xml" /> -->
 
-    <!-- ANALOG SENSORS FT -->
+    <!-- MAS SENSORS FT -->
 
    <xi:include href="wrappers/FT/left_arm-FT_remapper.xml" />
    <xi:include href="wrappers/FT/right_arm-FT_remapper.xml" />
+   <!-- <xi:include href="wrappers/FT/left_arm_jetpack-FT_remapper.xml" />
+   <xi:include href="wrappers/FT/right_arm_jetpack-FT_remapper.xml" /> -->
 
    <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
@@ -92,6 +94,8 @@
 
    <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
    <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
+   <!-- <xi:include href="hardware/FT/left_arm_jetpack-eb1-j0_1-strain.xml" />
+   <xi:include href="hardware/FT/right_arm_jetpack-eb3-j0_1-strain.xml" /> -->
 
      <!-- INERTIAL SENSOR-->
 <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
@@ -127,7 +131,7 @@
     <xi:include href="calibrators/torso-calib.xml" />
 
     <!-- estimators -->
-    <xi:include href="estimators/wholebodydynamics.xml" />
+    <!--<xi:include href="estimators/wholebodydynamics.xml" />-->
 
   </devices>
 </robot>
