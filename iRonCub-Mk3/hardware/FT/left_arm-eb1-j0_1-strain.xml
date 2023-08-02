@@ -16,32 +16,32 @@
            <group name="PROPERTIES">
   
                  <group name="CANBOARDS">
-                    <param name="type">                 strain2  strain2                 </param>
+                    <param name="type">                 strain2                 </param>
 
                     <group name="PROTOCOL">
-                        <param name="major">            2  2                       </param>    
-                        <param name="minor">            0  0                       </param>     
+                        <param name="major">            2                       </param>    
+                        <param name="minor">            0                       </param>     
                     </group>                    
                     <group name="FIRMWARE">
-                        <param name="major">            2  2                       </param>    
-                        <param name="minor">            2  2                       </param>
-                        <param name="build">            0  0                        </param>
+                        <param name="major">            2                       </param>    
+                        <param name="minor">            2                       </param>
+                        <param name="build">            0                        </param>
                     </group>
                 </group>
                 
                 <group name="SENSORS">
-                    <param name="id">                   l_arm_ft_sensor  l_jetpack_ft_sensor   </param>
-                    <param name="board">                 strain2  strain2             </param>
-                    <param name="location">             CAN2:13  CAN2:2                 </param>
+                    <param name="id">                   l_arm_ft_sensor   </param>
+                    <param name="board">                 strain2             </param>
+                    <param name="location">             CAN2:13                 </param>
                 </group>                
             
             </group>
 
             <group name="SETTINGS">        
-                <param name="enabledSensors">       l_arm_ft_sensor  l_jetpack_ft_sensor               </param>
-                <param name="ftPeriod">             5  5         		                    </param>
-                <param name="temperaturePeriod">    1000  1000      		                   </param>
-                <param name="useCalibration">       true  true      		              </param>           
+                <param name="enabledSensors">       l_arm_ft_sensor               </param>
+                <param name="ftPeriod">             5         		                    </param>
+                <param name="temperaturePeriod">    1000      		                   </param>
+                <param name="useCalibration">       true      		              </param>           
             </group>       
         
             <group name="CANMONITOR">        
