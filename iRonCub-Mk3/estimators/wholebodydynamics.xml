@@ -4,8 +4,8 @@
 <devices robot="@WBD_YARP_ROBOT_NAME@" build="1">
     <device name="secondaryCalibration_l_arm_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  l_arm_ft  </param> <!-- in case there are many FTs in the MAS device -->
-        <xi:include href="./dummy_calibration_models/4th_order_dummy.xml" />
+        <param name="sensorName">  l_arm_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -18,8 +18,8 @@
 
     <device name="secondaryCalibration_r_arm_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  r_arm_ft  </param> <!-- in case there are many FTs in the MAS device -->
-        <xi:include href="./dummy_calibration_models/4th_order_dummy.xml" />
+        <param name="sensorName">  r_arm_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -32,8 +32,8 @@
 
     <device name="secondaryCalibration_l_jet_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  l_jet_ft  </param> <!-- in case there are many FTs in the MAS device -->
-        <xi:include href="./dummy_calibration_models/4th_order_dummy.xml" />
+        <param name="sensorName">  l_jet_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -46,8 +46,8 @@
 
     <device name="secondaryCalibration_r_jet_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  r_jet_ft  </param> <!-- in case there are many FTs in the MAS device -->
-        <xi:include href="./dummy_calibration_models/4th_order_dummy.xml" />
+        <param name="sensorName">  r_jet_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
