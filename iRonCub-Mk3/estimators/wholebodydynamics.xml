@@ -4,7 +4,7 @@
 <devices robot="@WBD_YARP_ROBOT_NAME@" build="1">
     <device name="secondaryCalibration_l_arm_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  l_arm_ft  </param>
+        <param name="sensorName">  l_arm_ft_sensor  </param>
         <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
@@ -18,7 +18,7 @@
 
     <device name="secondaryCalibration_r_arm_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  r_arm_ft  </param>
+        <param name="sensorName">  r_arm_ft_sensor  </param>
         <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
@@ -32,7 +32,7 @@
 
     <device name="secondaryCalibration_l_jet_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  l_jet_ft  </param>
+        <param name="sensorName">  l_jet_ft_sensor  </param>
         <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
@@ -46,7 +46,7 @@
 
     <device name="secondaryCalibration_r_jet_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
-        <param name="sensorName">  r_jet_ft  </param>
+        <param name="sensorName">  r_jet_ft_sensor  </param>
         <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
@@ -178,8 +178,8 @@
         </group>
 
          <group name="multipleAnalogSensorsNames">
-            <param name="SixAxisForceTorqueSensorsNames">("l_arm_ft", "r_arm_ft", "l_jet_ft", "r_jet_ft", "l_foot_front_ft", "r_foot_front_ft", "l_foot_rear_ft", "r_foot_rear_ft")</param>
-            <!-- <param name="TemperatureSensorsNames">("l_arm_ft", "r_arm_ft", "l_jet_ft", "r_jet_ft", "l_foot_front_ft", "r_foot_front_ft", "l_foot_rear_ft", "r_foot_rear_ft")</param> -->
+            <param name="SixAxisForceTorqueSensorsNames">("l_arm_ft_sensor", "r_arm_ft_sensor", "l_jet_ft_sensor", "r_jet_ft_sensor", "l_foot_front_ft_sensor", "r_foot_front_ft_sensor", "l_foot_rear_ft_sensor", "r_foot_rear_ft_sensor")</param>
+            <!-- <param name="TemperatureSensorsNames">("l_arm_ft_sensor", "r_arm_ft_sensor", "l_jet_ft_sensor", "r_jet_ft_sensor", "l_foot_front_ft_sensor", "r_foot_front_ft_sensor", "l_foot_rear_ft_sensor", "r_foot_rear_ft_sensor")</param> -->
         </group>
 
 
