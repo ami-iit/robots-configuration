@@ -127,7 +127,8 @@
     <xi:include href="calibrators/torso-calib.xml" />
 
     <!-- estimators -->
-    <xi:include href="estimators/wholebodydynamics_no-jetpack.xml" /> <!-- The model is iRonCub-Mk3-FT-ARMS, refer to https://github.com/ami-iit/element_ft-nonlinear-modeling/tree/main/models/iRonCub-Mk3-FT-ARMS/iRonCub/robots/iRonCub-Mk3-FT-ARMS -->
+    <xi:include href="estimators/wholebodydynamics_no-jetpack.xml" />
+    <!-- The model is iRonCub-Mk3-FT-ARMS, refer to https://github.com/ami-iit/element_ft-nonlinear-modeling/tree/main/models/iRonCub-Mk3-FT-ARMS/iRonCub/robots/iRonCub-Mk3-FT-ARMS -->
 
   </devices>
 </robot>
