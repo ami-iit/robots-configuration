@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<group name="modelClassParams">
+   <param name="np">1</param>
+   <param name="ny">6</param>
+   <param name="nu">7</param>
+   <param name="na">0</param>
+   <param name="nb">0</param>
+   <param name="string">1st_degree</param>
+   <param name="row1">(0.56905    -0.35313    0.059443    0.033523    0.036005    0.021044)</param>
+   <param name="row2">(-0.29915     0.47527    0.077333   -0.013174    -0.01896   -0.013902)</param>
+   <param name="row3">(-0.027353    -0.12568      1.0883  -0.0044803    0.006753    0.001398)</param>
+   <param name="row4">(-0.70926     -2.4025      1.2761     0.89073    0.031969   -0.015511)</param>
+   <param name="row5">(0.92481      3.1332    -0.04584    -0.40391     0.79908    -0.16362)</param>
+   <param name="row6">(1.0581    0.054247    -0.62927    0.027894    -0.08086     0.97617)</param>
+   <param name="row7">(-0.46277     0.28561      1.4788   -0.032947   -0.020466   -0.015511)</param>
+   <param name="row8">(64.0306     -33.9878     -38.3113       3.4642      2.62892      2.51791)</param>
+</group>
