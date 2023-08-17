@@ -50,6 +50,7 @@
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="startWithZeroFTSensorOffsets">true</param> <!-- bypass using resetOffset of FT sensors in simulation -->
         <param name="useSkinForContacts">false</param>
+        <param name="additionalConsideredFixedJoints">(l_weights_origin, r_weights_origin)</param> <!-- Added explicitly in order to be found by WBD_OUTPUT_EXTERNAL_WRENCH_PORTS since they are attached to fixed joints -->
         <param name="devicePeriodInSeconds">0.002</param>
         <param name="estimateJointVelocityAcceleration">false</param>  <!-- if true a kf will estimate the joint velocities and accelerations -->
         <param name="processNoiseCovariance">(1.0e-3, 1.0e-3, 1.0e-3,
