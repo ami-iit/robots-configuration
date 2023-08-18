@@ -23,7 +23,7 @@
                     <param name="major">            2           </param>
                     <param name="minor">            0           </param>
                     <param name="build">            4           </param>
-                </group>
+            </group>
             </group>
 
             <group name="JOINTMAPPING">
