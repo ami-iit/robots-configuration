@@ -9,7 +9,7 @@
         <module>
                 <name>yarprobotinterface</name>
                 <parameters>--config iRonCub_wbd_no-jetpack.xml</parameters>
-                <environment>YARP_LOG_PROCESS_LABEL=robotinterface YARP_ROBOT_NAME=iRonCub-Mk3-FT-ARMS</environment>
+                <environment>YARP_ROBOT_NAME=iRonCub-Mk3-FT-ARMS</environment>
                 <node>icub-head</node>
         </module>
 
