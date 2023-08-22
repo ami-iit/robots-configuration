@@ -23,13 +23,13 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="ACCELEROMETER">
-            <param name="names">("l_arm_ft_acc", "r_arm_ft_acc", "l_leg_ft_acc", "r_leg_ft_acc")</param>
-            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor", "l_leg_ft_sensor", "r_leg_ft_sensor")</param>
+            <param name="names">("l_arm_ft_acc", "r_arm_ft_acc")</param>
+            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
         </group>
 
         <group name="GYROSCOPE">
-            <param name="names">("l_arm_ft_gyro", "r_arm_ft_gyro", "l_leg_ft_gyro", "r_leg_ft_gyro")</param>
-            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor", "l_leg_ft_sensor", "r_leg_ft_sensor")</param>
+            <param name="names">("l_arm_ft_gyro", "r_arm_ft_gyro")</param>
+            <param name="frames">("l_arm_ft_sensor", "r_arm_ft_sensor")</param>
         </group>
 
         <group name="EXTERNAL_CONTACT">
@@ -53,8 +53,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="InertialSensors">
-          <param name="accelerometers_list">(l_arm_ft_acc, r_arm_ft_acc, l_leg_ft_acc, r_leg_ft_acc)</param>
-          <param name="gyroscopes_list">(l_arm_ft_gyro, r_arm_ft_gyro, l_leg_ft_gyro, r_leg_ft_gyro)</param>
+          <param name="accelerometers_list">(l_arm_ft_acc, r_arm_ft_acc)</param>
+          <param name="gyroscopes_list">(l_arm_ft_gyro, r_arm_ft_gyro)</param>
         </group>
     </group>
 
@@ -118,8 +118,8 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
              <param name="dynamics_list">
                  ("JOINT_VELOCITY", "MOTOR_CURRENT"
-                  "LEFT_ARM_ACC", "RIGHT_ARM_ACC", "LEFT_LEG_ACC", "RIGHT_LEG_ACC",
-                  "LEFT_ARM_GYRO", "RIGHT_ARM_GYRO", "LEFT_LEG_GYRO", "RIGHT_LEG_GYRO")
+                  "LEFT_ARM_ACC", "RIGHT_ARM_ACC",
+                  "LEFT_ARM_GYRO", "RIGHT_ARM_GYRO")
               </param>
              <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
@@ -204,7 +204,7 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">torso-mc_remapper</elem>
             <elem name="arms_ft_sensors">arms-FT_remapper</elem>
-            <elem name="no_feet_imu_sensors">no_feet-imu_remapper</elem>
+            <elem name="arms_imu_sensors">arms-imu_remapper</elem>
             <elem name="torso-eb5-j0_2">torso-eb5-j0_2-mc</elem>
         </paramlist>
     </action>
