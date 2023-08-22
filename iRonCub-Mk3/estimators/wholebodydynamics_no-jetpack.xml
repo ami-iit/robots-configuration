@@ -5,7 +5,7 @@
     <device name="secondaryCalibration_l_arm_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  l_arm_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/4th_order_dummy.xml" />
+        <xi:include href="./ft_secondary_calibration_models/leftArm_ft_models/3rd_degree.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
