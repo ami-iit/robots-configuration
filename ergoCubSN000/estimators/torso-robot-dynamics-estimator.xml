@@ -64,8 +64,7 @@ BSD-3-Clause license. -->
         <param name="kappa">0.0</param>
         <group name="UKF_STATE">
              <param name="dynamics_list">
-                 ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE",
-                  "LEFT_ARM_FT", "RIGHT_ARM_FT",
+                 ("JOINT_VELOCITY", "MOTOR_TORQUE", "FRICTION_TORQUE"
                   "LEFT_ARM_CONTACT", "RIGHT_ARM_CONTACT")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
@@ -83,8 +82,8 @@ BSD-3-Clause license. -->
              </group>
              <group name="FRICTION_TORQUE">
                 <param name="name">tau_F</param>
-                <param name="covariance">(1e-4, 1e-4, 1e-4)</param>
-                <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
+                <param name="covariance">(1e-5, 1e-5, 1e-5)</param>
+                <param name="initial_covariance">(0.00001, 0.00001, 0.00001)</param>
                 <param name="friction_k0">(0.001, 0.001, 0.01)</param>
                 <param name="friction_k1">(0.001, 0.001, 0.01)</param>
                 <param name="friction_k2">(0.0, 0.0, 0.0)</param>
@@ -118,8 +117,7 @@ BSD-3-Clause license. -->
 
         <group name="UKF_MEASUREMENT">
              <param name="dynamics_list">
-                 ("JOINT_VELOCITY", "MOTOR_CURRENT",
-                  "LEFT_ARM_FT", "RIGHT_ARM_FT"
+                 ("JOINT_VELOCITY", "MOTOR_CURRENT"
                   "LEFT_ARM_ACC", "RIGHT_ARM_ACC", "LEFT_LEG_ACC", "RIGHT_LEG_ACC",
                   "LEFT_ARM_GYRO", "RIGHT_ARM_GYRO", "LEFT_LEG_GYRO", "RIGHT_LEG_GYRO")
               </param>
