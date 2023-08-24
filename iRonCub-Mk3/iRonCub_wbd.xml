@@ -90,8 +90,6 @@
    <xi:include href="hardware/FT/left_leg-eb8-j3_5-strain.xml" />
    <xi:include href="hardware/FT/right_leg-eb12-j3_5-strain.xml" />
 
-   <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
-   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
    <xi:include href="hardware/FT/left_arm_jetpack-eb1-j0_1-strain.xml" />
    <xi:include href="hardware/FT/right_arm_jetpack-eb3-j0_1-strain.xml" />
 

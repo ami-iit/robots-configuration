@@ -67,7 +67,7 @@
         <param name="contactWrenchType">(    pureKnown        , pureKnown        , pureKnown          , pureKnown          , full     , full     , full     , full        , full         )</param>
         <param name="contactWrenchDirection">(0,0,1           , 0,0,1            , 0,0,1              , 0,0,1              , 0,0,0    , 0,0,0    ,0,0,0     , 0,0,0       , 0,0,0        )</param>
         <param name="contactWrenchPosition">( 0,0,0           , 0,0,0            , 0,0,0              , 0,0,0              , 0,0,0    , 0,0,0    ,0,0,0     , 0,0,0       , 0,0,0        )</param>
-        <param name="imuFrameName">imu_frame</param>
+        <param name="imuFrameName">head_imu</param>
         <param name="forceTorqueEstimateConfidence">2</param>
         <param name="useJointVelocity">true</param>
         <param name="useJointAcceleration">false</param>
