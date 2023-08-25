@@ -86,8 +86,8 @@
     <!--xi:include href="wrappers/FT/left_leg-FT_remapper.xml" /-->
     <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
     <xi:include href="wrappers/FT/arms-FT_remapper.xml" />
-    <!--xi:include href="wrappers/FT/legs-FT_remapper.xml" /-->
-    <!--xi:include href="wrappers/FT/FT_remapper.xml" /-->
+    <xi:include href="wrappers/FT/legs-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/FT_remapper.xml" />
     <xi:include href="wrappers/FT/right_arm-FT_remapper.xml" />
     <xi:include href="wrappers/FT/left_arm-FT_remapper.xml" />
 
@@ -97,9 +97,9 @@
     <!--xi:include href="wrappers/inertials/left_leg-imu_remapper.xml" /-->
     <xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" />
     <xi:include href="wrappers/inertials/arms-imu_remapper.xml" />
-    <!--xi:include href="wrappers/inertials/legs-imu_remapper.xml" /-->
-    <!--xi:include href="wrappers/inertials/no_feet-imu_remapper.xml" /-->
-    <!--xi:include href="wrappers/inertials/imu_remapper.xml" /-->
+    <xi:include href="wrappers/inertials/legs-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/no_feet-imu_remapper.xml" />
+    <xi:include href="wrappers/inertials/imu_remapper.xml" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
@@ -126,7 +126,7 @@
     <xi:include href="wrappers/inertials/right_arm-imu_wrapper.xml" />
     <!--xi:include href="wrappers/inertials/left_leg-imu_wrapper.xml" /-->
     <xi:include href="wrappers/inertials/right_leg-imu_wrapper.xml" />
-    <!--xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" /-->
+    <xi:include href="wrappers/inertials/left_foot-imu_wrapper.xml" />
     <xi:include href="wrappers/inertials/right_foot-imu_wrapper.xml" />
 
     <!-- BATTERY-->
