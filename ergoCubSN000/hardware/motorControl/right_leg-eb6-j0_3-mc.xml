@@ -117,7 +117,7 @@
         <param name="outputType">          current                      </param>
         <param name="fbkControlUnits">     metric_units                 </param>
         <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">             450       -600        1500       1400       </param>
+        <param name="kp">             450       -600        1500       800       </param>
         <param name="kd">             0          0           0           0         </param>
         <param name="ki">             25        -100        1000        200       </param>
         <param name="maxOutput">      2500       2500        7000      2500      </param>

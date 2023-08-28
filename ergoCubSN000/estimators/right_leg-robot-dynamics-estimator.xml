@@ -71,13 +71,13 @@ BSD-3-Clause license. -->
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-2, 1e-3, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">JointVelocityStateDynamics</param>
              </group>
              <group name="MOTOR_TORQUE">
                 <param name="name">tau_m</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-4, 1e-2, 1e-4)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-3, 1e-2, 1e-4)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
@@ -85,9 +85,9 @@ BSD-3-Clause license. -->
                 <param name="name">tau_F</param>
                 <param name="covariance">(1e-3, 1e-3, 1e-2, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="friction_k0">(7.92, 9.0, 4.53, 13.13, 11.34, 2.38)</param>
+                <param name="friction_k0">(7.92, 9.0, 4.53, 9.13, 11.34, 2.38)</param>
                 <param name="friction_k1">(5.73, 5.71, 4.67, 2.75, 12.52, 4.0)</param>
-                <param name="friction_k2">(1.68, 0.55, 0.53, 6.12, 0.52, 0.32)</param>
+                <param name="friction_k2">(1.68, 0.55, 0.53, 2.12, 0.52, 0.32)</param>
                 <!--param name="friction_k0">(7.92, 9.0, 4.53, 13.13, 11.34, 2.38)</param>
                 <param name="friction_k1">(5.73, 10.71, 4.67, 2.75, 12.52, 4.0)</param>
                 <param name="friction_k2">(1.68, 1.55, 0.53, 6.12, 0.52, 0.32)</param-->
