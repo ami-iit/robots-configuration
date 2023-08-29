@@ -71,23 +71,23 @@ BSD-3-Clause license. -->
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-2, 1e-3, 1e-2)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">JointVelocityStateDynamics</param>
              </group>
              <group name="MOTOR_TORQUE">
                 <param name="name">tau_m</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-3, 1e-2, 1e-4)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-4)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
              <group name="FRICTION_TORQUE">
                 <param name="name">tau_F</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-2, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="friction_k0">(7.92, 9.0, 4.53, 9.13, 11.34, 2.38)</param>
-                <param name="friction_k1">(5.73, 5.71, 4.67, 2.75, 12.52, 4.0)</param>
-                <param name="friction_k2">(1.68, 0.55, 0.53, 2.12, 0.52, 0.32)</param>
+                <param name="friction_k0">(7.92, 5.0, 4.53, 9.13, 5.34, 2.38)</param>
+                <param name="friction_k1">(5.73, 5.71, 4.67, 2.75, 5.52, 4.0)</param>
+                <param name="friction_k2">(1.68, 0.3, 0.53, 2.12, 0.52, 0.32)</param>
                 <!--param name="friction_k0">(7.92, 9.0, 4.53, 13.13, 11.34, 2.38)</param>
                 <param name="friction_k1">(5.73, 10.71, 4.67, 2.75, 12.52, 4.0)</param>
                 <param name="friction_k2">(1.68, 1.55, 0.53, 6.12, 0.52, 0.32)</param-->
@@ -101,13 +101,13 @@ BSD-3-Clause license. -->
              </group>
              <group name="RIGHT_FOOT_FRONT_FT">
                 <param name="name">r_foot_front_ft_sensor</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-5, 1e-5, 1e-5)</param>
+                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-5, 1e-5, 1e-5)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
              <group name="RIGHT_FOOT_REAR_FT">
                 <param name="name">r_foot_rear_ft_sensor</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-5, 1e-5, 1e-5)</param>
+                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-5, 1e-5, 1e-5)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
@@ -155,13 +155,13 @@ BSD-3-Clause license. -->
              </group>
              <group name="RIGHT_FOOT_FRONT_CONTACT">
                 <param name="name">r_foot_front</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-2, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.1, 0.1, 0.1, 0.1, 0.1, 0.1)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
              <group name="RIGHT_FOOT_REAR_CONTACT">
                 <param name="name">r_foot_rear</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-2, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.1, 0.1, 0.1, 0.1, 0.1, 0.1)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
              </group>
@@ -178,12 +178,12 @@ BSD-3-Clause license. -->
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-4, 1e-4, 1e-4, 1e-3)</param>
+                <param name="covariance">(1e-3, 1e-2, 1e-3, 1e-2, 1e-3, 1e-2)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
              </group>
              <group name="MOTOR_CURRENT">
                 <param name="name">i_m</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="gear_ratio">(100.0, -160.0, 100.0, 100.0, 100.0, 160.0)</param>
                 <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.025)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
@@ -226,19 +226,19 @@ BSD-3-Clause license. -->
              </group>
              <group name="RIGHT_LEG_GYRO">
                 <param name="name">r_leg_ft_gyro</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
              </group>
              <group name="RIGHT_FOOT_FRONT_GYRO">
                 <param name="name">r_foot_front_ft_gyro</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
              </group>
              <group name="RIGHT_FOOT_REAR_GYRO">
                 <param name="name">r_foot_rear_ft_gyro</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
              </group>
