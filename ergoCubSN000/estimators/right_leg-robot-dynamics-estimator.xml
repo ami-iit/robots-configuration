@@ -71,7 +71,7 @@ BSD-3-Clause license. -->
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-2, 1e-3, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-2, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">JointVelocityStateDynamics</param>
              </group>
@@ -178,12 +178,12 @@ BSD-3-Clause license. -->
                                       "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
              <group name="JOINT_VELOCITY">
                 <param name="name">ds</param>
-                <param name="covariance">(1e-3, 1e-2, 1e-3, 1e-2, 1e-3, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-2, 1e-3, 1e-2, 1e-3, 1e-3)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
              </group>
              <group name="MOTOR_CURRENT">
                 <param name="name">i_m</param>
-                <param name="covariance">(1e-2, 1e-3, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-2, 1e-3, 1e-2, 1e-2, 1e-2, 1e-3)</param>
                 <param name="gear_ratio">(100.0, -160.0, 100.0, 100.0, 100.0, 160.0)</param>
                 <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.025)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
