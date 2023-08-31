@@ -27,8 +27,6 @@
 
     <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" />
-    <xi:include href="wrappers/motorControl/left_leg-mc_remapper_wbd.xml" />
-    <xi:include href="wrappers/motorControl/right_leg-mc_remapper_wbd.xml" />
 
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
@@ -83,6 +81,8 @@
     <!-- FT SENSORS - REMAPPERS -->
     <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
     <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_remapper_wbd.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_remapper_wbd.xml" />
 
     <!-- FT SENSORS - MULTIPLE ANALOG SENSOR SERVERS -->
     <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
