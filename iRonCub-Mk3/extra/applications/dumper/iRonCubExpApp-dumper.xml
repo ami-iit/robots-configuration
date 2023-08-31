@@ -6,11 +6,11 @@
     <name>iRonCubExpApp-dumper</name>
 
     <application>
-       <name>iRonCubApp-logger</name>
+        <name>iRonCubApp-turbines-dumper</name>
     </application>
 
     <application>
-        <name>iRonCubApp-turbines-dumper</name>
+       <name>iRonCubApp-logger</name>
     </application>
 
     <application>
