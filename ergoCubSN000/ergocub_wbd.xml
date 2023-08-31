@@ -27,6 +27,8 @@
 
     <xi:include href="wrappers/motorControl/left_leg-mc_remapper.xml" />
     <xi:include href="wrappers/motorControl/right_leg-mc_remapper.xml" />
+    <xi:include href="wrappers/motorControl/left_leg-mc_remapper_wbd.xml" />
+    <xi:include href="wrappers/motorControl/right_leg-mc_remapper_wbd.xml" />
 
     <xi:include href="wrappers/motorControl/right_arm-mc_wrapper.xml" />
 
