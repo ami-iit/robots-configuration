@@ -64,7 +64,7 @@
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
         <param name="defaultContactFrames">(l_elbow_1,chest_l_jet_turbine,chest_r_jet_turbine,r_elbow_1,root_link,l_sole,r_sole,l_ankle_1,r_ankle_1,l_foot_front,r_foot_front)</param>
         <param name="overrideContactFrames">(l_arm_jet_turbine, r_arm_jet_turbine, chest_l_jet_turbine, chest_r_jet_turbine, root_link, l_foot_rear, r_foot_rear, l_foot_front, r_foot_front)</param>
-        <param name="contactWrenchType">(    pureKnown        , pureKnown        , pureKnown          , pureKnown          , full     , full     , full     , full        , full         )</param>
+        <param name="contactWrenchType">(    pure             , pure             , pure               , pure               , full     , full     , full     , full        , full         )</param>
         <param name="contactWrenchDirection">(0,0,1           , 0,0,1            , 0,0,1              , 0,0,1              , 0,0,0    , 0,0,0    ,0,0,0     , 0,0,0       , 0,0,0        )</param>
         <param name="contactWrenchPosition">( 0,0,0           , 0,0,0            , 0,0,0              , 0,0,0              , 0,0,0    , 0,0,0    ,0,0,0     , 0,0,0       , 0,0,0        )</param>
         <param name="imuFrameName">head_imu</param>
@@ -134,36 +134,6 @@
             <param name="enableGravityCompensation">true</param>
             <param name="gravityCompensationBaseLink">root_link</param>
             <param name="gravityCompensationAxesNames">(torso_roll,torso_pitch,torso_yaw,neck_pitch,neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
-        </group>
-
-	<group name="FT_SECONDARY_CALIBRATION">
-            <param name="l_arm_ft">
-                   (0.725416845954673,-0.193734889477843,-0.000750660116279,-0.493389204924643,0.208721401684598,0.232216866114498,
-                    0.277911482834144,0.721669682720518,0.079744273870858,-0.551806684320880,0.340796536112566,-0.095726506086055,
-                    0.058512691880839,-0.026259245359369,0.961054892438277,-0.001672588061163,-0.040144684119862,0.028904858845599,
-                   -0.020613636226550,-0.000266355692161,-0.007106353837195,0.946152056949401,0.006557550768685,-0.007743541248609,
-                   -0.008033431507184,-0.014085700626405,-0.001511524718360,-0.024058394170065,1.013549946399498,0.038013125881714,
-                    0.000422242850389,-0.004114883067249,0.000064277247963,0.012455688813988,-0.013878080964184,0.987572790828476)
-            </param>
-
-            <param name="r_arm_ft">
-                    (0.794940626500074,0.125334287778540,-0.062869746776510,-0.305980690332562,0.011226779742047,-0.367504489060532,
-                    -0.166608779053738,0.478035535864582,-0.100426896898395,-1.880708606173178,-0.623814944550364,-0.291467179541353,
-                    0.107573784081792,-0.023994376340728,0.945781778888619,-0.613317179977426,0.101165492337217,0.015351248214599,
-                    0.021654259542665,-0.008118109296448,0.006670961098080,0.919220433950450,0.113948085666806,-0.026813977125476,
-                    0.000471068156428,0.022745520574837,-0.006448547444577,-0.012385371036635,0.937413904365554,-0.065360176579440,
-                    -0.006437481106495,-0.006632744841387,0.005000810887091,0.022918420572894,0.071080838345348,1.011184967613884)
-            </param>
-        </group>
-
-        <group name="FT_OFFSET">
-            <param name="l_arm_ft">
-                   (-55.710365859965009,-19.782075036167221,-7.821819529447135,1.524292098125204,2.055306999014841,-0.143741677610297)
-            </param>
-
-            <param name="r_arm_ft">
-                    (-73.639860156269819,24.072660497240438,-28.817082293698117,-1.928682746629074,1.760186171442543,0.723043880391045)
-            </param>
         </group>
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
