@@ -8,6 +8,10 @@
     </dependencies>
 
     <application>
+        <name>testbench-dumper</name>
+    </application>
+
+    <application>
         <name>testbench-loadcell</name>
     </application>
 
