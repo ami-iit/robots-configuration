@@ -7,28 +7,16 @@
     <dependencies>
     </dependencies>
 
-    <module>
-		<name>yarpdev</name>
-		<parameters>yarpdev --device futekmcc128interface --nLoadCells 1 </parameters>
-		<node>ironpiTestbench</node>
-	</module>
+    <application>
+        <name>testbench-loadcell</name>
+    </application>
 
-    <module>
-		<name>yarpdev</name>
-		<parameters>--device opencv_grabber --name /image1:o --camera 0 --width 640 --height 480 </parameters>
-		<node>ironpiTestbench</node>
-	</module>
+    <application>
+        <name>testbench-turbine</name>
+    </application>
 
-    <module>
-		<name>yarpview</name>
-		<parameters>--name /camera1:i </parameters>
-		<node>ironcub-pilot</node>
-	</module>
-
-    <connection>
-		<from>/image1:o</from>
-		<to>/camera1:i</to>
-		<protocol>mjpeg</protocol>
-	</connection>
+    <application>
+        <name>testbench-webcams</name>
+    </application>
 
 </application>

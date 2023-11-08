@@ -1,0 +1,22 @@
+<application>
+<name>testbench-turbine</name>
+
+<var name="generic_node_1">ironcub-pilot</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________Turbines related stuff_______________________ -->
+	<module>
+		<name>yarprobotinterface</name>
+		<parameters>--config main2-serial-usb-testbench.xml </parameters>
+		<node>ironpiTestbench</node>
+	</module>
+
+	<module>
+		<name>jets-GUI</name>
+		<node>${generic_node_1}</node>
+	</module>
+
+    
+</application>
