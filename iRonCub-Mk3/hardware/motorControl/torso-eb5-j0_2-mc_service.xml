@@ -37,7 +37,7 @@
                 </group>                                                            
                                                                                     
                 <group name="ENCODER1">                                             
-                    <param name="type">             amo                 amo                 amo                 </param>  
+                    <param name="type">             amo                 amo                 none                </param>
                     <param name="port">             CONN:P7             CONN:P8             CONN:P6             </param>
                     <param name="position">         atjoint             atjoint             atjoint             </param>
                     <param name="resolution">       1048576             1048576             1048576             </param> 
