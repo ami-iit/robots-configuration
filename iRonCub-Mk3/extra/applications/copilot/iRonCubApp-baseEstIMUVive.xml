@@ -11,7 +11,7 @@
     <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
     <module>
 		<name>yarpdev</name>
-        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial_mas --period 5 --subdevice xsensmt --serial /dev/ttyS0 --xsensmt_period 0.01 --xsensmt_gyro_period 0.005 --xsensmt_euler_period 0.005</parameters>
+        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial_mas --period 10 --subdevice xsensmt --serial /dev/ttyS0 --xsensmt_period 0.01 --xsensmt_gyro_period 0.01 --xsensmt_euler_period 0.01</parameters>
 		<node>${generic_node_3}</node>
 	</module>
 
