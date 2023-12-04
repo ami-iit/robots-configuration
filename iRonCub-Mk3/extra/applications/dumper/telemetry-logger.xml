@@ -2,7 +2,7 @@
 
   <name>iRonCubApp-logger</name>
 
-  <var name="logging_laptop">ironLogger</var>
+  <var name="logging_laptop">ironcub-pilot</var>
 
   <!-- Logger -->
   <module>
