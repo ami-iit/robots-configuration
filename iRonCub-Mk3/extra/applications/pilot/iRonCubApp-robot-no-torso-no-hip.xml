@@ -1,5 +1,5 @@
 <application>
-<name>iRonCubApp-robot-pilot-all-joints</name>
+<name>iRonCubApp-robot-pilot-no-torso-no-hip</name>
 
         <dependencies>
         </dependencies>
@@ -7,7 +7,7 @@
         <module>
                 <name>yarprobotinterface</name>
                 <environment>YARP_LOG_PROCESS_LABEL=robotinterface</environment>
-                <parameters>--config iRonCub_wbd_no-jetpack.xml</parameters>
+                <parameters>--config iRonCub_wbd_no-jetpack_no-torso-hip-pitch-roll.xml</parameters>
                 <node>icub-head</node>
         </module>
 
