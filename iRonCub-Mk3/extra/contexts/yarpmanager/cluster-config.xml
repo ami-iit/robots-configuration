@@ -1,7 +1,7 @@
 <cluster name="ironcubmk3" user="icub">
 
 <!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
-<nameserver namespace="/eth" node="10.0.2.2" type="yarpserver"> </nameserver>
+<nameserver namespace="/icub09_eth" node="10.0.2.2" type="yarpserver"> </nameserver>
 
 <!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
 this is usually the value of the DISPLAY variable when logged on -->
@@ -9,10 +9,10 @@ this is usually the value of the DISPLAY variable when logged on -->
 <node user="icub" address="10.0.2.2">icub-head</node>
 <node user="icub" address="10.0.2.3">icub-cam-head</node>
 <node user="icub" display=":1" address="10.0.2.4">ironcub-pilot</node>
-<node user="icub" display=":1" address="10.0.0.150">ironcub-copilot</node>
+<node user="icub" display=":1" address="10.0.2.5">ironcub-copilot</node>
 <node user="ironcub" display=":1" address="10.0.0.170">alienCub</node>
-<node user="ironcub" display=":1" address="10.0.0.200">ironLogger</node>
-<node user="ironpi" address="10.0.0.160">ironpiWebcam</node>
+<node user="ironcub" display=":1" address="10.0.2.6">ironLogger</node>
+<node user="ironpi" address="10.0.2.160">ironpiWebcam</node>
 <node user="ironpi" address="10.0.0.155">ironpiTestbench</node>
 
 </cluster>
