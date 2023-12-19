@@ -11,8 +11,8 @@ this is usually the value of the DISPLAY variable when logged on -->
 <node user="icub" display=":1" address="10.0.2.4">ironcub-pilot</node>
 <node user="icub" display=":1" address="10.0.2.5">ironcub-copilot</node>
 <node user="ironcub" display=":1" address="10.0.0.170">alienCub</node>
-<node user="ironcub" display=":1" address="10.0.0.200">ironLogger</node>
-<node user="ironpi" address="10.0.0.160">ironpiWebcam</node>
+<node user="ironcub" display=":1" address="10.0.2.6">ironLogger</node>
+<node user="ironpi" address="10.0.2.160">ironpiWebcam</node>
 <node user="ironpi" address="10.0.0.155">ironpiTestbench</node>
 
 </cluster>
