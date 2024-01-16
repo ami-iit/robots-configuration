@@ -98,6 +98,8 @@
     <xi:include href="wrappers/inertials/head-imuFilter.xml" /> -->
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
+    <xi:include href="wrappers/inertials/chest-inertials_wrapper.xml" />
+    <xi:include href="hardware/inertials/chest-inertial.xml" />
 <!--    <xi:include href="hardware/inertials/left_leg-eb7-IMU.xml" />
     <xi:include href="wrappers/inertials/left_leg-IMU_wrapper.xml" />
     <xi:include href="hardware/inertials/left_leg-eb8-IMU.xml" />
