@@ -3,7 +3,7 @@
 
 <devices robot="@WBD_YARP_ROBOT_NAME@" build="1">
     <device name="secondaryCalibration_l_arm_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.01      </param> <!-- in seconds-->
+        <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  l_arm_ft  </param>
         <xi:include href="./ft_secondary_calibration_models/leftArm_ft_models/3rd_degree.xml" />
 
@@ -17,7 +17,7 @@
     </device>
 
     <device name="secondaryCalibration_r_arm_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.01      </param> <!-- in seconds-->
+        <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  r_arm_ft  </param>
         <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/4th_order_dummy.xml" />
 
@@ -50,7 +50,7 @@
         <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
         <param name="startWithZeroFTSensorOffsets">true</param> <!-- bypass using resetOffset of FT sensors in simulation -->
         <param name="useSkinForContacts">false</param>
-        <param name="devicePeriodInSeconds">0.01</param>
+        <param name="devicePeriodInSeconds">0.002</param>
         <param name="estimateJointVelocityAcceleration">false</param>  <!-- if true a kf will estimate the joint velocities and accelerations -->
         <param name="processNoiseCovariance">(1.0e-3, 1.0e-3, 1.0e-3,
                                               1.0e-3, 1.0e-3, 1.0e-3,
