@@ -7,6 +7,7 @@ option(INSTALL_ALL_IRONCUB_VERSIONS "Install all variations of iRonCub robots." 
 
 if(INSTALL_ALL_IRONCUB_VERSIONS)
     set(robot_list iRonCub-Mk3 iRonCub-Mk3-FT-ARMS) #Add to the list other iRonCub3 versions (that share the same configuration files)
+    set(robot_list iRonCub-Mk3 iRonCub-Mk3-WALKING-TURBINES) #Add to the list other iRonCub3 versions (that share the same configuration files)
 else()
     set(robot_list iRonCub-Mk3) #install only iRonCub-Mk3
 endif()
