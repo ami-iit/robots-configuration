@@ -6,7 +6,7 @@ file(GLOB ini ${CMAKE_CURRENT_SOURCE_DIR}/*.ini)
 option(INSTALL_ALL_IRONCUB_VERSIONS "Install all variations of iRonCub robots." TRUE)
 
 if(INSTALL_ALL_IRONCUB_VERSIONS)
-    set(robot_list iRonCub-Mk3 iRonCub-Mk3-FT-ARMS) #Add to the list other iRonCub3 versions (that share the same configuration files)
+    set(robot_list iRonCub-Mk3 iRonCub-Mk3-FT-ARMS iRonCub-Mk3-WALKING-TURBINES iRonCub-Mk3-WALKING-NO-TURBINES) #Add to the list other iRonCub3 versions (that share the same configuration files)
 else()
     set(robot_list iRonCub-Mk3) #install only iRonCub-Mk3
 endif()
