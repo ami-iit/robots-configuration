@@ -13,7 +13,7 @@
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <elem name="right_leg-eb6-j0_3-strain">  right_leg-eb6-j0_3-strain </elem>
+                <elem name="right_leg-eb6-j0_3-strain">  r_leg_ft_calibrated </elem>
                 <elem name="right_leg-eb7-j4_5-strain">  right_leg-eb7-j4_5-strain </elem>
             </paramlist>
         </action>
