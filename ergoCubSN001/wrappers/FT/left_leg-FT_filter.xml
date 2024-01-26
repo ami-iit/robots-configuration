@@ -6,7 +6,7 @@
   <param name="sensorName">  l_leg_ft  </param>
   <xi:include href="./second_calibration_models/left_leg-eb8-j0_3/np3_ny6_nu7_na0_nb0.xml" />
 
-  <action phase="startup" level="6" type="attach">
+  <action phase="startup" level="5" type="attach">
     <paramlist name="networks">
       <!-- ft -->
       <elem name="left_leg-eb8-j0_3-strain">  left_leg-eb8-j0_3-strain </elem>
