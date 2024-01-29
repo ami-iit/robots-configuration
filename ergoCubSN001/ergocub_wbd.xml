@@ -80,7 +80,7 @@
 
     <!-- FT SENSORS - SECONDARY CALIBRATION -->
     <xi:include href="wrappers/FT/left_leg-FT_filter.xml" />
-    <xi:include href="wrappers/FT/right_leg-FT_filter.xml" />    
+    <xi:include href="wrappers/FT/right_leg-FT_filter.xml" />
 
     <!-- FT SENSORS - REMAPPERS -->
     <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" />
@@ -91,6 +91,12 @@
     <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" />
     <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
+
+    <!-- FT SENSORS - RAW FTS -->
+    <xi:include href="wrappers/FT/left_leg-FT_wrapper_raw.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_wrapper_raw.xml" />
+    <xi:include href="wrappers/FT/left_leg-FT_remapper_raw.xml" />
+    <xi:include href="wrappers/FT/right_leg-FT_remapper_raw.xml" />
 
 
     <!-- INERTIAL SENSOR 
