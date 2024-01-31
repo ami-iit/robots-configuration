@@ -138,7 +138,7 @@
         <param name="coulombNeg">     0          0         </param>
         <param name="velocityThres">  0.1      0.1         </param>
         <param name="filterType">     0          0         </param>
-        <param name="ktau">           50        -100       </param>
+        <param name="ktau">          150        -100       </param>
     </group>
     <!-- custom PIDs: end -->
 
