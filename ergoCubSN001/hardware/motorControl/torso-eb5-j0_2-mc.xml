@@ -118,26 +118,26 @@
     </group>
     
     <group name="TRQ_PID_OUTPUT_CURR">
-        <param name="controlLaw">          torque                       </param>
-        <param name="outputType">          current                      </param>
-        <param name="fbkControlUnits">     metric_units                 </param>
-        <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">             300          300     -300       </param>
-        <param name="kd">             0          0         0          </param>
-        <param name="ki">             20          20       -20        </param>
-        <param name="maxOutput">      2500       2500      2500        </param>
-        <param name="maxInt">         200        200       200        </param>
-        <param name="ko">             0          0         0             </param>
-        <param name="stictionUp">     0          0         0            </param>
-        <param name="stictionDown">   0          0         0          </param>
-        <param name="kff">            1          1         1           </param>
-	<param name="viscousPos">     0         0           0       </param>
-	<param name="viscousNeg">     0         0           0      </param>
-        <param name="coulombPos">     0         0           0       </param>	
-	<param name="coulombNeg">    0         0           0       </param>	
-        <param name="velocityThres">  0.1        0.1       0.1        </param>
-        <param name="filterType">     0          0         0        </param>
-        <param name="ktau">           176      176        -176     </param>
+        <param name="controlLaw">            torque                       </param>
+        <param name="outputType">            current                      </param>
+        <param name="fbkControlUnits">       metric_units                 </param>
+        <param name="outputControlUnits">    machine_units                </param>
+        <param name="kp">                  0          -0        -0        </param>
+        <param name="kd">                  0          -0         0        </param>
+        <param name="ki">                  0          0         -0        </param>
+        <param name="maxOutput">         2500       2500      2500        </param>
+        <param name="maxInt">             200        200       200        </param>
+        <param name="ko">                  0          0         0         </param>
+        <param name="stictionUp">          0          0         0         </param>
+        <param name="stictionDown">        0          0         0         </param>
+        <param name="kff">                 1          1         1         </param>
+        <param name="viscousPos">          0         0           0        </param>
+        <param name="viscousNeg">          0         0           0        </param>
+        <param name="coulombPos">          0         0           0        </param>	
+        <param name="coulombNeg">          0         0           0        </param>	
+        <param name="velocityThres">       0.1        0.1       0.1       </param>
+        <param name="filterType">          0          0         0         </param>
+        <param name="ktau">               250      -250        -200       </param>
     </group>
 
     <!-- other default PIDs: end -->
