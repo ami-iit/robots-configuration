@@ -58,6 +58,62 @@
         <action phase="shutdown" level="2" type="detach" />
     </device>
 
+    <device name="secondaryCalibration_l_foot_front_ft" type="ftSecondaryCalibImpl">
+        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="sensorName">  l_foot_front_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/1st_order_dummy.xml" />
+
+        <action phase="startup" level="6" type="attach">
+            <paramlist name="networks">
+                <!-- ft -->
+                <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem> <!-- left_foot_front, left_foot_rear -->
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="2" type="detach" />
+    </device>
+
+    <device name="secondaryCalibration_r_foot_front_ft" type="ftSecondaryCalibImpl">
+        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="sensorName">  r_foot_front_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/1st_order_dummy.xml" />
+
+        <action phase="startup" level="6" type="attach">
+            <paramlist name="networks">
+                <!-- ft -->
+                <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem> <!-- right_foot_front, right_foot_rear -->
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="2" type="detach" />
+    </device>
+
+    <device name="secondaryCalibration_l_foot_rear_ft" type="ftSecondaryCalibImpl">
+        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="sensorName">  l_foot_rear_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/1st_order_dummy.xml" />
+
+        <action phase="startup" level="6" type="attach">
+            <paramlist name="networks">
+                <!-- ft -->
+                <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem> <!-- left_foot_front, left_foot_rear -->
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="2" type="detach" />
+    </device>
+
+    <device name="secondaryCalibration_r_foot_rear_ft" type="ftSecondaryCalibImpl">
+        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="sensorName">  r_foot_rear_ft  </param>
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/1st_order_dummy.xml" />
+
+        <action phase="startup" level="6" type="attach">
+            <paramlist name="networks">
+                <!-- ft -->
+                <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem> <!-- right_foot_front, right_foot_rear -->
+            </paramlist>
+        </action>
+        <action phase="shutdown" level="2" type="detach" />
+    </device>
+
     <device name="wholebodydynamics" type="wholebodydynamics">
         <param name="axesNames">(torso_pitch,torso_roll,torso_yaw,neck_pitch, neck_roll,neck_yaw,l_shoulder_pitch,l_shoulder_roll,l_shoulder_yaw,l_elbow,r_shoulder_pitch,r_shoulder_roll,r_shoulder_yaw,r_elbow,l_hip_pitch,l_hip_roll,l_hip_yaw,l_knee,l_ankle_pitch,l_ankle_roll,r_hip_pitch,r_hip_roll,r_hip_yaw,r_knee,r_ankle_pitch,r_ankle_roll)</param>
         <param name="modelFile">model.urdf</param>
@@ -180,10 +236,10 @@
                 <elem name="l_jet_sensor">secondaryCalibration_l_jet_ft</elem>
                 <elem name="r_jet_sensor">secondaryCalibration_r_jet_ft</elem>
 
-                <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem> <!-- left_rear, left_front -->
-                <!--elem name="l_leg_ft_sensor">left_leg-eb7-j0_2-strain</elem-->    <!-- left_upper_leg -->
-                <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem> <!-- right_rear, right_front -->
-                <!--elem name="r_leg_ft_sensor">right_leg-eb11-j0_2-strain</elem-->    <!-- right_upper_leg -->
+                <elem name="l_foot_front_sensor">secondaryCalibration_l_foot_front_ft</elem> <!-- left_front -->
+                <elem name="r_foot_front_sensor">secondaryCalibration_r_foot_front_ft</elem> <!-- right_front -->
+                <elem name="l_foot_rear_sensor">secondaryCalibration_l_foot_rear_ft</elem> <!-- left_rear -->
+                <elem name="r_foot_rear_sensor">secondaryCalibration_r_foot_rear_ft</elem> <!-- right_rear -->
 
             </paramlist>
         </action>
