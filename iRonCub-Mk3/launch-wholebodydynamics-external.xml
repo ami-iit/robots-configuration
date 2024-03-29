@@ -34,8 +34,8 @@
     </device>
 
     <!-- imu -->
-    <device name="head-inertial-client" type="multipleanalogsensorsclient">
-        <param name="remote"> /icub/head/inertials </param>
+    <device name="chest-inertial-client" type="multipleanalogsensorsclient">
+        <param name="remote"> /icub/xsens_inertial_mas </param>
         <param name="local"> /wholeBodyDynamics-external/imu </param>
     </device>
 
@@ -51,12 +51,12 @@
     </device>
 
     <device name="left_foot_client" type="multipleanalogsensorsclient">
-        <param name="remote"> /icub/left_foot/FT </param>
+        <param name="remote"> /icub/left_leg/FT </param>
         <param name="local"> /wholeBodyDynamics-external/l_foot_ft </param>
     </device>
 
     <device name="right_foot_client" type="multipleanalogsensorsclient">
-        <param name="remote"> /icub/right_foot/FT </param>
+        <param name="remote"> /icub/right_leg/FT </param>
         <param name="local"> /wholeBodyDynamics-external/r_foot_ft </param>
     </device>
 
