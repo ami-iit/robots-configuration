@@ -22,7 +22,7 @@ export ROBOTS_CONFIGURATION_DIR=${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/robots-c
 alias gotoRobotsConfigurationFolder='cd $ROBOTS_CONFIGURATION_DIR'
 
 #Automatic Joypad configuration
-alias connectToJoypad='sudo expect ${ADDITIONAL_COMMANDS_DIR}/bluetoothConnect.sh 28:9A:4B:08:E1:1B'
+alias connectToJoypad='sudo expect ${ADDITIONAL_COMMANDS_DIR}/bluetoothConnect.sh 28:9A:4B:08:EC:67'
 
 # Go to DCM folder
 alias dcmFolder='cd ${ROBOTOLOGY_SUPERBUILD_SOURCE_DIR}/src/walking-controllers/src/WalkingModule/app/robots/${YARP_ROBOT_NAME}'
@@ -72,4 +72,3 @@ ${GREEN}ping-console-from-head${NC} Start pinging 10.0.0.150 from icub-head in c
 if [ "$PS1" ]; then
   echo -e "Type ${GREEN}helpRobot${NC} for a list of useful commands."
 fi
-
