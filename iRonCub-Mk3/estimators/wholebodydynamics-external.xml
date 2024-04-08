@@ -10,7 +10,7 @@
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="l_arm_jetpack_ft_sensors">left_arm_jetpack-eb1-j0_1-strain</elem> <!-- left_arm, left_jetpack -->
+                <elem name="l_arm_jetpack_ft_sensors">left_arm_client</elem> <!-- left_arm, left_jetpack -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -24,7 +24,7 @@
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="r_arm_jetpack_ft_sensors">right_arm_jetpack-eb3-j0_1-strain</elem> <!-- right_arm, right_jetpack -->
+                <elem name="r_arm_jetpack_ft_sensors">right_arm_client</elem> <!-- right_arm, right_jetpack -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -38,7 +38,7 @@
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="l_arm_jetpack_ft_sensors">left_arm_jetpack-eb1-j0_1-strain</elem> <!-- left_arm, left_jetpack -->
+                <elem name="l_arm_jetpack_ft_sensors">left_arm_client</elem> <!-- left_arm, left_jetpack -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -52,7 +52,7 @@
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="r_arm_jetpack_ft_sensors">right_arm_jetpack-eb3-j0_1-strain</elem> <!-- right_arm, right_jetpack -->
+                <elem name="r_arm_jetpack_ft_sensors">right_arm_client</elem> <!-- right_arm, right_jetpack -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -61,12 +61,12 @@
     <device name="secondaryCalibration_l_foot_front_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  l_foot_front_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/l_foot_front_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/feet_fts_models_regularization/l_foot_front_ft/np2_ny6_nu7_na0_nb0.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem> <!-- left_foot_front, left_foot_rear -->
+                <elem name="l_foot_ft_sensors">left_foot_client</elem> <!-- left_foot_front, left_foot_rear -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -75,12 +75,12 @@
     <device name="secondaryCalibration_r_foot_front_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  r_foot_front_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/r_foot_front_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/feet_fts_models_regularization/r_foot_front_ft/np2_ny6_nu7_na0_nb0.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem> <!-- right_foot_front, right_foot_rear -->
+                <elem name="r_foot_ft_sensors">right_foot_client</elem> <!-- right_foot_front, right_foot_rear -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -89,12 +89,12 @@
     <device name="secondaryCalibration_l_foot_rear_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  l_foot_rear_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/l_foot_rear_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/feet_fts_models_regularization/l_foot_rear_ft/np2_ny6_nu7_na0_nb0.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="l_foot_ft_sensors">left_leg-eb8-j3_5-strain</elem> <!-- left_foot_front, left_foot_rear -->
+                <elem name="l_foot_ft_sensors">left_foot_client</elem> <!-- left_foot_front, left_foot_rear -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -103,12 +103,12 @@
     <device name="secondaryCalibration_r_foot_rear_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.002      </param> <!-- in seconds-->
         <param name="sensorName">  r_foot_rear_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/r_foot_rear_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/feet_fts_models_regularization/r_foot_rear_ft/np2_ny6_nu7_na0_nb0.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
                 <!-- ft -->
-                <elem name="r_foot_ft_sensors">right_leg-eb12-j3_5-strain</elem> <!-- right_foot_front, right_foot_rear -->
+                <elem name="r_foot_ft_sensors">right_foot_client</elem> <!-- right_foot_front, right_foot_rear -->
             </paramlist>
         </action>
         <action phase="shutdown" level="2" type="detach" />
@@ -193,14 +193,14 @@
         </group>
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
-            <param name="/wholeBodyDynamics/left_arm_thrust/cartesianEndEffectorWrench:o">(l_arm_jet_turbine, l_arm_jet_turbine)</param>
-            <param name="/wholeBodyDynamics/right_arm_thrust/cartesianEndEffectorWrench:o">(r_arm_jet_turbine, r_arm_jet_turbine)</param>
-            <param name="/wholeBodyDynamics/left_jet_thrust/cartesianEndEffectorWrench:o">(chest_l_jet_turbine, chest_l_jet_turbine)</param>
-            <param name="/wholeBodyDynamics/right_jet_thrust/cartesianEndEffectorWrench:o">(chest_r_jet_turbine, chest_r_jet_turbine)</param>
-            <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front, l_sole, l_sole)</param>
-            <param name="/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear, l_sole, l_sole)</param>
-            <param name="/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front, r_sole, r_sole)</param>
-            <param name="/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o">(r_foot_rear, r_sole, r_sole)</param>
+            <param name="/wholeBodyDynamics-external/left_arm_thrust/cartesianEndEffectorWrench:o">(l_arm_jet_turbine, l_arm_jet_turbine)</param>
+            <param name="/wholeBodyDynamics-external/right_arm_thrust/cartesianEndEffectorWrench:o">(r_arm_jet_turbine, r_arm_jet_turbine)</param>
+            <param name="/wholeBodyDynamics-external/left_jet_thrust/cartesianEndEffectorWrench:o">(chest_l_jet_turbine, chest_l_jet_turbine)</param>
+            <param name="/wholeBodyDynamics-external/right_jet_thrust/cartesianEndEffectorWrench:o">(chest_r_jet_turbine, chest_r_jet_turbine)</param>
+            <param name="/wholeBodyDynamics-external/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front, l_sole, l_sole)</param>
+            <param name="/wholeBodyDynamics-external/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear, l_sole, l_sole)</param>
+            <param name="/wholeBodyDynamics-external/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front, r_sole, r_sole)</param>
+            <param name="/wholeBodyDynamics-external/right_foot_rear/cartesianEndEffectorWrench:o">(r_foot_rear, r_sole, r_sole)</param>
         </group>
 
          <group name="multipleAnalogSensorsNames">
@@ -212,22 +212,15 @@
         <action phase="startup" level="15" type="attach">
             <paramlist name="networks">
 
-                <elem name="head-j0">head-eb20-j0_1-mc</elem>
-                <elem name="head-j2">head-eb21-j2_5-mc</elem>
-                <elem name="torso">torso-eb5-j0_2-mc</elem>
-                <elem name="left_upper_arm-j0">left_arm-eb1-j0_1-mc</elem>
-                <elem name="left_upper_arm-j2">left_arm-eb2-j2_3-mc</elem>
-                <!-- <elem name="left_lower_arm">left_arm-eb24-j4_7-mc</elem> -->
-                <elem name="right_upper_arm-j0">right_arm-eb3-j0_1-mc</elem>
-                <elem name="right_upper_arm-j2">right_arm-eb4-j2_3-mc</elem>
-                <!-- <elem name="right_lower_arm">right_arm-eb27-j4_7-mc</elem> -->
-                <elem name="left_upper_leg-j0">left_leg-eb7-j0_2-mc</elem>
-                <elem name="left_lower_leg-j2">left_leg-eb8-j3_5-mc</elem>
-                <elem name="right_upper_leg-j0">right_leg-eb11-j0_2-mc</elem>
-                <elem name="right_lower_leg-j2">right_leg-eb12-j3_5-mc</elem>
+                <elem name="head_mc">head_mc</elem>
+                <elem name="torso_mc">torso_mc</elem>
+                <elem name="left_arm_mc">left_arm_mc</elem>
+                <elem name="right_arm_mc">right_arm_mc</elem>
+                <elem name="left_leg_mc">left_leg_mc</elem>
+                <elem name="right_leg_mc">right_leg_mc</elem>
 
                 <!-- imu -->
-                <elem name="imu">chest-inertial</elem>
+                <elem name="imu">chest-inertial-client</elem>
                 <!-- imu_waist -->
 <!--            <elem name="imu">xsensmt-inertial</elem> -->
                 <!-- ft -->
