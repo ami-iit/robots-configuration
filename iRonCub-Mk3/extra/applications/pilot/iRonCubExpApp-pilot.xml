@@ -16,5 +16,13 @@
     <application>
         <name>iRonCubApp-webcams</name>
     </application>
+
+    <application>
+        <name>iRonCubApp-turbines-dumper</name>
+    </application>
+
+    <application>
+       <name>iRonCubApp-logger</name>
+    </application>
     
 </application>
