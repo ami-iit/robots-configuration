@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="battery_wrapper" type="battery_nws_yarp">
     <param name="period">       1.0                     </param>
-    <param name="name">       /ergocub/battery/bat      </param>
+    <param name="name">       /ergocub000/battery/bat      </param>
 
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
