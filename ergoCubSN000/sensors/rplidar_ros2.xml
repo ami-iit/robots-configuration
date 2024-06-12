@@ -25,7 +25,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="laser_wrapper_yarp" type="rangefinder2D_nws_yarp">
         <param name="period">  0.01      </param>
-        <param name="name">    /ergocub/laser:o  </param>
+        <param name="name">    /ergocub000/laser:o  </param>
         <action phase="startup" level="10" type="attach">
             <paramlist name="networks">
             <elem name="laser"> rpLidarS2 </elem>

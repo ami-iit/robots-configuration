@@ -4,7 +4,7 @@
 
     <device xmlns:xi="http://www.w3.org/2001/XInclude" name="head-imuFilter" type="imuFilter">
         <param name="period">       10                  </param>
-        <param name="name">     /imuFilter              </param>
+        <param name="name">     /imuFilter000           </param>
 
 
         <action phase="startup" level="5" type="attach">
