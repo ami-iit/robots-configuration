@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb9-j4_5-jtcvc" type="JointTorqueControlDevice">
+    <param name="remote">  /hijackingTrqCrl  </param>
+    <param name="joint_list"> (  "l_ankle_pitch", "l_ankle_roll"  )</param>
+
+    <group name="TORQUE_CURRENT_PARAMS">
+        <param name="kt">(   0.111,  0.025   )</param>
+        <param name="kfc">(  1.0, 1.0  )</param>
+        <param name="max_curr">(  2.0, 2.0  )</param>
+        <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_COULOMB_VISCOUS_STRIBECK") </param>
+    </group>
+
+    <group name="FRICTION_PINN">
+        <param name="model"> ("", "model.onnx") </param>
+        <param name="history_size"> (0, 25) </param>
+        <param name="thread_number"> 2 </param>
+    </group>
+
+    <group name="FRICTION_COULOMB_VISCOUS">
+        <param name="kv">(  0.0058,   0.000980   )</param>
+        <param name="kc">(  0.1,   0.01  )</param>
+    </group>
+
+    <group name="FRICTION_COULOMB_VISCOUS_STRIBECK">
+        <param name="kv">(   0.1          0.3     )</param>
+        <param name="kc">(   14.828       1.022   )</param>
+        <param name="ks">(   13.0168       1.466   )</param>
+        <param name="ka">(   53.107       12.067  )</param>
+        <param name="vs">(   -0.2147       0.3011  )</param>
+    </group>
+
+    <!-- Warning, still in milliseconds -->
+    <param name="period"> 1 </param>
+
+    <action phase="startup" level="4" type="attach">
+        <paramlist name="networks">
+            <elem name="left_leg_joints2">  left_leg-eb9-j4_5-mc </elem>
+        </paramlist>
+    </action>
+
+    <action phase="shutdown" level="20" type="detach" />
+</device>
