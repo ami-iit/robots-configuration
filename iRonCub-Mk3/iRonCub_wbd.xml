@@ -114,8 +114,8 @@
     <xi:include href="wrappers/inertials/right_arm-IMU_wrapper.xml" />
 
     <!-- ANALOG SENSOR CANBATTERY -->
-    <xi:include href="wrappers/battery/canBattery.xml" />
-    <xi:include href="hardware/battery/canBattery.xml" />
+    <xi:include href="wrappers/battery/battery_bat.xml" />
+    <xi:include href="hardware/battery/battery_bat.xml" />
 
 
     <!--  CALIBRATORS -->
