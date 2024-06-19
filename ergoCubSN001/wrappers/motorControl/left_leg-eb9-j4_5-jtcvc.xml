@@ -14,6 +14,7 @@
     <group name="FRICTION_PINN">
         <param name="model"> ("", "model_349.onnx") </param>
         <param name="history_size"> (0, 25) </param>
+        <param name="input_size"> 2 </param>
         <param name="thread_number"> 2 </param>
     </group>
 
