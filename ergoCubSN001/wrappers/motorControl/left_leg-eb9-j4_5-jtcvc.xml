@@ -6,9 +6,9 @@
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.025   )</param>
-        <param name="kfc">(  1.0, 1.0  )</param>
+        <param name="kfc">(  1.0, 1.2  )</param>
         <param name="max_curr">(  2.0, 2.0  )</param>
-        <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_COULOMB_VISCOUS_STRIBECK") </param>
+        <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_PINN") </param>
     </group>
 
     <group name="FRICTION_PINN">
