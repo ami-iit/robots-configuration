@@ -6,29 +6,34 @@
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.025   )</param>
+        <!--param name="kfc">(  1.0, 0.87  )</param-->
         <param name="kfc">(  1.0, 1.2  )</param>
+        <!--param name="kp">(  1.0, 20.0  )</param-->
+        <param name="kp">(  1.0, 1.0  )</param>
         <param name="max_curr">(  2.0, 2.0  )</param>
         <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_PINN") </param>
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "model_4626batch_7history.onnx") </param>
-        <param name="history_size"> (0, 7) </param>
+        <param name="model"> ("", "model349_batch4316_samples20.onnx") </param>
+        <param name="history_size"> (0, 20) </param>
         <param name="number_of_inputs"> (0, 2) </param>
         <param name="thread_number"> 2 </param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS">
-        <param name="kv">(  0.0058,   0.000980   )</param>
-        <param name="kc">(  0.1,   0.01  )</param>
+        <param name="kv">(  0.0058    0.2144  )</param>
+        <param name="kc">(  0.1       1.4793  )</param>
+        <param name="ka">(  53.107    10.0401 )</param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS_STRIBECK">
-        <param name="kv">(   0.1          0.3     )</param>
-        <param name="kc">(   14.828       1.022   )</param>
-        <param name="ks">(   13.0168       1.466   )</param>
-        <param name="ka">(   53.107       12.067  )</param>
-        <param name="vs">(   -0.2147       0.3011  )</param>
+        <param name="kv">(   0.1          0.322    )</param>
+        <param name="kc">(   14.828       1.0074   )</param>
+        <param name="ks">(   13.0168      3.9698   )</param>
+        <param name="ka">(   53.107       3.4404   )</param>
+        <param name="vs">(   -0.2147      0.2407   )</param>
+        <param name="alpha">(  0.0        0.5746   )</param>
     </group>
 
     <!-- Warning, still in milliseconds -->
