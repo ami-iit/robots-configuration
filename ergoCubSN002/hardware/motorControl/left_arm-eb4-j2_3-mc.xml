@@ -119,11 +119,11 @@
 
     <!-- custom PIDs: begin -->
     <group name="TRQ_PID_OUTPUT_CURR">
-        <param name="controlLaw">          torque                       </param>
-        <param name="outputType">          current                      </param>
-        <param name="fbkControlUnits">     metric_units                 </param>
-        <param name="outputControlUnits">  machine_units                </param>
-        <param name="kp">             0         -200       </param>
+        <param name="controlLaw">          torque          </param>
+        <param name="outputType">          current         </param>
+        <param name="fbkControlUnits">     metric_units    </param>
+        <param name="outputControlUnits">  machine_units   </param>
+        <param name="kp">             0         -0         </param>
         <param name="kd">             0          0         </param>
         <param name="ki">             0          0         </param>
         <param name="maxOutput">      2500       2500      </param>
@@ -136,9 +136,9 @@
         <param name="viscousNeg">     0.0001    -0.0002    </param>
         <param name="coulombPos">     0          0         </param>
         <param name="coulombNeg">     0          0         </param>
-        <param name="velocityThres">  0          0         </param>
+        <param name="velocityThres">  0.1      0.1         </param>
         <param name="filterType">     0          0         </param>
-        <param name="ktau">           50        -300       </param>
+        <param name="ktau">          150        -150       </param>
     </group>
     <!-- custom PIDs: end -->
 
