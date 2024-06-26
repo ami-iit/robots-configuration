@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Pre-commit hook running..."
+AUTHOR_IDENT=$(git var GIT_AUTHOR_IDENT | sed -r 's/( [^ ]+){2}$//')
+COMMITTER_IDENT=$(git var GIT_COMMITTER_IDENT | sed -r 's/( [^ ]+){2}$//')
+
+echo "Author identity: ${AUTHOR_IDENT}"
+echo "Committer identity: ${COMMITTER_IDENT}"
+
+if [ "${AUTHOR_IDENT}" == "${COMMITTER_IDENT}" ]; then
+  echo "Error! Author matched committer: this is not allowed."
+  echo "Please, use the option --author=\"Name Surnaname <user@email.com>\" to specify your identity."
+  exit 1  # Prevent the commit
+fi

@@ -54,11 +54,13 @@
     <xi:include href="wrappers/inertials/head-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/head-inertial.xml" />
 
-    <xi:include href="wrappers/inertials/waist-inertials_remapper.xml" />
-    <xi:include href="wrappers/inertials/waist-inertials_wrapper.xml" />
     <xi:include href="hardware/inertials/waist-inertial.xml" />
-    <xi:include href="hardware/inertials/waist-eb5-inertials.xml" />
-
+    
+    <!-- FT SENSORS - IMU -->
+    <xi:include href="hardware/inertials/left_arm-eb1-IMU.xml" />
+    <xi:include href="hardware/inertials/right_arm-eb3-IMU.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_wrapper.xml" />
+    <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" />
 
     <!-- ANALOG SENSOR MAIS -->
     <xi:include href="wrappers/MAIS/left_arm-mais_wrapper.xml" />
@@ -95,4 +97,3 @@
 
     </devices>
 </robot>
-
