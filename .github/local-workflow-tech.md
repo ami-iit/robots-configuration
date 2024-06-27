@@ -22,7 +22,7 @@ Technicalities underlying the fast-pace local workflow
   ```console
   git config --local user.name "icub-tech-iit-bot"
   git config --local user.email "icub-tech@iit.it"
-  git config --local credential.https://github.com/icub-tech-iit/robots-configuration.git.helper store
+  git config --local credential.https://github.com/icub-tech-iit/robots-configuration.helper store
   ```
   ⚠️ Note the use of the option `--local` to avoid impacting Git globally on the system.
 - In order to push without password, the PAT needs to be provided. The credentials will be stored plainly under `~/.git-credentials`. No worries though, as this PAT has a very narrowed use and impacts a fork that is backed up anyhow by the upstream repository.
