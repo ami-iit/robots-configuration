@@ -1,20 +1,12 @@
 Technicalities underlying the fast-pace local workflow
 ======================================================
 
-## 🔲 Set up the options of the fork repository
-- Create a ruleset that:
-  - Targets all branches.
-  - Restricts updates.
-  - Restricts deletions.
-  - Blocks force pushes.
-- Disable the option `Automatically delete head branches `.
-
 ## 🔲 Clone the fork locally
-- Clone the `icub-tech-iit` fork:
+- Clone the ``icub-tech-iit`` fork
   ```console
   git remote add icub-tech https://github.com/icub-tech-iit/robots-configuration.git
   ```
-- Switch to the branch corresponding to the robot (e.g., `devel-ergoCubSN???`).
+- Switch to the branch corresponding to the robot.
 
 ## 🔲 Set the default committer
 - Fine-grained PAT can be scoped to work on a specified organization and only on a specified repository.
@@ -22,7 +14,7 @@ Technicalities underlying the fast-pace local workflow
   ```console
   git config --local user.name "icub-tech-iit-bot"
   git config --local user.email "icub-tech@iit.it"
-  git config --local credential.https://github.com/icub-tech-iit/robots-configuration.helper store
+  git config --local credential.https://github.com/icub-tech-iit/robots-configuration.git.helper store
   ```
   ⚠️ Note the use of the option `--local` to avoid impacting Git globally on the system.
 <<<<<<< HEAD
@@ -49,7 +41,11 @@ Technicalities underlying the fast-pace local workflow
 
 ## 🔲 Ensure that the author information is specified explicitly at commit time
 - We do rely on [Git hoooks](../.githooks).
+<<<<<<< HEAD
 - Run the following command from the `robots-configuration` root folder:
+=======
+- Run the following command  from the `robots-configuration` root folder:
+>>>>>>> 89aa49b8c (Added more info to the local workflow md file)
   ```console
   git config --local core.hooksPath .githooks/
   ```
