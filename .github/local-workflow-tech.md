@@ -21,6 +21,7 @@ Technicalities underlying the fast-pace local workflow
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 - In order to push without password, the PAT needs to be provided. The credentials will be stored plainly under `~/.git-credentials`. No worries though, as this PAT has a very narrowed use and impacts a fork that is backed up anyhow by the upstream repository.
 - The PAT can be stored manually in `~/.git-credentials` with the format `https://icub-tech-iit-bot:${PAT}@github`. Alternatively, when attempting to push the first time, it is enough to use `icub-tech-iit-bot` as user and specifying the `PAT` as password. This will be stored in the `~/.git-credentials` file automatically.
 =======
@@ -40,6 +41,9 @@ Technicalities underlying the fast-pace local workflow
 >>>>>>> a5f69bb80 (added method alternative to using credential helper)
 - ⚠️  Being the local system shared, no one else should store his/her PAT in the same file.
 >>>>>>> b89000b2e (More info on the credentials storing for the local workflow documentation)
+=======
+- The first time there's a push, the PAT needs to be provided. The credentials will be stored plainly under `~/.git-credentials` (the format is: `https://icub-tech-iit-bot:<PAT>@github`). No worries though, as this PAT has a very narrowed use and impacts a fork that is backed up anyhow by the upstream repository. The PAT can be stored in `~/.git-credentials` upfront as well. Being the local system shared, no one else should store his/her PAT in the same file.
+>>>>>>> e91037fb5 ([ergoCubSN001] Minor modification to local-workflow-tech.md)
 - ⌛ The PAT expires after **`1 year`** at the latest, thus needing to be regenerated.
 - The upstream maintainer will take care of the PAT.
 
