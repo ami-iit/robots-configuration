@@ -6,15 +6,35 @@
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.025   )</param>
-        <!--param name="kfc">(  1.0, 0.87  )</param-->
         <param name="kfc">(  1.0, 1.1  )</param>
-        <!--param name="kp">(  1.0, 20.0  )</param-->
         <param name="kp">(  0.0, 0.0  )</param>
         <param name="max_curr">(  2.0, 2.0  )</param>
-        <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_COULOMB_VISCOUS") </param>
+        <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_PINN") </param>
     </group>
 
     <group name="FRICTION_PINN">
+        <param name="model"> ("", "model349_batch4804_samples19.onnx") </param>
+        <param name="history_size"> (0, 19) </param>
+        <param name="number_of_inputs"> (0, 2) </param>
+        <param name="thread_number"> 2 </param>
+    </group>
+
+    <group name="FRICTION_COULOMB_VISCOUS">
+        <param name="kv">(  0.0058    0.2367  )</param>
+        <param name="kc">(  0.1       1.2066  )</param>
+        <param name="ka">(  53.107    10.5296 )</param>
+    </group>
+
+    <group name="FRICTION_COULOMB_VISCOUS_STRIBECK">
+        <param name="kv">(   0.1          0.2874   )</param>
+        <param name="kc">(   14.828       1.0005   )</param>
+        <param name="ks">(   13.0168      6.0174   )</param>
+        <param name="ka">(   53.107       2.7803   )</param>
+        <param name="vs">(   -0.2147      0.1288   )</param>
+        <param name="alpha">(  0.0        0.6351   )</param>
+    </group>
+
+    <!-- WORKING NETWORK <group name="FRICTION_PINN">
         <param name="model"> ("", "model349_batch4316_samples20.onnx") </param>
         <param name="history_size"> (0, 20) </param>
         <param name="number_of_inputs"> (0, 2) </param>
@@ -34,7 +54,7 @@
         <param name="ka">(   53.107       3.4404   )</param>
         <param name="vs">(   -0.2147      0.2407   )</param>
         <param name="alpha">(  0.0        0.5746   )</param>
-    </group>
+    </group> -->
 
     <!-- Warning, still in milliseconds -->
     <param name="period"> 1 </param>
