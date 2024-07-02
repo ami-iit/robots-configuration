@@ -4,8 +4,9 @@
 
 <device name="right_leg-FT_secondary_calib" type="ftSecondaryCalibImplNN">
     <param name="period">      0.001      </param> <!-- in seconds -->
-    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/model.onnx </param>
-    <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 or 7 -->
+    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/all_inputs/model.onnx </param>  <!-- path to the network model -->
+    <!-- <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/model.onnx </param>  path to the network model -->
+    <param name="numberInputs">     13     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
