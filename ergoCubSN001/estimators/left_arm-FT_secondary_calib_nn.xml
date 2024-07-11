@@ -8,7 +8,7 @@
     <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/l_arm_ft/model.onnx </param>  path to the network model
     <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
     <param name="FtSensorName">l_arm_ft</param>  <!-- name of the FT sensor -->
-    <param name="IMUSensorName">l_arm_imu</param>  <!-- name of the IMU sensor -->
+    <param name="IMUSensorName">l_arm_ft_imu</param>  <!-- name of the IMU sensor -->
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
