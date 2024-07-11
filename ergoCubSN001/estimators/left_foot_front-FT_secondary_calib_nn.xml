@@ -2,21 +2,20 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 
-<device name="right_leg-FT_secondary_calib" type="ftSecondaryCalibImplNN">
+<device name="left_foot_front-FT_secondary_calib" type="ftSecondaryCalibImplNN">
     <param name="period">      0.001      </param> <!-- in seconds -->
     <!-- <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/all_inputs/model.onnx </param>  path to the network model -->
-    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/r_leg_ft/model.onnx </param>  path to the network model
+    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/l_foot_front_ft/model.onnx </param>  path to the network model
     <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
-    <param name="FtSensorName">r_leg_ft</param>  <!-- name of the FT sensor -->
-    <param name="IMUSensorName">r_leg_imu</param>  <!-- name of the IMU sensor -->
+    <param name="FtSensorName">l_foot_front_ft</param>  <!-- name of the FT sensor -->
+    <param name="IMUSensorName">l_foot_front_imu</param>  <!-- name of the IMU sensor -->
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
             <!-- ft -->
-            <elem name="right_leg-eb6-j0_3-strain">right_leg-eb6-j0_3-strain</elem>
-            <elem name="right_leg-eb6-j0_3-inertial">right_leg-eb6-j0_3-inertial</elem>
+            <elem name="left_leg-eb9-j4_5-strain_ft2">left_leg-eb9-j4_5-strain_ft2</elem>
+            <elem name="left_leg-eb9-j4_5-inertial_ft2">left_leg-eb9-j4_5-inertial_ft2</elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />
 </device>
-

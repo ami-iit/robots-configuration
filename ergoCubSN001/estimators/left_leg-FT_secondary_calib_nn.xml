@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+
+<device name="left_leg-FT_secondary_calib" type="ftSecondaryCalibImplNN">
+    <param name="period">      0.001      </param> <!-- in seconds -->
+    <!-- <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/all_inputs/l_leg_ft/model.onnx </param>  path to the network model -->
+    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/l_leg_ft/model.onnx </param>  path to the network model
+    <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
+    <param name="FtSensorName">l_leg_ft</param>  <!-- name of the FT sensor -->
+    <param name="IMUSensorName">l_leg_imu</param>  <!-- name of the IMU sensor -->
+
+    <action phase="startup" level="4" type="attach">
+        <paramlist name="networks">
+            <!-- ft -->
+            <elem name="left_leg-eb8-j0_3-strain">left_leg-eb8-j0_3-strain</elem>
+            <elem name="left_leg-eb8-j0_3-inertial">left_leg-eb8-j0_3-inertial</elem>
+        </paramlist>
+    </action>
+    <action phase="shutdown" level="20" type="detach" />
+</device>
