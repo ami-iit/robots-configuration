@@ -14,7 +14,8 @@
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <elem name="right_leg-eb6-j0_3-strain">  right_leg-FT_secondary_calib  </elem>
-                <elem name="right_leg-eb7-j4_5-strain">  right_leg-eb7-j4_5-strain </elem>
+                <elem name="right_leg-eb7-j4_5-strain_ft1">  right_foot_rear-FT_secondary_calib  </elem>
+                <elem name="right_leg-eb7-j4_5-strain_ft2">  right_foot_front-FT_secondary_calib  </elem>
             </paramlist>
         </action>
 
