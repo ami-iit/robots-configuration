@@ -13,8 +13,8 @@
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
             <!-- ft -->
-            <elem name="right_leg-eb7-j4_5-strain_ft1">right_leg-eb7-j4_5-strain_ft1</elem>
-            <elem name="right_leg-eb7-j4_5-inertial_ft1">right_leg-eb7-j4_5-inertial_ft1</elem>
+            <elem name="right_leg-eb7-j4_5-strain_ft1">right_leg-eb7-j4_5-strain</elem>
+            <elem name="right_leg-eb7-j4_5-inertial_ft1">right_leg-eb7-j4_5-inertial</elem>
         </paramlist>
     </action>
     <action phase="shutdown" level="20" type="detach" />
