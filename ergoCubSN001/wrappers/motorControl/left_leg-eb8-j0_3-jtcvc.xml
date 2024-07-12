@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb9-j4_5-jtcvc" type="JointTorqueControlDevice">
-    <param name="remote">  /hijackingTrqCrl/lower_leg  </param>
-    <param name="joint_list"> (  "l_ankle_pitch", "l_ankle_roll"  )</param>
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb8-j0_3-jtcvc" type="JointTorqueControlDevice">
+    <param name="remote">  /hijackingTrqCrl/upper_leg  </param>
+    <param name="joint_list"> (  "l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee"  )</param>
 
     <group name="TORQUE_CURRENT_PARAMS">
-        <param name="kt">(   0.111,  0.025   )</param>
-        <param name="kfc">(  1.0, 1.1  )</param>
-        <param name="kp">(  0.0, 0.0  )</param>
-        <param name="max_curr">(  2.0, 2.0  )</param>
-        <param name="friction_model"> ("FRICTION_COULOMB_VISCOUS_STRIBECK", "FRICTION_PINN") </param>
+        <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
+        <param name="kfc">(  1.0, 1.0, 1.0, 1.0  )</param>
+        <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
+        <param name="max_curr">(  10.0, 10.0, 10.0, 10.0   )</param>
+        <param name="friction_model"> ("", "", "", "FRICTION_PINN") </param>
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "l_ankle_roll_batch4804_samples19.onnx") </param>
-        <param name="history_size"> (0, 19) </param>
-        <param name="number_of_inputs"> (0, 2) </param>
+        <param name="model"> ("", "", "", "l_knee_batch4914_samples22.onnx") </param>
+        <param name="history_size"> (0, 0, 0, 22) </param>
+        <param name="number_of_inputs"> (0, 0, 0, 2) </param>
         <param name="thread_number"> 1 </param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS">
-        <param name="kv">(  0.0058    0.2367  )</param>
-        <param name="kc">(  0.1       1.2066  )</param>
-        <param name="ka">(  53.107    10.5296 )</param>
+        <param name="kv">(  0.0058    0.2367  0.0058    5.5491  )</param>
+        <param name="kc">(  0.1       1.2066  0.1       8.1122  )</param>
+        <param name="ka">(  53.107    10.5296  53.107    50.8400 )</param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS_STRIBECK">
-        <param name="kv">(   0.1          0.2874   )</param>
-        <param name="kc">(   14.828       1.0005   )</param>
-        <param name="ks">(   13.0168      6.0174   )</param>
-        <param name="ka">(   53.107       2.7803   )</param>
-        <param name="vs">(   -0.2147      0.1288   )</param>
-        <param name="alpha">(  0.0        0.6351   )</param>
+        <param name="kv">(   0.1      0.2874  0.1    2.4791   )</param>
+        <param name="kc">(   14.8     1.0005  14.82  5.4554   )</param>
+        <param name="ks">(   13.0   6.0174  13.016   13.3471   )</param>
+        <param name="ka">(   53.1    2.7803   53.10    107.9275   )</param>
+        <param name="vs">(   -0.21    0.1288  -0.21   0.1486   )</param>
+        <param name="alpha">(  0.0    0.6351  0.0    -0.6191   )</param>
     </group>
 
     <!-- WORKING NETWORK <group name="FRICTION_PINN">
@@ -61,7 +61,7 @@
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
-            <elem name="left_leg_joints2">  left_leg-eb9-j4_5-mc </elem>
+            <elem name="left_leg_joints2">  left_leg-eb8-j0_3-mc </elem>
         </paramlist>
     </action>
 
