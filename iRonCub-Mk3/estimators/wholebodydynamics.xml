@@ -3,9 +3,9 @@
 
 <devices robot="@WBD_YARP_ROBOT_NAME@" build="1">
     <device name="secondaryCalibration_l_arm_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  l_arm_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/leftArm_ft_models/3rd_degree.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/3rd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -17,9 +17,9 @@
     </device>
 
     <device name="secondaryCalibration_r_arm_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  r_arm_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/4th_order_dummy.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/3rd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -31,9 +31,9 @@
     </device>
 
     <device name="secondaryCalibration_l_jet_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  l_jet_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/4th_order_dummy.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/3rd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -45,9 +45,9 @@
     </device>
 
     <device name="secondaryCalibration_r_jet_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  r_jet_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/4th_order_dummy.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/3rd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -59,9 +59,9 @@
     </device>
 
     <device name="secondaryCalibration_l_foot_front_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  l_foot_front_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/l_foot_front_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/2nd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -73,9 +73,9 @@
     </device>
 
     <device name="secondaryCalibration_r_foot_front_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  r_foot_front_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/r_foot_front_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/2nd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -87,9 +87,9 @@
     </device>
 
     <device name="secondaryCalibration_l_foot_rear_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  l_foot_rear_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/l_foot_rear_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/2nd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -101,9 +101,9 @@
     </device>
 
     <device name="secondaryCalibration_r_foot_rear_ft" type="ftSecondaryCalibImpl">
-        <param name="period">      0.002      </param> <!-- in seconds-->
+        <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  r_foot_rear_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/feet_fts_models/r_foot_rear_ft/np2_ny6_nu7_na0_nb0.xml" />
+        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/2nd_order_dummy.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -135,7 +135,7 @@
         <param name="startWithZeroFTSensorOffsets">true</param> <!-- bypass using resetOffset of FT sensors in simulation -->
         <param name="useSkinForContacts">false</param>
         <param name="additionalConsideredFixedJoints">(l_elbow_turbine, r_elbow_turbine, l_jet_ft_sensor, r_jet_ft_sensor, jetpack)</param> <!-- Added explicitly in order to be found by WBD_OUTPUT_EXTERNAL_WRENCH_PORTS since they are attached to fixed joints -->
-        <param name="devicePeriodInSeconds">0.002</param>
+        <param name="devicePeriodInSeconds">0.001</param>
         <param name="estimateJointVelocityAcceleration">false</param>  <!-- if true a kf will estimate the joint velocities and accelerations -->
         <param name="processNoiseCovariance">(1.0e-3, 1.0e-3, 1.0e-3,
                                               1.0e-3, 1.0e-3, 1.0e-3,
@@ -248,4 +248,3 @@
 
     </device>
 </devices>
-
