@@ -18,8 +18,7 @@
   <param name="forceTorqueFilterCutoffInHz">10.0</param>
   <param name="jointVelFilterCutoffInHz">10.0</param> <!-- used if useJointVelocity is set to true -->
   <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
-  <param name="startWithZeroFTSensorOffsets">true</param> <!-- bypass using resetOffset of FT sensors -->
-  <param name="devicePeriodInSeconds">0.002</param>
+  <param name="devicePeriodInSeconds">0.001</param>
   <param name="useSkinForContacts">false</param>
   <param name="publishNetExternalWrenches">true</param>
   <param name="assume_fixed">chest</param>
