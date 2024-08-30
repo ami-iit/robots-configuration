@@ -6,10 +6,10 @@
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
-        <param name="kfc">(  0.0, 0.0, 0.0, 1.0  )</param>
+        <param name="kfc">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  10.0, 10.0, 10.0, 10.0   )</param>
-        <param name="friction_model"> ("", "", "", "FRICTION_PINN") </param>
+        <param name="friction_model"> ("", "", "", "") </param>
     </group>
 
     <group name="FRICTION_PINN">
