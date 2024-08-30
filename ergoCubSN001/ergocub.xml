@@ -41,6 +41,9 @@
     <xi:include href="wrappers/motorControl/head-mc_remapper.xml" disabled_by="disable_head" />
     <xi:include href="wrappers/motorControl/head-mc-slow_wrapper.xml" disabled_by="disable_head" />
 
+    <!-- motor controllers jtcvc -->
+    <xi:include href="wrappers/motorControl/left_leg-eb9-j4_5-jtcvc.xml" disabled_by="disable_left_leg" />
+
     <!-- HEAD -->
     <xi:include href="hardware/motorControl/head-eb20-j0_1-mc.xml" disabled_by="disable_head" />
     <xi:include href="hardware/motorControl/head-eb21-j2_3-mc.xml" disabled_by="disable_head" />
