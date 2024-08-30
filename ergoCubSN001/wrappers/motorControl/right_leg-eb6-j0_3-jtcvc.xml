@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
-<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb8-j0_3-jtcvc" type="JointTorqueControlDevice">
+<device xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-eb6-j0_3-jtcvc" type="JointTorqueControlDevice">
     <param name="remote">  /hijackingTrqCrl/r_upper_leg  </param>
     <param name="joint_list"> (  "r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee"  )</param>
 
