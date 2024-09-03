@@ -1,0 +1,12 @@
+<cluster name="ironcubmk3" user="alienCub">
+
+<!-- specify type="yarpserver" or type="yarpserver3" to use the old or new nameserver default behavior is to use yarpserver3 -->
+<nameserver namespace="/testbench" node="10.0.2.7" type="yarpserver"> </nameserver>
+
+<!-- specify nodes, if you want to enable display on desktop please specify which desktop to use
+this is usually the value of the DISPLAY variable when logged on -->
+
+<node user="aliencub" display=":1" address="10.0.2.7">ironcub-pilot</node>
+<node user="ironpi" address="10.0.0.155">ironpiTestbench</node>
+
+</cluster>

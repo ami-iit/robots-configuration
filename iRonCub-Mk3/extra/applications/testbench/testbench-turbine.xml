@@ -10,12 +10,13 @@
 	<module>
 		<name>yarprobotinterface</name>
 		<parameters>--config main2-serial-usb-testbench.xml </parameters>
-		<node>ironpiTestbench</node>
+		<node>localhost</node>
+		<environment>YARP_ROBOT_NAME=jetcatSetup</environment>
 	</module>
 
 	<module>
 		<name>jets-GUI</name>
-		<node>${generic_node_1}</node>
+		<node>localhost</node>
 	</module>
 
     
