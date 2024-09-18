@@ -1,0 +1,12 @@
+<cluster name="icub01" user="icub">
+
+<nameserver namespace="/icub04" node="icub29" port="10000"> </nameserver>
+
+<node user="icub" display=":1">icub29</node>
+<node user="icub" display=":1">icub30</node>
+<node user="icub" display="false">icub-head</node>
+<node user="ironcub" display=":1">ironcub-laptop-1</node>
+<node user="ironcub" display=":0.0">ironcub-laptop-2</node>
+<node user="ironpi" display="false">ironpi</node>
+</cluster>
+

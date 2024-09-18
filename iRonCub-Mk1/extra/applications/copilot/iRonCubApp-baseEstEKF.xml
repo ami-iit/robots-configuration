@@ -1,0 +1,18 @@
+<application>
+<name>iRonCubApp-baseEstEKF</name>
+
+<var name="generic_node_1">hosam-laptop</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
+    <module>
+		<name>yarprobotinterface</name>
+        <parameters> --config launch-dlgekf-base-estimator.xml</parameters>
+        <environment>YARP_ROBOT_NAME=iRonCub-Mk1_1</environment>
+        <environment>YARP_CLOCK=/clock</environment>
+		<node>${generic_node_1}</node>
+	</module>
+    
+</application>

@@ -1,0 +1,27 @@
+<application>
+    <description>Refer to the issue https://github.com/dic-iit/component_ironcub/issues/250</description>
+    <authors>
+        <author email="hosameldin.mohamed@iit.it">Hosameldin A. O. Mohamed</author>
+    </authors>
+    <name>iRonCubExpApp-copilot</name>
+
+    <application>
+        <name>iRonCubApp-baseEstV1</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-ExtWBD</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-realSenseT265</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-VIVE_trackers</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-dumper</name>
+    </application>
+</application>

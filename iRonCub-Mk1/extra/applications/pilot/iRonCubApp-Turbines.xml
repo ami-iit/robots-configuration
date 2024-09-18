@@ -1,0 +1,22 @@
+<application>
+<name>iRonCubApp-Turbines</name>
+
+<var name="generic_node_1">ironcub-laptop-1</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________Turbines related stuff_______________________ -->
+	<module>
+		<name>yarprobotinterface</name>
+        <environment>YARP_ROBOT_NAME=jetcatSetup</environment>
+		<parameters>--config main-serial.xml </parameters>
+		<node>icub-head</node>
+	</module>
+
+	<module>
+		<name>jets-GUI</name>
+		<node>${generic_node_1}</node>
+	</module>
+    
+</application>

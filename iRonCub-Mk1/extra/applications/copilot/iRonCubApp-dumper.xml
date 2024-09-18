@@ -1,0 +1,238 @@
+<application>
+<name>iRonCubApp-dumper</name>
+
+<var name="generic_node_1">icub29</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
+
+    	<module>
+		<name>bash</name>
+		<parameters>dumperScript_iRonCub</parameters>
+		<node>${generic_node_1}</node>
+	</module>
+
+    <!-- _______________________iRonCub-Mk1_______________________ -->
+
+    <connection>
+        <from>/icub/inertial</from>
+        <to>/dumper/icub/head/inertial</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+
+    <connection>
+        <from>/icub/head/state:o</from>
+        <to>/dumper/icub/head/state:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+        <!-- BASE IMU -->    
+    <connection>
+        <from>/icub/xsens_inertial</from>
+        <to>/dumper/icub/waist/inertial</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <!-- CONTACT WRENCHES -->
+    <connection>
+        <from>/wholeBodyDynamics/left_foot/cartesianEndEffectorWrench:o</from>
+        <to>/dumper/icub/left_foot/cartesianEndEffectorWrench:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+     
+    <connection>
+        <from>/wholeBodyDynamics/right_foot/cartesianEndEffectorWrench:o</from>
+        <to>/dumper/icub/right_foot/cartesianEndEffectorWrench:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o</from>
+        <to>/dumper/icub/left_arm/cartesianEndEffectorWrench:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+        
+    <connection>
+        <from>/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o</from>
+        <to>/dumper/icub/right_arm/cartesianEndEffectorWrench:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <!--  state      -->
+    <connection>
+        <from>/icub/head/state:o</from>
+        <to>/dumper/icub/head/state</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/torso/state:o</from>
+        <to>/dumper/icub/torso/state</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/icub/left_arm/state:o</from>
+        <to>/dumper/icub/left_arm/state</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/right_arm/state:o</from>
+        <to>/dumper/icub/right_arm/state</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/left_leg/state:o</from>
+        <to>/dumper/icub/left_leg/state</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/right_leg/state:o</from>
+        <to>/dumper/icub/right_leg/state</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <!--  stateExt      -->
+
+    <connection>
+        <from>/icub/head/stateExt:o</from>
+        <to>/dumper/icub/head/stateExt</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/torso/stateExt:o</from>
+        <to>/dumper/icub/torso/stateExt</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/icub/left_arm/stateExt:o</from>
+        <to>/dumper/icub/left_arm/stateExt</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/right_arm/stateExt:o</from>
+        <to>/dumper/icub/right_arm/stateExt</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <connection>
+        <from>/icub/left_leg/stateExt:o</from>
+        <to>/dumper/icub/left_leg/stateExt</to>
+        <protocol>udp</protocol>        
+    </connection>
+ 
+    <connection>
+        <from>/icub/right_leg/stateExt:o</from>
+        <to>/dumper/icub/right_leg/stateExt</to>
+        <protocol>udp</protocol>        
+    </connection>
+
+    <!-- 6 AXIS FT SENSORS -->
+    <connection>
+        <from>/icub/left_arm/analog:o</from>
+        <to>/dumper/icub/left_arm/analog:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+     
+    <connection>
+        <from>/icub/right_arm/analog:o</from>
+        <to>/dumper/icub/right_arm/analog:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/icub/left_leg/measures:o</from>
+        <to>/dumper/icub/left_leg/measures:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/icub/right_leg/measures:o</from>
+        <to>/dumper/icub/right_leg/measures:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/icub/left_foot/measures:o</from>
+        <to>/dumper/icub/left_foot/measures:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+    
+    <connection>
+        <from>/icub/right_foot/measures:o</from>
+        <to>/dumper/icub/right_foot/measures:o</to>
+        <protocol>udp</protocol>        
+    </connection>
+  
+    
+    
+        <!-- _______________________Turbines related stuff_______________________ -->
+
+    <connection>
+		<from>/iRonCubJets/body/stateExt:o</from>
+		<to>/dumper/jet/stateExt</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<connection>
+		<from>/JetCatTurbines/data</from>
+		<to>/dumper/jet/data</to>
+		<protocol>udp</protocol>
+	</connection>
+
+        <!-- _______________________realSenseT265_______________________ -->
+
+    <connection>
+		<from>/t265</from>
+		<to>/dumper/realSenseT265Pose</to>
+		<protocol>udp</protocol>
+    </connection>
+
+    <!-- _______________________WBD thrust estimation_______________________ -->
+
+    <connection>
+		<from>/wholeBodyDynamics-thrEst/torso/cartesianEndEffectorWrench:o</from>
+		<to>/dumper/wholeBodyDynamics-thrEst/torso/cartesianEndEffectorWrench</to>
+		<protocol>udp</protocol>
+	</connection>
+
+    <connection>
+		<from>/wholeBodyDynamics-thrEst/left_arm/cartesianEndEffectorWrench:o</from>
+		<to>/dumper/wholeBodyDynamics-thrEst/left_arm/cartesianEndEffectorWrench</to>
+		<protocol>udp</protocol>
+	</connection>
+
+    <connection>
+		<from>/wholeBodyDynamics-thrEst/right_arm/cartesianEndEffectorWrench:o</from>
+		<to>/dumper/wholeBodyDynamics-thrEst/right_arm/cartesianEndEffectorWrench</to>
+		<protocol>udp</protocol>
+	</connection>
+
+    <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
+
+    	<connection>
+		<from>/base-estimator/floating_base/state:o</from>
+		<to>/dumper/base-estimator/floating_base/state</to>
+		<protocol>udp</protocol>
+	</connection>
+
+    <!-- _______________________VIVE trackers_______________________ -->
+
+    	<connection>
+        	<from>/transformServer/transforms:o</from>
+        	<to>/dumper/vive_trackers/transforms</to>
+        	<protocol>udp</protocol>
+        </connection>
+
+</application>
+ 
+

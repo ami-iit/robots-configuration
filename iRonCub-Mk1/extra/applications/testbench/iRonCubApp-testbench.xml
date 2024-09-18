@@ -1,0 +1,54 @@
+<application>
+<name>iRonCubApp-testbench</name>
+
+<var name="generic_node_1">ironcub-laptop-1</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________Turbines related stuff_______________________ -->
+	<module>
+		<name>yarprobotinterface</name>
+        <environment>YARP_ROBOT_NAME=jetcatSetup</environment>
+		<parameters>--config main2-serial-usb-testbench.xml </parameters>
+		<node>ironpi</node>
+	</module>
+
+	<module>
+		<name>jets-GUI</name>
+		<node>${generic_node_1}</node>
+	</module>
+	
+	
+	        <module>
+		<name>bash</name>
+		<parameters>dumperScript_jet-FT</parameters>
+		<node>${generic_node_1}</node>
+	</module>
+	
+	
+	
+	
+
+    <!-- 6 AXIS FT SENSORS -->
+    <connection>
+        <from>/ft/ftsense/analog:o</from>
+        <to>/dumper/jet/ftSense</to>
+        <protocol>udp</protocol>        
+    </connection>
+ 
+    <!-- _______________________Turbines related stuff_______________________ -->
+
+    <connection>
+		<from>/iRonCubJets/body/stateExt:o</from>
+		<to>/dumper/jet/stateExt</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<connection>
+		<from>/JetCatTurbines/data</from>
+		<to>/dumper/jet/data</to>
+		<protocol>udp</protocol>
+	</connection>
+    
+</application>

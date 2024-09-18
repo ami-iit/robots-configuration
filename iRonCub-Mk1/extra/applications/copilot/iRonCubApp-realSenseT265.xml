@@ -1,0 +1,16 @@
+<application>
+<name>iRonCubApp-realSenseT265</name>
+
+<var name="generic_node_1">ironcub-laptop-1</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________realSenseT265_______________________ -->
+    <module>
+		<name>yarpdev</name>
+        <parameters>--device analogServer --name /t265 --period 10 --subdevice realsense2Tracking </parameters>
+		<node>${generic_node_1}</node>
+	</module>
+    
+</application>

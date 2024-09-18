@@ -1,0 +1,21 @@
+<application>
+<name>iRonCubApp-VIVE_trackers</name>
+
+<var name="generic_node_1">ironcub-laptop-1</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________realSenseT265_______________________ -->
+    <module>
+		<name>yarpdev</name>
+        <parameters>--device transformServer --ROS::enable_ros_publisher 0 --ROS::enable_ros_subscriber 0 </parameters>
+		<node>${generic_node_1}</node>
+    </module>
+
+    <module>
+		<name>yarp-openvr-trackers</name>
+		<node>${generic_node_1}</node>
+    </module>
+    
+</application>

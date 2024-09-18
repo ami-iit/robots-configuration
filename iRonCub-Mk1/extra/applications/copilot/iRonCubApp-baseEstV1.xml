@@ -1,0 +1,18 @@
+<application>
+<name>iRonCubApp-baseEstV1</name>
+
+<var name="generic_node_1">icub29</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
+    <module>
+		<name>yarprobotinterface</name>
+        <parameters> --config launch-fbe-analogsens.xml</parameters>
+        <environment>YARP_ROBOT_NAME=iRonCub-Mk1_1</environment>
+        <environment>YARP_CLOCK=/clock</environment>
+		<node>${generic_node_1}</node>
+	</module>
+    
+</application>
