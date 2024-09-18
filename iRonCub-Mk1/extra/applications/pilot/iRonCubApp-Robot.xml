@@ -25,7 +25,7 @@
                 <name>yarpmotorgui</name>
                 <node>${generic_node_1}</node>
                 <environment>YARP_ROBOT_NAME=iRonCub-Mk1</environment>
-                <parameters>--from /home/icub/code/ironcub/component_ironcub/models/home-poses/homePoseiRonCub.ini</parameters>
+                <parameters>--from /home/icub/code/ironcub-mk1-software/models/home-poses/homePoseiRonCub.ini</parameters>
     </module>
 
     
