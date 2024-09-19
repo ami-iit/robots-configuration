@@ -9,7 +9,7 @@
         <param name="kfc">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  10.0, 10.0, 10.0, 10.0   )</param>
-        <param name="friction_model"> ("", "", "", "FRICTION_COULOMB_VISCOUS") </param>
+        <param name="friction_model"> ("", "", "", "") </param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS">
