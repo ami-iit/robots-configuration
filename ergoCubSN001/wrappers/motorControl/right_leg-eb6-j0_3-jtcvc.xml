@@ -10,6 +10,10 @@
         <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  10.0, 10.0, 10.0, 10.0   )</param>
         <param name="friction_model"> ("", "", "", "") </param>
+        <param name="bwfilter_cutoff_freq"> 0.0 </param>
+        <param name="bwfilter_order"> 0 </param>
+        <param name="bwfilter_enabled"> false </param>
+        <param name="max_output_friction">(  0.0, 40.0  )</param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS">
