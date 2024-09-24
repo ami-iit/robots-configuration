@@ -13,12 +13,13 @@
         <param name="bwfilter_cutoff_freq"> 3.0 </param>
         <param name="bwfilter_order"> 1 </param>
         <param name="bwfilter_enabled"> true </param>
-        <param name="max_output_friction">(  0.0, 40.0  )</param>
+        <param name="max_output_friction">(  0.0, 10.0  )</param>
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "r_ankle_roll_hist20_batch4324.onnx") </param>
+        <param name="model"> ("", "rar_b4477_h6.onnx") </param>
         <param name="thread_number"> 1 </param>
+        <param name="model_type"> 2 </param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS">
