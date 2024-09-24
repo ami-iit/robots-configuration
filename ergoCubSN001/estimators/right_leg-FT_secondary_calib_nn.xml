@@ -5,8 +5,8 @@
 <device name="right_leg-FT_secondary_calib" type="ftSecondaryCalibImplNN">
     <param name="period">      0.001      </param> <!-- in seconds -->
     <!-- <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/all_inputs/model.onnx </param>  path to the network model -->
-    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/r_leg_ft/model.onnx </param>
-    <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
+    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature_quaternion/r_leg_ft/scaling/onnx/model.onnx </param>
+    <param name="numberInputs">     11     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
     <param name="FtSensorName">r_leg_ft</param>  <!-- name of the FT sensor -->
     <param name="IMUSensorName">r_leg_ft_imu</param>  <!-- name of the IMU sensor -->
 
