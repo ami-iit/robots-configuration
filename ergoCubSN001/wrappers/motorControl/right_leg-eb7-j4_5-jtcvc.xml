@@ -17,9 +17,9 @@
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "rar_b4477_h6.onnx") </param>
+        <param name="model"> ("", "rar_b3784_h13.onnx") </param>
         <param name="thread_number"> 1 </param>
-        <param name="model_type"> 2 </param>
+        <param name="model_type"> 4 </param>
     </group>
 
     <group name="FRICTION_COULOMB_VISCOUS">
