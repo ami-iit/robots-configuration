@@ -18,6 +18,7 @@
 
 	<module>
 		<name>jets-GUI</name>
+        <environment>DESKTOP_SESSION=gnome</environment>
 		<node>${generic_node_1}</node>
 	</module>
 
