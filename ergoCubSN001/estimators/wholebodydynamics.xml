@@ -7,7 +7,7 @@
   <param name="modelFile">model.urdf</param>
   <param name="fixedFrameGravity">(0,0,-9.81)</param>
   <!-- <param name="defaultContactFrames">(l_hand_palm,r_hand_palm,root_link,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear,l_upper_leg,r_upper_leg)</param> -->
-  <param name="defaultContactFrames">(l_hand_palm,r_hand_palm,chest,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear,l_upper_leg,r_upper_leg)</param>
+  <param name="defaultContactFrames">(chest,r_upper_leg)</param>
   <param name="imuFrameName">waist_imu_0</param>
   <param name="publishOnROS">true</param>
   <param name="forceTorqueEstimateConfidence">2</param>
@@ -18,7 +18,7 @@
   <param name="forceTorqueFilterCutoffInHz">10.0</param>
   <param name="jointVelFilterCutoffInHz">10.0</param> <!-- used if useJointVelocity is set to true -->
   <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
-  <param name="startWithZeroFTSensorOffsets">true</param> <!-- bypass using resetOffset of FT sensors -->
+  <param name="startWithZeroFTSensorOffsets">false</param> <!-- bypass using resetOffset of FT sensors -->
   <param name="devicePeriodInSeconds">0.002</param>
   <param name="useSkinForContacts">false</param>
   <param name="publishNetExternalWrenches">true</param>
@@ -31,7 +31,7 @@
   <group name="multipleAnalogSensorsNames">
     <!-- <param name="SixAxisForceTorqueSensorsNames">(l_leg_ft, l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft, r_arm_ft, l_arm_ft)</param> -->
     <!-- <param name="SixAxisForceTorqueSensorsNames">(l_foot_front_ft, l_foot_rear_ft, r_leg_ft, r_foot_front_ft, r_foot_rear_ft, r_arm_ft, l_arm_ft)</param> -->
-    <param name="SixAxisForceTorqueSensorsNames">()</param>
+    <param name="SixAxisForceTorqueSensorsNames">(r_leg_ft)</param>
   </group>
 
 
