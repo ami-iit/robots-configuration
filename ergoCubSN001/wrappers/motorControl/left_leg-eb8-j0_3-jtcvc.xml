@@ -13,11 +13,11 @@
         <param name="bwfilter_cutoff_freq"> 3.0 </param>
         <param name="bwfilter_order"> 1 </param>
         <param name="bwfilter_enabled"> true </param>
-        <param name="max_output_friction">(  0.0, 0.0, 30.0, 30.0  )</param>
+        <param name="max_output_friction">(  25.0, 15.0, 15.0, 30.0  )</param>
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "", "2_lhy_b3662_h13.onnx", "2_lk_b4729_h22.onnx") </param>
+        <param name="model"> ("", "", "2_lhy_b4562_h20.onnx", "2_lk_b4729_h22.onnx") </param>
         <param name="thread_number"> 1 </param>
         <param name="model_type"> 2 </param>
     </group>
