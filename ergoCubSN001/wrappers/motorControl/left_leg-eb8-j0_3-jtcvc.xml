@@ -5,8 +5,8 @@
     <param name="joint_list"> (  "l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee"  )</param>
 
     <group name="TORQUE_CURRENT_PARAMS">
-        <param name="kt">(   0.15698,  0.06646,  0.06646,  0.15698   )</param>
-        <param name="kfc">(  1.0, 1.0, 1.0, 1.0  )</param>
+        <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
+        <param name="kfc">(  1.0, 1.0, 0.7, 1.0  )</param>
         <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  10.0, 10.0, 10.0, 6.0   )</param>
         <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN") </param>
@@ -17,7 +17,7 @@
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("2_lhp_b4236_h5.onnx", "2_lhr_b4856_h22.onnx", "2_lhy_b4562_h20.onnx", "2_lk_b4729_h22.onnx") </param>
+        <param name="model"> ("2_lhp_b4912_h23.onnx", "2_lhr_b4657_h4.onnx", "2_lhy_b4562_h20.onnx", "2_lk_b4566_h20.onnx") </param>
         <param name="thread_number"> 1 </param>
         <param name="model_type"> 2 </param>
     </group>
