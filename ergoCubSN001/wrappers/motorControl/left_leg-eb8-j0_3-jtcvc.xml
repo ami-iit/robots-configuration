@@ -7,7 +7,7 @@
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
         <param name="kfc">(  1.0, 1.0, 0.8, 1.0  )</param>
-        <param name="kp">(  0.0, 0.0, 0.0, 0.0  )</param>
+        <param name="kp">(  3.0, 3.0, 4.0, 5.0  )</param>
         <param name="max_curr">(  10.0, 10.0, 10.0, 6.0   )</param>
         <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN") </param>
         <param name="bwfilter_cutoff_freq"> 3.0 </param>
