@@ -14,8 +14,8 @@
   <param name="useJointAcceleration">false</param>
   <param name="streamFilteredFT">true</param>
   <param name="imuFilterCutoffInHz">3.0</param>
-  <param name="forceTorqueFilterCutoffInHz">3.0</param>
-  <param name="jointVelFilterCutoffInHz">3.0</param> <!-- used if useJointVelocity is set to true -->
+  <param name="forceTorqueFilterCutoffInHz">0.5</param>
+  <param name="jointVelFilterCutoffInHz">1.0</param> <!-- used if useJointVelocity is set to true -->
   <param name="jointAccFilterCutoffInHz">3.0</param> <!-- used if useJointAcceleration is set to true -->
   <param name="devicePeriodInSeconds">0.001</param>
   <param name="useSkinForContacts">false</param>
