@@ -6,8 +6,8 @@
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
-        <param name="kfc">(  0.8, 0.8, 0.7, 0.9  )</param>
-        <param name="kp">(  5.0, 3.0, 3.0, 5.0  )</param>
+        <param name="kfc">(  0.7, 0.8, 0.7, 0.9  )</param>
+        <param name="kp">(  5.5, 3.5, 3.0, 5.0  )</param>
         <param name="ki">(  0.0, 0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  10.0, 10.0, 10.0, 6.0   )</param>
         <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN", "FRICTION_PINN") </param>
