@@ -5,10 +5,10 @@
     <!-- The below parameter names are set from the macro MAS_getTagFromEnum(enum MAS_SensorType) + "Names"
             defined in <yarp/dev/MultipleAnalogSensorsInterfaces.h> and respective device source file -->
     <param name="ThreeAxisGyroscopesNames">
-    (r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)
+    (r_leg_ft_imu, r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)
     </param>
     <param name="ThreeAxisLinearAccelerometersNames">
-    (r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)
+    (r_leg_ft_imu, r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)
     </param>
     <action phase="startup" level="5" type="attach">
         <paramlist name="networks">
