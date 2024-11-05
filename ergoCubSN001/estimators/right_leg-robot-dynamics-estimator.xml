@@ -79,7 +79,7 @@ BSD-3-Clause license. -->
         </group> -->
 
         <group name="SixAxisForceTorqueSensors">
-          <param name="sixaxis_forcetorque_sensors_list">()</param>
+          <param name="sixaxis_forcetorque_sensors_list">("r_foot_front_ft", "r_foot_rear_ft")</param>
         </group>
 
         <group name="InertialSensors">
@@ -325,9 +325,7 @@ BSD-3-Clause license. -->
         <paramlist name="networks">
 
             <elem name="all_joints">right_leg-mc_remapper</elem>
-            <!-- <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem> -->
-            <!-- <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem> -->
-            <elem name="imu">waist-inertial</elem>
+            <elem name="r_leg_all_sensors">right_leg-all_sensors_remapper</elem>
             <elem name="right_upper_leg-j0">right_leg-eb6-j0_3-mc</elem>
             <elem name="right_lower_leg-j2">right_leg-eb7-j4_5-mc</elem>
         </paramlist>
