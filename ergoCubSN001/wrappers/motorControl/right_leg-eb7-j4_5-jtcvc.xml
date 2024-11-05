@@ -12,7 +12,7 @@
         <param name="ki">(  0.0, 0.0 )</param>
         <param name="max_curr">(  3.0, 1.5  )</param>
         <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN") </param>
-        <param name="bwfilter_cutoff_freq"> 2.0 </param>
+        <param name="bwfilter_cutoff_freq"> 1.0 </param>
         <param name="bwfilter_order"> 1 </param>
         <param name="bwfilter_enabled"> true </param>
         <param name="max_output_friction">(  13.0, 7.0  )</param>
@@ -21,23 +21,8 @@
     <group name="FRICTION_PINN">
         <param name="model"> ("2_rap_b4979_h10.onnx", "2_rar_b3942_h22.onnx") </param>
         <param name="thread_number"> 1 </param>
-        <param name="model_type"> 2 </param>
     </group>
 
-    <group name="FRICTION_COULOMB_VISCOUS">
-        <param name="kv">(  0.0058    0.2367  )</param>
-        <param name="kc">(  0.1       1.2066  )</param>
-        <param name="ka">(  53.107    10.5296 )</param>
-    </group>
-
-    <group name="FRICTION_COULOMB_VISCOUS_STRIBECK">
-        <param name="kv">(   0.1          0.2874   )</param>
-        <param name="kc">(   14.828       1.0005   )</param>
-        <param name="ks">(   13.0168      6.0174   )</param>
-        <param name="ka">(   53.107       2.7803   )</param>
-        <param name="vs">(   -0.2147      0.1288   )</param>
-        <param name="alpha">(  0.0        0.6351   )</param>
-    </group>
 
     <!-- Warning, still in milliseconds -->
     <param name="period"> 1 </param>

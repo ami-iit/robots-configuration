@@ -97,9 +97,9 @@ BSD-3-Clause license. -->
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
                  "WAIST_ACC", "WAIST_GYRO")
-                 <!-- "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
-                 "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
-                 "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT" -->
+                 <!-- "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
+                 "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
+                 "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO" -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -111,14 +111,14 @@ BSD-3-Clause license. -->
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
@@ -229,7 +229,7 @@ BSD-3-Clause license. -->
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="associated_state">FRICTION_TORQUES</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e0, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="RIGHT_FOOT_FRONT_FT">
@@ -327,7 +327,7 @@ BSD-3-Clause license. -->
             <elem name="all_joints">right_leg-mc_remapper</elem>
             <!-- <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem> -->
             <!-- <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem> -->
-            <elem name="waist_imu_sensor">waist-inertials_remapper</elem>
+            <elem name="imu">waist-inertial</elem>
             <elem name="right_upper_leg-j0">right_leg-eb6-j0_3-mc</elem>
             <elem name="right_lower_leg-j2">right_leg-eb7-j4_5-mc</elem>
         </paramlist>
