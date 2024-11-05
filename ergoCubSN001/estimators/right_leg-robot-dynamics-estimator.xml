@@ -19,7 +19,7 @@ BSD-3-Clause license. -->
         <param name="gear_ratio">(100.0, -160.0, 100.0, 100.0, 100.0, 160.0)</param>
         <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.047)</param>
 
-        <group name="FT">
+        <!-- <group name="FT">
             <param name="names">("r_foot_front_ft", "r_foot_rear_ft")</param>
             <param name="frames">("r_foot_front_ft", "r_foot_rear_ft")</param>
             <param name="associated_joints">("r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
@@ -33,6 +33,22 @@ BSD-3-Clause license. -->
         <group name="GYROSCOPE">
             <param name="names">("waist_imu_0", "r_leg_ft_imu", "r_foot_front_ft_imu", "r_foot_rear_ft_imu")</param>
             <param name="frames">("waist_imu_0", "r_leg_ft", "r_foot_front_ft", "r_foot_rear_ft")</param>
+        </group> -->
+
+        <group name="FT">
+            <param name="names">()</param>
+            <param name="frames">()</param>
+            <param name="associated_joints">()</param>
+        </group>
+
+        <group name="ACCELEROMETER">
+            <param name="names">("waist_imu_0")</param>
+            <param name="frames">("waist_imu_0")</param>
+        </group>
+
+        <group name="GYROSCOPE">
+            <param name="names">("waist_imu_0")</param>
+            <param name="frames">("waist_imu_0")</param>
         </group>
 
         <group name="EXTERNAL_CONTACT">
@@ -52,14 +68,24 @@ BSD-3-Clause license. -->
           <param name="joints_list">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
         </group>
 
-        <group name="SixAxisForceTorqueSensors">
-          <param name="sixaxis_forcetorque_sensors_list">("r_leg_ft_sensor", "r_foot_front_ft_sensor", "r_foot_rear_ft_sensor")</param>
+        <!-- <group name="SixAxisForceTorqueSensors">
+          <param name="sixaxis_forcetorque_sensors_list">("r_leg_ft", "r_foot_front_ft", "r_foot_rear_ft")</param>
         </group>
 
         <group name="InertialSensors">
-            <param name="accelerometers_list">(waist_imu_0, r_leg_ft, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
-            <param name="gyroscopes_list">(waist_imu_0, r_leg_ft, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
-            <param name="orientation_sensors_list">(waist_imu_0, r_leg_ft, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
+            <param name="accelerometers_list">(waist_imu_0, r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
+            <param name="gyroscopes_list">(waist_imu_0, r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
+            <param name="orientation_sensors_list">(waist_imu_0, r_leg_ft_imu, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
+        </group> -->
+
+        <group name="SixAxisForceTorqueSensors">
+          <param name="sixaxis_forcetorque_sensors_list">()</param>
+        </group>
+
+        <group name="InertialSensors">
+            <param name="accelerometers_list">(waist_imu_0)</param>
+            <param name="gyroscopes_list">(waist_imu_0)</param>
+            <param name="orientation_sensors_list">(waist_imu_0)</param>
         </group>
     </group>
 
@@ -70,10 +96,10 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
-                 "WAIST_ACC", "WAIST_GYRO",
-                 "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
+                 "WAIST_ACC", "WAIST_GYRO")
+                 <!-- "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
                  "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
-                 "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT")
+                 "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT" -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -178,12 +204,14 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
-                "WAIST_ACC", "WAIST_GYRO",
-                "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
+                "WAIST_ACC", "WAIST_GYRO"
+                )
+                <!-- "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
                 "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
-                "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT"
+                "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
+                "RIGHT_LEG_ACC_CARTESIAN",
                 "RIGHT_FOOT_FRONT_ACC_CARTESIAN",
-                "RIGHT_FOOT_REAR_ACC_CARTESIAN")
+                "RIGHT_FOOT_REAR_ACC_CARTESIAN" -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -297,8 +325,9 @@ BSD-3-Clause license. -->
         <paramlist name="networks">
 
             <elem name="all_joints">right_leg-mc_remapper</elem>
-            <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
-            <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem>
+            <!-- <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem> -->
+            <!-- <elem name="r_leg_imu_sensors">right_leg-imu_remapper</elem> -->
+            <elem name="waist_imu_sensor">waist-inertials_remapper</elem>
             <elem name="right_upper_leg-j0">right_leg-eb6-j0_3-mc</elem>
             <elem name="right_lower_leg-j2">right_leg-eb7-j4_5-mc</elem>
         </paramlist>

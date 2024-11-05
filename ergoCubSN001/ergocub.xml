@@ -132,6 +132,7 @@
     <xi:include href="wrappers/inertials/alljoints-inertials_remapper.xml" disabled_by="disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
 
     <xi:include href="wrappers/inertials/right_leg-imu_remapper.xml" disabled_by="disable_right_leg" />
+    <xi:include href="wrappers/inertials/waist-inertials_remapper.xml" disabled_by="disable_torso" />
 
     <!-- BATTERY BAT -->
     <xi:include href="wrappers/battery/battery_bat.xml" disabled_by="disable_battery" />
@@ -159,7 +160,7 @@
     <xi:include href="wrappers/FT/right_foot-FT_nws_ros2.xml" enabled_by="enable_ros2" disabled_by="disable_ros2 disable_right_leg" />
 
     <!-- ESTIMATORS -->
-    <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" />
+    <!-- <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_left_arm disable_right_leg disable_left_leg" /> -->
     <xi:include href="estimators/right_leg-robot-dynamics-estimator.xml" disabled_by="disable_rde disable_right_leg" />
 
   </devices>
