@@ -33,7 +33,7 @@
     <device name="secondaryCalibration_l_jet_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  l_jet_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/3rd_order_dummy.xml" />
+        <xi:include href="./ft_secondary_calibration_models/leftJet_ft_models/correction.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -47,7 +47,7 @@
     <device name="secondaryCalibration_r_jet_ft" type="ftSecondaryCalibImpl">
         <param name="period">      0.001      </param> <!-- in seconds-->
         <param name="sensorName">  r_jet_ft  </param>
-        <xi:include href="./ft_secondary_calibration_models/dummy_ft_models/3rd_order_dummy.xml" />
+        <xi:include href="./ft_secondary_calibration_models/rightJet_ft_models/correction.xml" />
 
         <action phase="startup" level="6" type="attach">
             <paramlist name="networks">
@@ -120,7 +120,7 @@
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
         <param name="defaultContactFrames">(l_elbow_1,chest_l_jet_turbine,chest_r_jet_turbine,r_elbow_1,root_link,l_sole,r_sole,l_ankle_1,r_ankle_1,l_foot_front,r_foot_front)</param>
         <param name="overrideContactFrames">(l_arm_jet_turbine, r_arm_jet_turbine, chest_l_jet_turbine, chest_r_jet_turbine, root_link, l_foot_rear, r_foot_rear, l_foot_front, r_foot_front)</param>
-        <param name="contactWrenchType">(    pure             , pure             , pure               , pure               , full     , full     , full     , full        , full         )</param>
+        <param name="contactWrenchType">(    pure             , pure             , pureKnown          , pureKnown          , full     , full     , full     , full        , full         )</param>
         <param name="contactWrenchDirection">(0,0,1           , 0,0,1            , 0,0,1              , 0,0,1              , 0,0,0    , 0,0,0    ,0,0,0     , 0,0,0       , 0,0,0        )</param>
         <param name="contactWrenchPosition">( 0,0,0           , 0,0,0            , 0,0,0              , 0,0,0              , 0,0,0    , 0,0,0    ,0,0,0     , 0,0,0       , 0,0,0        )</param>
         <param name="imuFrameName">chest_imu</param>
