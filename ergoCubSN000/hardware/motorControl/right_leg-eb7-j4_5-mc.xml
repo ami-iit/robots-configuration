@@ -152,16 +152,17 @@
         <param name="deadZone">                 0.011              0.011              </param>
     </group>
 
-  <group name="KALMAN_FILTER">
-        <param name="kalmanFilterEnabled">        1            1          </param>
-        <param name="x0">                         0            0          </param>
-        <param name="x1">                         0            0          </param>
-        <param name="x2">                         0            0          </param>
-        <param name="Q0">                         0.0001       0.0001     </param>
-        <param name="Q1">                         0.01         0.01       </param>
-        <param name="Q2">                         10           10         </param>
-        <param name="R">                          0.001        0.001      </param>
-        <param name="P0">                         0.000099     0.000099   </param>
+    <group name="KALMAN_FILTER">
+        <!--   r_ankle_pitch r_ankle_roll  -->
+        <param name="kalmanFilterEnabled">          1 1             </param>
+        <param name="x0">                           0 0             </param>
+        <param name="x1">                           0 0             </param>
+        <param name="x2">                           0 0             </param>
+        <param name="Q0">      8.2551466249195e-05   0.0010366306537430618         </param>
+        <param name="Q1">      0.002233929810758366   9.018428667819708e-05         </param>
+        <param name="Q2">      48.09029943071946      49.267538984124414            </param>
+        <param name="R">      2.0531857814388692e-05  0.003329749020748807     </param>
+        <param name="P0">     0.003343795067559131    0.38134537532629503      </param>
     </group>
     
 </device>
