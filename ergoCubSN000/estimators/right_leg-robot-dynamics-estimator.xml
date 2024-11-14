@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.005</param>
+        <param name="sampling_time">0.01</param>
         <param name="remote">/robot-dynamics-estimator/right_leg</param>
     </group>
 
@@ -78,7 +78,7 @@ BSD-3-Clause license. -->
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">JointVelocityStateDynamics</param>
             </group>
@@ -92,7 +92,7 @@ BSD-3-Clause license. -->
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
@@ -192,7 +192,7 @@ BSD-3-Clause license. -->
             </group>
             <group name="MOTOR_CURRENTS">
                 <param name="variable_name">i_m</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="gear_ratio">(100.0, -160.0, 100.0, 100.0, 100.0, 160.0)</param>
                 <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.047)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
@@ -200,7 +200,7 @@ BSD-3-Clause license. -->
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="associated_state">FRICTION_TORQUES</param>
-                <param name="covariance">(1e-1, 1e0, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="RIGHT_FOOT_FRONT_FT">
