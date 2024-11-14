@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.005</param>
+        <param name="sampling_time">0.01</param>
         <param name="remote">/robot-dynamics-estimator/torso</param>
     </group>
 
@@ -111,14 +111,14 @@ BSD-3-Clause license. -->
             <group name="WAIST_ACC">
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
             <group name="WAIST_GYRO">
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">gyroscope</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
