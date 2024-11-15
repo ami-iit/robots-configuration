@@ -161,14 +161,16 @@
     <xi:include href="wrappers/allSensors/arms-all_sensors_remapper.xml" disabled_by="disable_left_arm disable_right_arm" />
     <xi:include href="wrappers/allSensors/left_arm-all_sensors_remapper.xml" disabled_by="disable_left_arm" />
     <xi:include href="wrappers/allSensors/right_arm-all_sensors_remapper.xml" disabled_by="disable_right_arm" />
+    <xi:include href="wrappers/allSensors/reduced_left_arm-mc_remapper.xml" disabled_by="disable_left_arm" />
+    <xi:include href="wrappers/allSensors/reduced_right_arm-mc_remapper.xml" disabled_by="disable_right_arm" />
 
     <!-- ESTIMATORS -->
     <!-- <xi:include href="estimators/wholebodydynamics.xml" disabled_by="disable_wholebodynamics disable_head disable_torso disable_right_arm disable_right_leg disable_left_leg" /> -->
     <xi:include href="estimators/left_leg-robot-dynamics-estimator.xml" disabled_by="disable_left_leg" />
     <xi:include href="estimators/right_leg-robot-dynamics-estimator.xml" disabled_by="disable_right_leg" />
     <xi:include href="estimators/torso-robot-dynamics-estimator.xml" disabled_by="disable_torso" />
-    <!-- <xi:include href="estimators/left_arm-robot-dynamics-estimator.xml" disabled_by="disable_left_arm" /> -->
-    <!-- <xi:include href="estimators/right_arm-robot-dynamics-estimator.xml" disabled_by="disable_right_arm" /> -->
+    <xi:include href="estimators/left_arm-robot-dynamics-estimator.xml" disabled_by="disable_left_arm" />
+    <xi:include href="estimators/right_arm-robot-dynamics-estimator.xml" disabled_by="disable_right_arm" />
 
   </devices>
 </robot>
