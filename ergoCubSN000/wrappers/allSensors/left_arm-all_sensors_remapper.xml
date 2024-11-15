@@ -12,20 +12,20 @@
             (l_arm_ft)
         </param>
         <param name="ThreeAxisGyroscopesNames">
-            (waist_imu_0, l_arm_ft_imu)
+            (l_arm_ft_imu)
         </param>
         <param name="ThreeAxisLinearAccelerometersNames">
-            (waist_imu_0, l_arm_ft_imu)
+            (l_arm_ft_imu)
         </param>
         <param name="ThreeAxisMagnetometersNames">
-            (waist_imu_0, l_arm_ft_imu)
+            (l_arm_ft_imu)
         </param>
         <param name="OrientationSensorsNames">
-            (waist_imu_0, l_arm_ft_imu)
+            (l_arm_ft_imu)
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
-                <elem name="waist-inertial">  waist-inertial </elem>
+                <!-- <elem name="waist-inertial">  waist-inertial </elem> -->
                 <elem name="left_arm-eb2-j0_1-strain">     left_arm-eb2-j0_1-strain      </elem>
                 <elem name="left_arm-eb2-j0_1-inertial">   left_arm-eb2-j0_1-inertial    </elem>
             </paramlist>

@@ -12,7 +12,9 @@ BSD-3-Clause license. -->
 
     <group name="MODEL">
         <param name="model_file">model.urdf</param>
-        <param name="base_link">root_link</param>
+        <param name="base_link">r_shoulder_2</param>
+        <param name="contact_frame">chest</param>
+        <param name="base_imu">r_arm_ft_imu</param>
         <param name="joint_list">("r_shoulder_pitch", "r_shoulder_roll", "r_shoulder_yaw", "r_elbow")</param>
         <param name="gear_ratio">(-100.0, -100.0, -100.0, 100.0)</param>
         <param name="torque_constant">(0.047, 0.047, 0.025, 0.025)</param>
@@ -24,13 +26,13 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="ACCELEROMETER">
-            <param name="names">("waist_imu_0", "r_arm_ft_imu")</param>
-            <param name="frames">("waist_imu_0", "r_arm_ft")</param>
+            <param name="names">("r_arm_ft_imu")</param>
+            <param name="frames">("r_arm_ft")</param>
         </group>
 
         <group name="GYROSCOPE">
-            <param name="names">("waist_imu_0", "r_arm_ft_imu")</param>
-            <param name="frames">("waist_imu_0", "r_arm_ft")</param>
+            <param name="names">("r_arm_ft_imu")</param>
+            <param name="frames">("r_arm_ft")</param>
         </group>
 
         <group name="EXTERNAL_CONTACT">
@@ -55,8 +57,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="InertialSensors">
-          <param name="accelerometers_list">("waist_imu_0", "r_arm_ft_imu")</param>
-          <param name="gyroscopes_list">("waist_imu_0", "r_arm_ft_imu")</param>
+          <param name="accelerometers_list">("r_arm_ft_imu")</param>
+          <param name="gyroscopes_list">("r_arm_ft_imu")</param>
         </group>
     </group>
 
@@ -67,7 +69,6 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
              <param name="dynamics_list">
                  ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
-                  "WAIST_ACC", "WAIST_GYRO",
                   "RIGHT_ARM_ACC", "RIGHT_ARM_GYRO",
                   "RIGHT_ARM_FT")
               </param>
@@ -130,9 +131,7 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
-                "WAIST_ACC", "WAIST_GYRO",
                 "RIGHT_ARM_ACC", "RIGHT_ARM_GYRO",
-                "RIGHT_ARM_ACC_CARTESIAN",
                 "RIGHT_ARM_FT")
             </param>
                 <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
@@ -209,10 +208,8 @@ BSD-3-Clause license. -->
     <!-- ATTACH -->
     <action phase="startup" level="15" type="attach">
         <paramlist name="networks">
-            <elem name="all_joints">right_arm-mc_remapper</elem>
+            <elem name="all_joints">reduced_right_arm-mc_remapper</elem>
             <elem name="r_arm_all_sensors">right_arm-all_sensors_remapper</elem>
-            <elem name="right_arm-eb1-j0">right_arm-eb1-j0_1-mc</elem>
-            <elem name="right_arm-eb3-j2">right_arm-eb3-j2_3-mc</elem>
         </paramlist>
     </action>
 

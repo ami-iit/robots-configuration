@@ -255,7 +255,6 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">torso-mc_remapper</elem>
             <elem name="torso_all_sensors">arms-all_sensors_remapper</elem>
-            <elem name="torso-eb5-j0_2">torso-eb5-j0_2-mc</elem>
         </paramlist>
     </action>
 

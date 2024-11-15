@@ -297,8 +297,6 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">left_leg-mc_remapper</elem>
             <elem name="l_leg_all_sensors">left_leg-all_sensors_remapper</elem>
-            <elem name="left_leg-eb8-j0">left_leg-eb8-j0_3-mc</elem>
-            <elem name="left_leg-eb9-j4">left_leg-eb9-j4_5-mc</elem>
         </paramlist>
     </action>
 
