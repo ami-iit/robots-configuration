@@ -139,12 +139,12 @@ BSD-3-Clause license. -->
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
                 <param name="associated_state">JOINT_VELOCITIES</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-5, 1e-5, 1e-5, 1e-5)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="MOTOR_CURRENTS">
                 <param name="variable_name">i_m</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="gear_ratio">(100.0, 100.0, 100.0, -100.0)</param>
                 <param name="torque_constant">(0.047, 0.047, 0.025, 0.025)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
@@ -167,7 +167,7 @@ BSD-3-Clause license. -->
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">accelerometer</param>
                 <param name="associated_state">WAIST_ACC</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
@@ -175,7 +175,7 @@ BSD-3-Clause license. -->
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">gyroscope</param>
                 <param name="associated_state">WAIST_GYRO</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
@@ -191,7 +191,7 @@ BSD-3-Clause license. -->
                 <param name="variable_name">l_arm_ft_imu</param>
                 <param name="sensor_type">gyroscope</param>
                 <param name="associated_state">LEFT_ARM_GYRO</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
@@ -210,6 +210,8 @@ BSD-3-Clause license. -->
         <paramlist name="networks">
             <elem name="all_joints">reduced_left_arm-mc_remapper</elem>
             <elem name="l_arm_all_sensors">left_arm-all_sensors_remapper</elem>
+            <elem name="left_upper_arm-j0">left_arm-eb2-j0_1-mc</elem>
+            <elem name="left_upper_arm-j2">left_arm-eb4-j2_3-mc</elem>
         </paramlist>
     </action>
 

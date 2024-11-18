@@ -36,9 +36,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="names">()</param>
-            <param name="frames">()</param>
-            <!-- <param name="frames">("chest")</param> -->
+            <param name="names">('chest')</param>
+            <param name="frames">('chest')</param>
         </group>
     </group>
 
@@ -71,7 +70,8 @@ BSD-3-Clause license. -->
         <group name="UKF_STATE">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
-                 "WAIST_ACC", "WAIST_GYRO")
+                 "WAIST_ACC", "WAIST_GYRO",
+                 "CHEST_CONTACT")
                  <!-- "LEFT_ARM_ACC", "LEFT_ARM_GYRO",
                  "RIGHT_ARM_ACC", "RIGHT_ARM_GYRO") -->
                   <!-- "CHEST_CONTACT") -->
@@ -170,7 +170,7 @@ BSD-3-Clause license. -->
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
                 <param name="associated_state">JOINT_VELOCITIES</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(1e-5, 1e-5, 1e-5)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="MOTOR_CURRENTS">
@@ -206,7 +206,7 @@ BSD-3-Clause license. -->
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">accelerometer</param>
                 <param name="associated_state">WAIST_ACC</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
@@ -214,37 +214,30 @@ BSD-3-Clause license. -->
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">gyroscope</param>
                 <param name="associated_state">WAIST_GYRO</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="LEFT_ARM_ACC_CARTESIAN">
                 <param name="variable_name">l_arm_ft_imu</param>
                 <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
             </group>
             <group name="LEFT_ARM_GYRO_CARTESIAN">
                 <param name="variable_name">l_arm_ft_imu</param>
                 <param name="sensor_type">gyroscope</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
             </group>
             <group name="RIGHT_ARM_ACC_CARTESIAN">
                 <param name="variable_name">r_arm_ft_imu</param>
                 <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
-            </group>
-            <group name="RIGHT_ARM_GYRO_CARTESIAN">
-                <param name="variable_name">r_arm_ft_imu</param>
-                <param name="sensor_type">gyroscope</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
-                <param name="use_bias">false</param>
-                <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
             </group>
         </group>
     </group>
@@ -255,6 +248,7 @@ BSD-3-Clause license. -->
 
             <elem name="all_joints">torso-mc_remapper</elem>
             <elem name="torso_all_sensors">arms-all_sensors_remapper</elem>
+            <elem name="torso">torso-eb5-j0_2-mc</elem>
         </paramlist>
     </action>
 
