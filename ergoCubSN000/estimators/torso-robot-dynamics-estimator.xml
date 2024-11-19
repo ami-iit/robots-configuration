@@ -155,7 +155,7 @@ BSD-3-Clause license. -->
                 <param name="sensor_type">none</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">0.1</param>
+                <param name="k">10</param>
                 <param name="dynamic_model">ExternalContactStateDynamics</param>
             </group>
         </group>
