@@ -36,8 +36,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="names">('chest')</param>
-            <param name="frames">('chest')</param>
+            <param name="names">(chest)</param>
+            <param name="frames">(chest)</param>
         </group>
     </group>
 
@@ -152,6 +152,7 @@ BSD-3-Clause license. -->
             </group>
             <group name="CHEST_CONTACT">
                 <param name="variable_name">chest</param>
+                <param name="sensor_type">none</param>
                 <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="k">0.1</param>
