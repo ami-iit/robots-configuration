@@ -23,4 +23,8 @@
         <node>ergocub000-lap</node>
     </module>
 
+    <application>
+       <name>iRonCubApp-webcams</name>
+    </application>
+
 </application>
