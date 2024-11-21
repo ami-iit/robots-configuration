@@ -31,5 +31,9 @@
        <name>iRonCubApp-turbines-pilot</name>
     </application>
 
+    <application>
+       <name>iRonCubApp-turbines-dumper</name>
+    </application>
+
 
 </application>
