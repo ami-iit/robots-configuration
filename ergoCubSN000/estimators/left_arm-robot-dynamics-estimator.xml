@@ -20,9 +20,9 @@ BSD-3-Clause license. -->
         <param name="torque_constant">(0.047, 0.047, 0.025, 0.025)</param>
 
         <group name="FT">
-            <param name="names">("l_arm_ft")</param>
-            <param name="frames">("l_arm_ft")</param>
-            <param name="associated_joints">("l_arm_ft_sensor")</param>
+            <param name="names">()</param>
+            <param name="frames">()</param>
+            <param name="associated_joints">()</param>
         </group>
 
         <group name="ACCELEROMETER">
@@ -36,8 +36,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="names">()</param>
-            <param name="frames">()</param>
+            <param name="names">("l_upper_arm")</param>
+            <param name="frames">("l_upper_arm")</param>
         </group>
     </group>
 
@@ -70,7 +70,7 @@ BSD-3-Clause license. -->
              <param name="dynamics_list">
                  ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
                   "LEFT_ARM_ACC", "LEFT_ARM_GYRO",
-                  "LEFT_ARM_FT")
+                  "LEFT_ARM_CONTACT")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
              <group name="JOINT_VELOCITIES">
@@ -126,13 +126,20 @@ BSD-3-Clause license. -->
                 <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
+            <group name="LEFT_ARM_CONTACT">
+                <param name="variable_name">l_upper_arm</param>
+                <param name="sensor_type">none</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="k">10.0</param>
+                <param name="dynamic_model">ExternalContactStateDynamics</param>
+            </group>
         </group>
 
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
-                "LEFT_ARM_ACC", "LEFT_ARM_GYRO",
-                "LEFT_ARM_FT")
+                "LEFT_ARM_ACC", "LEFT_ARM_GYRO")
             </param>
                 <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
                                         "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->
