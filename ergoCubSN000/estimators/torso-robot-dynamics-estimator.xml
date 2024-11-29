@@ -53,13 +53,13 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="SixAxisForceTorqueSensors">
-          <param name="sixaxis_forcetorque_sensors_list">("l_arm_ft", "r_arm_ft")</param>
+          <param name="sixaxis_forcetorque_sensors_list">()</param>
         </group>
 
         <group name="InertialSensors">
-            <param name="accelerometers_list">("waist_imu_0", "l_arm_ft_imu", "r_arm_ft_imu")</param>
-            <param name="gyroscopes_list">("waist_imu_0", "l_arm_ft_imu", "r_arm_ft_imu")</param>
-            <param name="orientation_sensors_list">("waist_imu_0", "l_arm_ft_imu", "r_arm_ft_imu")</param>
+            <param name="accelerometers_list">("waist_imu_0")</param>
+            <param name="gyroscopes_list">("waist_imu_0")</param>
+            <param name="orientation_sensors_list">("waist_imu_0")</param>
         </group>
     </group>
 
@@ -92,20 +92,6 @@ BSD-3-Clause license. -->
                 <param name="variable_name">tau_F</param>
                 <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
-                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
-            </group>
-            <group name="LEFT_ARM_FT">
-                <param name="variable_name">l_arm_ft</param>
-                <param name="sensor_type">ft</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
-                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
-            </group>
-            <group name="RIGHT_ARM_FT">
-                <param name="variable_name">r_arm_ft</param>
-                <param name="sensor_type">ft</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
-                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
             <group name="WAIST_ACC">
@@ -153,7 +139,7 @@ BSD-3-Clause license. -->
             <group name="CHEST_CONTACT">
                 <param name="variable_name">chest</param>
                 <param name="sensor_type">none</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="k">10.0</param>
                 <param name="dynamic_model">ExternalContactStateDynamics</param>
@@ -164,9 +150,6 @@ BSD-3-Clause license. -->
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
                 "WAIST_ACC", "WAIST_GYRO")
-                <!-- "LEFT_ARM_FT", "RIGHT_ARM_FT", -->
-                <!-- "LEFT_ARM_ACC", "LEFT_ARM_GYRO",
-                "RIGHT_ARM_ACC", "RIGHT_ARM_GYRO") -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -187,22 +170,6 @@ BSD-3-Clause license. -->
                 <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
-            <group name="LEFT_ARM_FT">
-                <param name="variable_name">l_arm_ft</param>
-                <param name="sensor_type">ft</param>
-                <param name="associated_state">LEFT_ARM_FT</param>
-                <param name="covariance">(1e1, 1e1, 1e1, 1e1, 1e1, 1e1)</param>
-                <param name="use_bias">false</param>
-                <param name="dynamic_model">ConstantMeasurementModel</param>
-            </group>
-            <group name="RIGHT_ARM_FT">
-                <param name="variable_name">r_arm_ft</param>
-                <param name="sensor_type">ft</param>
-                <param name="associated_state">RIGHT_ARM_FT</param>
-                <param name="covariance">(1e1, 1e1, 1e1, 1e1, 1e1, 1e1)</param>
-                <param name="use_bias">false</param>
-                <param name="dynamic_model">ConstantMeasurementModel</param>
-            </group>
             <group name="WAIST_ACC">
                 <param name="variable_name">waist_imu_0</param>
                 <param name="sensor_type">accelerometer</param>
@@ -219,27 +186,6 @@ BSD-3-Clause license. -->
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
-            <group name="LEFT_ARM_ACC_CARTESIAN">
-                <param name="variable_name">l_arm_ft_imu</param>
-                <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
-                <param name="use_bias">false</param>
-                <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
-            </group>
-            <group name="LEFT_ARM_GYRO_CARTESIAN">
-                <param name="variable_name">l_arm_ft_imu</param>
-                <param name="sensor_type">gyroscope</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
-                <param name="use_bias">false</param>
-                <param name="dynamic_model">GyroscopeMeasurementDynamics</param>
-            </group>
-            <group name="RIGHT_ARM_ACC_CARTESIAN">
-                <param name="variable_name">r_arm_ft_imu</param>
-                <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
-                <param name="use_bias">false</param>
-                <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
-            </group>
         </group>
     </group>
 
@@ -248,7 +194,7 @@ BSD-3-Clause license. -->
         <paramlist name="networks">
 
             <elem name="all_joints">torso-mc_remapper</elem>
-            <elem name="torso_all_sensors">arms-all_sensors_remapper</elem>
+            <elem name="torso_all_sensors">waist-all_sensors_remapper</elem>
             <elem name="torso">torso-eb5-j0_2-mc</elem>
         </paramlist>
     </action>
