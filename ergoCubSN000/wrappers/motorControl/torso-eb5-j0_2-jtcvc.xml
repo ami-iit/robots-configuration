@@ -2,12 +2,12 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-eb5-j0_2-jtcvc" type="JointTorqueControlDevice">
     <param name="remote">  /hijackingTrqCrl/torso  </param>
-    <param name="joint_list"> (  "torso_roll", "torso_yaw"  )</param>
+    <param name="joint_list"> (  "torso_pitch", "torso_roll", "torso_yaw"  )</param>
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.047,  0.047,  0.047   )</param>
         <param name="kfc">(  0.0, 0.0, 0.0  )</param>
-        <param name="kp">(  0.0, 0.0, 0.0  )</param>
+        <param name="kp">(  0.5, 0.5, 0.5  )</param>
         <param name="ki">(  0.0, 0.0, 0.0  )</param>
         <param name="max_curr">(  15.0, 15.0, 15.0  )</param>
         <param name="friction_model"> ( "", "", "" ) </param>

@@ -169,7 +169,7 @@ BSD-3-Clause license. -->
                 "LEFT_FOOT_FRONT_ACC", "LEFT_FOOT_FRONT_GYRO",
                 "LEFT_FOOT_REAR_ACC", "LEFT_FOOT_REAR_GYRO",
                 "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT",
-                "LEFT_FOOT_FRONT_ACC_CARTESIAN", "LEFT_FOOT_REAR_ACC_CARTESIAN")
+                "LEFT_FOOT_REAR_ACC_CARTESIAN")
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -257,21 +257,21 @@ BSD-3-Clause license. -->
             <group name="LEFT_LEG_ACC_CARTESIAN">
                 <param name="variable_name">l_leg_ft_imu</param>
                 <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e0, 1e0, 1e0)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
             </group>
             <group name="LEFT_FOOT_FRONT_ACC_CARTESIAN">
                 <param name="variable_name">l_foot_front_ft_imu</param>
                 <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e0, 1e0, 1e0)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
             </group>
             <group name="LEFT_FOOT_REAR_ACC_CARTESIAN">
                 <param name="variable_name">l_foot_rear_ft_imu</param>
                 <param name="sensor_type">accelerometer</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e0, 1e0, 1e0)</param>
                 <param name="use_bias">false</param>
                 <param name="dynamic_model">AccelerometerMeasurementDynamics</param>
             </group>
