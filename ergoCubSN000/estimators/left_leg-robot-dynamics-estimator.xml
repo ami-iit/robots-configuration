@@ -168,8 +168,7 @@ BSD-3-Clause license. -->
                 "WAIST_ACC", "WAIST_GYRO",
                 "LEFT_FOOT_FRONT_ACC", "LEFT_FOOT_FRONT_GYRO",
                 "LEFT_FOOT_REAR_ACC", "LEFT_FOOT_REAR_GYRO",
-                "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT",
-                "LEFT_FOOT_REAR_ACC_CARTESIAN")
+                "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT")
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -179,7 +178,7 @@ BSD-3-Clause license. -->
             </group>
             <group name="MOTOR_CURRENTS">
                 <param name="variable_name">i_m</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="gear_ratio">(-100.0, 160.0, -100.0, -100.0, -100.0, -160.0)</param>
                 <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.047)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
