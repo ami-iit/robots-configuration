@@ -168,8 +168,7 @@ BSD-3-Clause license. -->
                  "WAIST_ACC", "WAIST_GYRO",
                  "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
                  "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
-                 "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT",
-                 "RIGHT_FOOT_REAR_ACC_CARTESIAN")
+                 "RIGHT_FOOT_FRONT_FT", "RIGHT_FOOT_REAR_FT")
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
