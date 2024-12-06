@@ -165,7 +165,7 @@ BSD-3-Clause license. -->
 
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
-                ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
+                ("JOINT_VELOCITIES", "MOTOR_CURRENTS",
                  "WAIST_ACC", "WAIST_GYRO",
                  "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
                  "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
