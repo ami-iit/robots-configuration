@@ -36,8 +36,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="names">()</param>
-            <param name="frames">()</param>
+            <param name="names">("l_upper_leg")</param>
+            <param name="frames">("l_upper_leg")</param>
         </group>
     </group>
 
@@ -73,7 +73,8 @@ BSD-3-Clause license. -->
                  "WAIST_ACC", "WAIST_GYRO",
                  "LEFT_FOOT_FRONT_ACC", "LEFT_FOOT_FRONT_GYRO",
                  "LEFT_FOOT_REAR_ACC", "LEFT_FOOT_REAR_GYRO",
-                 "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT")
+                 "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT",
+                 "LEFT_UPPER_LEG_CONTACT")
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -157,7 +158,7 @@ BSD-3-Clause license. -->
                 <param name="sensor_type">none</param>
                 <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">0.1</param>
+                <param name="k">10.0</param>
                 <param name="dynamic_model">ExternalContactStateDynamics</param>
             </group>
         </group>
