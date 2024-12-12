@@ -169,7 +169,7 @@ BSD-3-Clause license. -->
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="associated_state">FRICTION_TORQUES</param>
-                <param name="covariance">(1e-2, 1e-2)</param>
+                <param name="covariance">(1e-3, 1e-3)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="WAIST_ACC">
