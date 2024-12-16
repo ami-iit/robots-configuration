@@ -86,7 +86,7 @@ BSD-3-Clause license. -->
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4)</param>
+                <param name="covariance">(5e-4, 5e-4, 1e-4, 1e-4, 1e-4, 2e-4)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
@@ -179,7 +179,7 @@ BSD-3-Clause license. -->
             </group>
             <group name="MOTOR_CURRENTS">
                 <param name="variable_name">i_m</param>
-                <param name="covariance">(1e-3, 7e-4, 1e-3, 1e-4, 1e-4, 8e-4)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-4, 1e-4, 1e-3)</param>
                 <param name="gear_ratio">(100.0, -160.0, 100.0, 100.0, 100.0, 160.0)</param>
                 <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.047)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
