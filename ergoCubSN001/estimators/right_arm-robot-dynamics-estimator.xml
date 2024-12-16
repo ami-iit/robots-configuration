@@ -138,7 +138,7 @@ BSD-3-Clause license. -->
 
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
-                ("JOINT_VELOCITIES", "MOTOR_CURRENTS",
+                ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
                 "RIGHT_ARM_ACC", "RIGHT_ARM_GYRO")
             </param>
                 <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
