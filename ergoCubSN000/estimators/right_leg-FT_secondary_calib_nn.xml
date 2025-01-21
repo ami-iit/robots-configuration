@@ -9,6 +9,10 @@
     <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature, or 11 if wrench_temperature_quaternion-->
     <param name="FtSensorName">r_leg_ft</param>  <!-- name of the FT sensor -->
     <param name="IMUSensorName">r_leg_ft_imu</param>  <!-- name of the IMU sensor -->
+    <param name="use_filter_ft"> true </param> <!-- true if you want to filter FT measures using a Butterworth filter -->
+    <param name="order"> 2 </param> <!-- order of the Butterworth filter -->
+    <param name="cutOffFrequency"> 15 </param> <!-- cutOff Frequency of the Butterworth filter -->
+    <param name="dT"> 0.001 </param> <!-- sampling period (used by the Butterworth filter) -->
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
