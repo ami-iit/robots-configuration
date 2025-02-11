@@ -13,10 +13,6 @@
     <param name="order"> 2 </param> <!-- order of the Butterworth filter -->
     <param name="cutOffFrequency"> 15 </param> <!-- cutOff Frequency of the Butterworth filter -->
     <param name="dT"> 0.001 </param> <!-- sampling period (used by the Butterworth filter) -->
-    <param name="filter_FT_value"> true </param> <!-- true if you want to filter FT measures using a Butterworth filter -->
-    <param name="order"> 2 </param> <!-- order of the Butterworth filter -->
-    <param name="cutOffFrequency"> 15 </param> <!-- cutOff Frequency of the Butterworth filter -->
-    <param name="dT"> 0.001 </param> <!-- sampling period (used by the Butterworth filter) -->
     <param name="isLSTM"> true </param> <!-- true if the network is an LSTM -->
     <param name="sequence_length"> 10 </param> <!-- sequence length input of the LSTM network -->
 
