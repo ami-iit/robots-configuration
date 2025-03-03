@@ -19,25 +19,40 @@ BSD-3-Clause license. -->
         <param name="gear_ratio">(100.0, -160.0, 100.0, 100.0, 100.0, 160.0)</param>
         <param name="torque_constant">(0.111, 0.047, 0.047, 0.111, 0.111, 0.047)</param>
 
-         <group name="FT">
+        <!-- <group name="FT">
             <param name="names">(r_foot_rear_ft, r_foot_front_ft)</param>
             <param name="frames">(r_foot_rear_ft, r_foot_front_ft)</param>
             <param name="associated_joints">(r_foot_rear_ft_sensor, r_foot_front_ft_sensor)</param>
+        </group> -->
+        <group name="FT">
+            <param name="names">()</param>
+            <param name="frames">()</param>
+            <param name="associated_joints">()</param>
         </group>
 
         <group name="ACCELEROMETER">
             <param name="names">(waist_imu_0, r_foot_rear_ft_imu, r_foot_front_ft_imu)</param>
             <param name="frames">(waist_imu_0, r_foot_rear_ft, r_foot_front_ft)</param>
         </group>
+        <!-- <group name="ACCELEROMETER">
+            <param name="names">(waist_imu_0)</param>
+            <param name="frames">(waist_imu_0)</param>
+        </group> -->
 
-        <group name="GYROSCOPE">
+        <!-- <group name="GYROSCOPE">
             <param name="names">(waist_imu_0, r_foot_rear_ft_imu, r_foot_front_ft_imu)</param>
             <param name="frames">(waist_imu_0, r_foot_rear_ft, r_foot_front_ft)</param>
+        </group> -->
+        <group name="GYROSCOPE">
+            <param name="names">(waist_imu_0)</param>
+            <param name="frames">(waist_imu_0)</param>
         </group>
 
         <group name="EXTERNAL_CONTACT">
-            <param name="names">("r_upper_leg")</param>
-            <param name="frames">("r_upper_leg")</param>
+            <!-- <param name="names">("r_upper_leg")</param>
+            <param name="frames">("r_upper_leg")</param> -->
+            <param name="names">("r_sole")</param>
+            <param name="frames">("r_sole")</param>
         </group>
     </group>
 
@@ -71,10 +86,12 @@ BSD-3-Clause license. -->
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
                  "WAIST_ACC", "WAIST_GYRO",
-                 "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
+                 "RIGHT_SOLE_CONTACT"
+                 )
+                 <!-- "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
                  "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
                  "RIGHT_FOOT_REAR_FT", "RIGHT_FOOT_FRONT_FT",
-                 "RIGHT_UPPER_LEG_CONTACT")
+                 "RIGHT_UPPER_LEG_CONTACT" -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
@@ -86,7 +103,7 @@ BSD-3-Clause license. -->
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(1e-4, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4)</param>
+                <param name="covariance">(5e-3, 1e-4, 1e-4, 1e-4, 1e-3, 1e-4)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
@@ -161,15 +178,25 @@ BSD-3-Clause license. -->
                 <param name="k">10.0</param>
                 <param name="dynamic_model">ExternalContactStateDynamics</param>
             </group>
+            <group name="RIGHT_SOLE_CONTACT">
+                <param name="variable_name">r_sole</param>
+                <param name="sensor_type">none</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
+                <param name="k">10.0</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
+            </group>
         </group>
 
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
                  "WAIST_ACC", "WAIST_GYRO",
-                 "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
+                 "RIGHT_FOOT_FRONT_ACC_CARTESIAN", RIGHT_FOOT_REAR_ACC_CARTESIAN
+                 )
+                 <!-- "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
                  "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
-                 "RIGHT_FOOT_REAR_FT", "RIGHT_FOOT_FRONT_FT")
+                 "RIGHT_FOOT_REAR_FT", "RIGHT_FOOT_FRONT_FT" -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
