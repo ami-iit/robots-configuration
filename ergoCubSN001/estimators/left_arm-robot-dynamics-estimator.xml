@@ -12,9 +12,9 @@ BSD-3-Clause license. -->
 
     <group name="MODEL">
         <param name="model_file">model.urdf</param>
-        <param name="base_link">torso_1</param>
+        <param name="base_link">l_shoulder_2</param>
         <param name="contact_frame">chest</param>
-        <param name="base_imu">waist_imu_0</param>
+        <param name="base_imu">l_arm_ft_imu</param>
         <param name="joint_list">("l_shoulder_pitch", "l_shoulder_roll", "l_shoulder_yaw", "l_elbow")</param>
         <param name="gear_ratio">(100.0, 100.0, 100.0, -100.0)</param>
         <param name="torque_constant">(0.047, 0.047, 0.025, 0.025)</param>
