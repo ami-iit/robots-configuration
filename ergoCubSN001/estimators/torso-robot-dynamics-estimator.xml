@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.002</param>
+        <param name="sampling_time">0.005</param>
         <param name="remote">/robot-dynamics-estimator/torso</param>
     </group>
 
