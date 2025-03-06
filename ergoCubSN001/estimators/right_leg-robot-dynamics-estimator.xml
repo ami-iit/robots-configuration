@@ -103,7 +103,7 @@ BSD-3-Clause license. -->
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(5e-3, 5e-3, 1e-4, 1e-4, 1e-3, 5e-3)</param>
+                <param name="covariance">(5e-3, 5e-3, 1e-4, 7e-3, 1e-3, 5e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
