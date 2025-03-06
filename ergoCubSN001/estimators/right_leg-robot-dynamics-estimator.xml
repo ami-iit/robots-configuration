@@ -103,7 +103,7 @@ BSD-3-Clause license. -->
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
                 <param name="elements">("r_hip_pitch", "r_hip_roll", "r_hip_yaw", "r_knee", "r_ankle_pitch", "r_ankle_roll")</param>
-                <param name="covariance">(5e-3, 1e-4, 1e-4, 1e-4, 1e-3, 1e-4)</param>
+                <param name="covariance">(5e-3, 5e-3, 1e-4, 1e-4, 1e-3, 5e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
@@ -183,7 +183,7 @@ BSD-3-Clause license. -->
                 <param name="sensor_type">none</param>
                 <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">10.0</param>
+                <param name="k">1.0</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
         </group>
@@ -214,7 +214,7 @@ BSD-3-Clause license. -->
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="associated_state">FRICTION_TORQUES</param>
-                <param name="covariance">(1e-1, 1e-1, 1e-1, 1e-1, 1e-1, 1e-1)</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="RIGHT_FOOT_FRONT_FT">
