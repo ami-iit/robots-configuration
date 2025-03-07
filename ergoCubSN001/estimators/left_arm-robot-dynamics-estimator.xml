@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="left_arm-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.005</param>
+        <param name="sampling_time">0.01</param>
         <param name="remote">/robot-dynamics-estimator/left_arm</param>
     </group>
 
@@ -26,13 +26,13 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="ACCELEROMETER">
-            <param name="names">("waist_imu_0", "l_arm_ft_imu")</param>
-            <param name="frames">("waist_imu_0", "l_arm_ft")</param>
+            <param name="names">("l_arm_ft_imu")</param>
+            <param name="frames">("l_arm_ft")</param>
         </group>
 
         <group name="GYROSCOPE">
-            <param name="names">("waist_imu_0", "l_arm_ft_imu")</param>
-            <param name="frames">("waist_imu_0", "l_arm_ft")</param>
+            <param name="names">("l_arm_ft_imu")</param>
+            <param name="frames">("l_arm_ft")</param>
         </group>
 
         <group name="EXTERNAL_CONTACT">
@@ -57,8 +57,8 @@ BSD-3-Clause license. -->
         </group>
 
         <group name="InertialSensors">
-          <param name="accelerometers_list">("waist_imu_0", "l_arm_ft_imu")</param>
-          <param name="gyroscopes_list">("waist_imu_0", "l_arm_ft_imu")</param>
+          <param name="accelerometers_list">("l_arm_ft_imu")</param>
+          <param name="gyroscopes_list">("l_arm_ft_imu")</param>
         </group>
     </group>
 
@@ -70,7 +70,6 @@ BSD-3-Clause license. -->
              <param name="dynamics_list">
                  ("JOINT_VELOCITIES", "MOTOR_TORQUES", "FRICTION_TORQUES",
                   "LEFT_ARM_ACC", "LEFT_ARM_GYRO",
-                  "WAIST_ACC", "WAIST_GYRO",
                   "LEFT_ARM_CONTACT")
               </param>
              <!-- Available models = ["ZeroVelocityStateDynamics", "JointVelocityStateDynamics", "FrictionTorqueStateDynamics"] -->
@@ -130,18 +129,17 @@ BSD-3-Clause license. -->
             <group name="LEFT_ARM_CONTACT">
                 <param name="variable_name">l_upper_arm</param>
                 <param name="sensor_type">none</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">10.0</param>
-                <param name="dynamic_model">ExternalContactStateDynamics</param>
+                <param name="k">5.0</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
         </group>
 
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
-                "LEFT_ARM_ACC", "LEFT_ARM_GYRO",
-                "WAIST_ACC", "WAIST_GYRO")
+                "LEFT_ARM_ACC", "LEFT_ARM_GYRO")
             </param>
                 <!-- Available models = ["ConstantMeasurementModel", "AccelerometerMeasurementDynamics",
                                         "GyroscopeMeasurementDynamics", "MotorCurrentMeasurementDynamics"] -->

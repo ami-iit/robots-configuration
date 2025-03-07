@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.005</param>
+        <param name="sampling_time">0.01</param>
         <param name="remote">/robot-dynamics-estimator/right_leg</param>
     </group>
 
@@ -30,14 +30,14 @@ BSD-3-Clause license. -->
             <param name="associated_joints">()</param>
         </group>
 
-        <group name="ACCELEROMETER">
+        <!-- <group name="ACCELEROMETER">
             <param name="names">(waist_imu_0, r_foot_rear_ft_imu, r_foot_front_ft_imu)</param>
             <param name="frames">(waist_imu_0, r_foot_rear_ft, r_foot_front_ft)</param>
-        </group>
-        <!-- <group name="ACCELEROMETER">
+        </group> -->
+        <group name="ACCELEROMETER">
             <param name="names">(waist_imu_0)</param>
             <param name="frames">(waist_imu_0)</param>
-        </group> -->
+        </group>
 
         <!-- <group name="GYROSCOPE">
             <param name="names">(waist_imu_0, r_foot_rear_ft_imu, r_foot_front_ft_imu)</param>
@@ -181,9 +181,9 @@ BSD-3-Clause license. -->
             <group name="RIGHT_SOLE_CONTACT">
                 <param name="variable_name">r_sole</param>
                 <param name="sensor_type">none</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(5e-3, 5e-3, 5e-3, 5e-3, 5e-3, 5e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">1.0</param>
+                <param name="k">5.0</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
         </group>
@@ -191,9 +191,9 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
-                 "WAIST_ACC", "WAIST_GYRO",
-                 "RIGHT_FOOT_FRONT_ACC_CARTESIAN", RIGHT_FOOT_REAR_ACC_CARTESIAN
+                 "WAIST_ACC", "WAIST_GYRO"
                  )
+                 <!-- "RIGHT_FOOT_FRONT_ACC_CARTESIAN", RIGHT_FOOT_REAR_ACC_CARTESIAN -->
                  <!-- "RIGHT_FOOT_REAR_ACC", "RIGHT_FOOT_REAR_GYRO",
                  "RIGHT_FOOT_FRONT_ACC", "RIGHT_FOOT_FRONT_GYRO",
                  "RIGHT_FOOT_REAR_FT", "RIGHT_FOOT_FRONT_FT" -->

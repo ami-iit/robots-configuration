@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="torso-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.005</param>
+        <param name="sampling_time">0.01</param>
         <param name="remote">/robot-dynamics-estimator/torso</param>
     </group>
 
@@ -15,11 +15,11 @@ BSD-3-Clause license. -->
         <param name="base_link">torso_1</param>
         <param name="contact_frame">chest</param>
         <param name="base_imu">waist_imu_0</param>
-        <param name="joint_list">("torso_roll", "torso_yaw")</param>
-        <param name="fixed_joint_list_names">(torso_pitch)</param>
-        <param name="fixed_joint_list_values">(10.0)</param>
-        <param name="gear_ratio">(100.0, -100.0)</param>
-        <param name="torque_constant">(0.047, 0.047)</param>
+        <param name="joint_list">("torso_roll", "torso_pitch", "torso_yaw")</param>
+        <param name="fixed_joint_list_names">()</param>
+        <param name="fixed_joint_list_values">()</param>
+        <param name="gear_ratio">(100.0, 160.0, -100.0)</param>
+        <param name="torque_constant">(0.047, 0.047, 0.047)</param>
 
         <group name="FT">
             <param name="names">()</param>
@@ -51,7 +51,7 @@ BSD-3-Clause license. -->
         <param name="stream_motor_states">true</param>
 
         <group name="RemoteControlBoardRemapper">
-          <param name="joints_list">("torso_roll", "torso_yaw")</param>
+          <param name="joints_list">("torso_roll", "torso_pitch", "torso_yaw")</param>
         </group>
 
         <group name="SixAxisForceTorqueSensors">
@@ -80,20 +80,20 @@ BSD-3-Clause license. -->
             </param>
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
-                <param name="covariance">(1e-4, 1e-4)</param>
-                <param name="initial_covariance">(0.01, 0.01)</param>
+                <param name="covariance">(1e-4, 1e-4, 1e-4)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">JointVelocityStateDynamics</param>
             </group>
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
-                <param name="covariance">(1e-3, 1e-3)</param>
-                <param name="initial_covariance">(0.01, 0.01)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
-                <param name="covariance">(1e-3, 1e-3)</param>
-                <param name="initial_covariance">(0.01, 0.01)</param>
+                <param name="covariance">(1e-3, 1e-3, 1e-3)</param>
+                <param name="initial_covariance">(0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
             <group name="WAIST_ACC">
@@ -141,10 +141,10 @@ BSD-3-Clause license. -->
             <group name="CHEST_CONTACT">
                 <param name="variable_name">chest</param>
                 <param name="sensor_type">none</param>
-                <param name="covariance">(1e-3, 1e-3, 1e-3, 1e-3, 1e-3, 1e-3)</param>
+                <param name="covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">10.0</param>
-                <param name="dynamic_model">ExternalContactStateDynamics</param>
+                <param name="k">1.0</param>
+                <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
         </group>
 
@@ -156,20 +156,20 @@ BSD-3-Clause license. -->
             <group name="JOINT_VELOCITIES">
                 <param name="variable_name">ds</param>
                 <param name="associated_state">JOINT_VELOCITIES</param>
-                <param name="covariance">(1e-5, 1e-5)</param>
+                <param name="covariance">(1e-5, 1e-5, 1e-5)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="MOTOR_CURRENTS">
                 <param name="variable_name">i_m</param>
-                <param name="covariance">(1e-3, 8e-4)</param>
-                <param name="gear_ratio">(100.0, -100.0)</param>
-                <param name="torque_constant">(0.047, 0.047)</param>
+                <param name="covariance">(1e-3, 1e-3, 8e-4)</param>
+                <param name="gear_ratio">(100.0, 160.0, -100.0)</param>
+                <param name="torque_constant">(0.047, 0.047, 0.047)</param>
                 <param name="dynamic_model">MotorCurrentMeasurementDynamics</param>
             </group>
             <group name="FRICTION_TORQUES">
                 <param name="variable_name">tau_F</param>
                 <param name="associated_state">FRICTION_TORQUES</param>
-                <param name="covariance">(1e-2, 1e-2)</param>
+                <param name="covariance">(1e-2, 1e-2, 1e-2)</param>
                 <param name="dynamic_model">ConstantMeasurementModel</param>
             </group>
             <group name="WAIST_ACC">

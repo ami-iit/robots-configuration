@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.005</param>
+        <param name="sampling_time">0.01</param>
         <param name="remote">/robot-dynamics-estimator/left_leg</param>
     </group>
 
@@ -30,14 +30,14 @@ BSD-3-Clause license. -->
             <param name="associated_joints">()</param>
         </group>
 
-        <group name="ACCELEROMETER">
+        <!-- <group name="ACCELEROMETER">
             <param name="names">("waist_imu_0", "l_foot_front_ft_imu", "l_foot_rear_ft_imu")</param>
             <param name="frames">("waist_imu_0", "l_foot_front_ft", "l_foot_rear_ft")</param>
-        </group>
-        <!-- <group name="ACCELEROMETER">
+        </group> -->
+        <group name="ACCELEROMETER">
             <param name="names">("waist_imu_0")</param>
             <param name="frames">("waist_imu_0")</param>
-        </group> -->
+        </group>
 
         <!-- <group name="GYROSCOPE">
             <param name="names">("waist_imu_0", "l_foot_front_ft_imu", "l_foot_rear_ft_imu")</param>
@@ -102,7 +102,7 @@ BSD-3-Clause license. -->
             <group name="MOTOR_TORQUES">
                 <param name="variable_name">tau_m</param>
                 <param name="elements">("l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee", "l_ankle_pitch", "l_ankle_roll")</param>
-                <param name="covariance">(1e-4, 5e-3, 8e-3, 1e-4, 1e-3, 5e-3)</param>
+                <param name="covariance">(5e-3, 5e-3, 8e-3, 1e-4, 1e-3, 5e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
@@ -180,9 +180,9 @@ BSD-3-Clause license. -->
             <group name="LEFT_SOLE_CONTACT">
                 <param name="variable_name">l_sole</param>
                 <param name="sensor_type">none</param>
-                <param name="covariance">(1e-2, 1e-2, 1e-2, 1e-2, 1e-2, 1e-2)</param>
+                <param name="covariance">(5e-3, 5e-3, 5e-3, 5e-3, 5e-3, 5e-3)</param>
                 <param name="initial_covariance">(0.01, 0.01, 0.01, 0.01, 0.01, 0.01)</param>
-                <param name="k">1.0</param>
+                <param name="k">5.0</param>
                 <param name="dynamic_model">ZeroVelocityStateDynamics</param>
             </group>
         </group>
@@ -190,9 +190,9 @@ BSD-3-Clause license. -->
         <group name="UKF_MEASUREMENT">
             <param name="dynamics_list">
                 ("JOINT_VELOCITIES", "MOTOR_CURRENTS", "FRICTION_TORQUES",
-                "WAIST_ACC", "WAIST_GYRO",
-                "LEFT_FOOT_FRONT_ACC_CARTESIAN", "LEFT_FOOT_REAR_ACC_CARTESIAN",
+                "WAIST_ACC", "WAIST_GYRO"
                 )
+                <!-- "LEFT_FOOT_FRONT_ACC_CARTESIAN", "LEFT_FOOT_REAR_ACC_CARTESIAN", -->
                 <!-- "LEFT_FOOT_FRONT_ACC", "LEFT_FOOT_FRONT_GYRO",
                 "LEFT_FOOT_REAR_ACC", "LEFT_FOOT_REAR_GYRO",
                 "LEFT_FOOT_FRONT_FT", "LEFT_FOOT_REAR_FT" -->
