@@ -24,7 +24,7 @@
     </group>
 
     <!-- Warning, still in milliseconds -->
-    <param name="period"> 2 </param>
+    <param name="period"> 1 </param>
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">
