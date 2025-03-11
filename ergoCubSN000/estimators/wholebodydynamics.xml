@@ -7,7 +7,7 @@
         <param name="nonConsideredAxesPositions">((torso_pitch, 0.1745))</param>
         <param name="modelFile">model.urdf</param>
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
-	<param name="defaultContactFrames">(l_hand_palm,r_hand_palm,root_link,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear,l_upper_leg,r_upper_leg)</param>
+	<param name="defaultContactFrames">(root_link,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear)</param>
         <param name="imuFrameName">waist_imu_0</param>
         <param name="publishOnROS">true</param>
 	<param name="forceTorqueEstimateConfidence">2</param>
@@ -41,8 +41,8 @@
 
 
         <group name="WBD_OUTPUT_EXTERNAL_WRENCH_PORTS">
-	     <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand_palm,l_hand_palm,root_link)</param>
-            <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand_palm,r_hand_palm,root_link)</param>
+	     <!-- <param name="/wholeBodyDynamics/left_arm/cartesianEndEffectorWrench:o">(l_hand_palm,l_hand_palm,root_link)</param>
+            <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand_palm,r_hand_palm,root_link)</param> -->
             <!-- <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param> -->
             <!-- <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param> -->
             <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front,l_sole,l_sole)</param>
@@ -75,8 +75,8 @@
                 <!-- ft -->
                 <elem name="l_leg_ft_sensors">left_leg-FT_remapper</elem>
                 <elem name="r_leg_ft_sensors">right_leg-FT_remapper</elem>
-                <elem name="l_arm_ft_sensors">left_arm-eb2-j0_1-strain</elem>
-                <elem name="r_arm_ft_sensors">right_arm-eb1-j0_1-strain</elem>
+                <!-- <elem name="l_arm_ft_sensors">left_arm-eb2-j0_1-strain</elem>
+                <elem name="r_arm_ft_sensors">right_arm-eb1-j0_1-strain</elem> -->
             </paramlist>
         </action>
 
