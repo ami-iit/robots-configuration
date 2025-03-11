@@ -9,7 +9,7 @@
             (r_arm_ft)
         </param>
         <param name="TemperatureSensorsNames">
-            (r_arm_ft)
+            ()
         </param>
         <param name="ThreeAxisGyroscopesNames">
             (r_arm_ft_imu)
@@ -18,10 +18,10 @@
             (r_arm_ft_imu)
         </param>
         <param name="ThreeAxisMagnetometersNames">
-            (r_arm_ft_imu)
+            ()
         </param>
         <param name="OrientationSensorsNames">
-            (r_arm_ft_imu)
+            ()
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">

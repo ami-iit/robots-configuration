@@ -6,7 +6,7 @@ BSD-3-Clause license. -->
 <device  xmlns:xi="http://www.w3.org/2001/XInclude" name="right_leg-robot-dynamics-estimator" type="RobotDynamicsEstimatorDevice">
     <group name="GENERAL">
         <param name="robot">ergocub</param>
-        <param name="sampling_time">0.01</param>
+        <param name="sampling_time">0.005</param>
         <param name="remote">/robot-dynamics-estimator/right_leg</param>
     </group>
 
@@ -74,7 +74,7 @@ BSD-3-Clause license. -->
         <group name="InertialSensors">
             <param name="accelerometers_list">(waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
             <param name="gyroscopes_list">(waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
-            <param name="orientation_sensors_list">(waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)</param>
+            <param name="orientation_sensors_list">()</param>
         </group>
     </group>
 

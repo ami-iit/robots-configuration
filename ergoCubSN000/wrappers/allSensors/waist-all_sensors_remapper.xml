@@ -12,10 +12,10 @@
             (waist_imu_0)
         </param>
         <param name="ThreeAxisMagnetometersNames">
-            (waist_imu_0)
+            ()
         </param>
         <param name="OrientationSensorsNames">
-            (waist_imu_0)
+            ()
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">

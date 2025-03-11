@@ -9,7 +9,7 @@
             (r_foot_rear_ft, r_foot_front_ft)
         </param>
         <param name="TemperatureSensorsNames">
-            (r_foot_rear_ft, r_foot_front_ft)
+            ()
         </param>
         <param name="ThreeAxisGyroscopesNames">
             (waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)
@@ -18,10 +18,10 @@
             (waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)
         </param>
         <param name="ThreeAxisMagnetometersNames">
-            (waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)
+            ()
         </param>
         <param name="OrientationSensorsNames">
-            (waist_imu_0, r_foot_front_ft_imu, r_foot_rear_ft_imu)
+            ()
         </param>
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
