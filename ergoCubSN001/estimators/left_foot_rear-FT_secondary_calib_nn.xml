@@ -5,10 +5,14 @@
 <device name="left_foot_rear-FT_secondary_calib" type="ftSecondaryCalibImplNN">
     <param name="period">      0.001      </param> <!-- in seconds -->
     <!-- <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/all_inputs/model.onnx </param>  path to the network model -->
-    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/wrench_temperature/l_foot_rear_ft/model.onnx </param>  path to the network model
+    <param name="networkModelPath"> /usr/local/src/robot/robotology-superbuild/src/robots-configuration/ergoCubSN001/estimators/ft_calib_models/l_foot_rear_ft/only_wrench_temperature/batch_normalization/1/onnx/model.onnx </param> 
     <param name="numberInputs">     7     </param>  <!-- number of inputs of the network, 13 if all_inputs, or 7 in wrench_temperature-->
     <param name="FtSensorName">l_foot_rear_ft</param>  <!-- name of the FT sensor -->
     <param name="IMUSensorName">l_foot_rear_ft_imu</param>  <!-- name of the IMU sensor -->
+    <param name="use_filter_ft"> true </param> <!-- true if you want to filter FT measures using a Butterworth filter -->
+    <param name="order"> 2 </param> <!-- order of the Butterworth filter -->
+    <param name="cutOffFrequency"> 15 </param> <!-- cutOff Frequency of the Butterworth filter -->
+    <param name="isLSTM"> false </param> <!-- true if the network is an LSTM -->
 
     <action phase="startup" level="4" type="attach">
         <paramlist name="networks">

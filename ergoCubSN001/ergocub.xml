@@ -76,6 +76,13 @@
 
     <!-- FT SENROS - CALIB -->
     <xi:include href="estimators/right_leg-FT_secondary_calib_nn.xml" />
+    <xi:include href="estimators/left_leg-FT_secondary_calib_nn.xml" />
+    <xi:include href="estimators/right_arm-FT_secondary_calib_nn.xml" />
+    <xi:include href="estimators/left_arm-FT_secondary_calib_nn.xml" />
+    <!-- <xi:include href="estimators/right_foot_front-FT_secondary_calib_nn.xml" /> -->
+    <!-- <xi:include href="estimators/right_foot_rear-FT_secondary_calib_nn.xml" /> -->
+    <xi:include href="estimators/left_foot_front-FT_secondary_calib_nn.xml" />
+    <xi:include href="estimators/left_foot_rear-FT_secondary_calib_nn.xml" />
 
     <!-- FT SENSORS - REMAPPERS -->
     <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" disabled_by="disable_left_leg" />
