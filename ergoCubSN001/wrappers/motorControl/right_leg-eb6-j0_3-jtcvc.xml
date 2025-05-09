@@ -23,7 +23,7 @@
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "1_rhr_b512_h11.onnx", "", "") </param>
+        <param name="model"> ("", "1_rhr_b1024_h35.onnx", "", "") </param>
         <param name="thread_number"> 1 </param>
     </group>
 
