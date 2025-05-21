@@ -24,7 +24,6 @@
     <group name="FRICTION_PINN">
         <param name="model"> ("2_lhp_b4912_h23.onnx", "2_lhr_b4657_h4.onnx", "2_lhy_b3722_h17.onnx", "2_lk_b4566_h20.onnx") </param>
         <param name="thread_number"> 1 </param>
-        <param name="input_type">("", 3, "", "" )</param>
     </group>
 
     <group name="KF_JOINT">
