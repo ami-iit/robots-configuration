@@ -99,9 +99,9 @@
         <param name="controlLaw">           low_lev_current     </param>
         <param name="fbkControlUnits">      machine_units       </param>
         <param name="outputControlUnits">   machine_units       </param>
-        <param name="kp">                       0.0078125          0.0078125        0.0078125       0.0078125       </param>
+        <param name="kp">                       0.00008125          0.00008125        0.00008125       0.00008125       </param>
         <param name="kd">                       0                   0          0          0        </param>
-        <param name="ki">                      0.001953125       0.001953125    0.001953125    0.001953125     </param>
+        <param name="ki">                      0.000651042       0.000651042    0.000651042    0.000651042     </param>
         <param name="shift">                    0                  0         0         0        </param>
         <param name="maxOutput">                32000               32000      32000      32000        </param>
         <param name="maxInt">                   32000               32000      32000      32000        </param>
@@ -112,7 +112,8 @@
         <param name="controlLaw">           low_lev_speed       </param>
         <param name="fbkControlUnits">      machine_units       </param>
         <param name="outputControlUnits">   machine_units       </param>
-        <param name="kff">                      0                   0           0        0       </param>
+        <!-- <param name="kff">                      0                   0           0        0       </param> -->
+        <param name="kff">                      0.1837                0.07789         0.07789        0.1837       </param>
         <param name="kp">                   0.01171875          0.01171875       0.01171875   0.01171875     </param>
         <param name="kd">                       0                   0           0        0       </param>
         <param name="ki">                       0.015625          0.015625      0.015625    0.015625     </param>
