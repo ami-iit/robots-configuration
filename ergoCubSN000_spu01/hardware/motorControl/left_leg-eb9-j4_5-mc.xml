@@ -11,8 +11,8 @@
     <!-- joint name                                     ankle_pitch          ankle_roll         -->
     <!-- joint number                                       0                   1               -->
     <group name="LIMITS">
-        <param name="jntPosMax">                     25                 20                 </param>
-        <param name="jntPosMin">                    -25                -20                 </param>
+        <param name="jntPosMax">                     30                 20                 </param>
+        <param name="jntPosMin">                    -55                -20                 </param>
         <param name="jntVelMax">                     1000               1000               </param>
         <param name="motorNominalCurrents">          1800               1800               </param>
         <param name="motorPeakCurrents">             5000               5000               </param>
@@ -61,7 +61,7 @@
         <param name="outputType">                velocity         velocity        </param>
         <param name="fbkControlUnits">           metric_units     metric_units    </param>
         <param name="outputControlUnits">        machine_units    machine_units   </param>
-        <param name="kp">                        250              500             </param>
+        <param name="kp">                        25               50             </param>
         <param name="kd">                        0                0               </param>
         <param name="ki">                        0                0               </param>
         <param name="maxOutput">                 32000            32000           </param>
@@ -118,9 +118,9 @@
         <param name="fbkControlUnits">           machine_units                       </param>
         <param name="outputControlUnits">        machine_units                       </param>
         <param name="kff">                      0.0      0.0         </param>
-        <param name="kp">                        1.6         1.6             </param>
+        <param name="kp">                        0.56         0.56             </param>
         <param name="kd">                        0               0                   </param>
-        <param name="ki">                       0.16          0.16             </param>
+        <param name="ki">                       0.072          0.072            </param>
         <param name="shift">                     0               0                   </param>
         <param name="maxOutput">               32000             32000               </param>
         <param name="maxInt">                  32000             32000               </param>
