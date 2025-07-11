@@ -11,22 +11,13 @@
     <!-- joint name                                     ankle_pitch          ankle_roll         -->
     <!-- joint number                                       0                   1               -->
     <group name="LIMITS">
-        <param name="jntPosMax">                  43                  23                  </param>
-        <param name="jntPosMin">                 -43                 -23                 </param>
-        <param name="jntVelMax">                   240                 240                 </param>
-        <param name="motorNominalCurrents">        10000               10000               </param>
-        <param name="motorPeakCurrents">           15000               15000               </param>
-        <param name="motorOverloadCurrents">       30000               30000               </param>
-        <param name="motorPwmLimit">               16000               16000               </param>
-<!-- Below are safe limits for the anke roll in case no temperature sensor is used. -->
-<!--
-        <param name="motorNominalCurrents">        10000               5000                </param>
-        <param name="motorPeakCurrents">           15000               10000               </param>
-        <param name="motorOverloadCurrents">       30000               15000               </param>
-        <param name="motorPwmLimit">               16000               18000               </param>
--->
-      <!--  <param name="hardwareTemperatureLimits">     110                110                </param>
-        <param name="warningTemperatureLimits">      90                 90                 </param>  keep commented until TemperatureSensorType is not ENABLE by setting it different from NONE-->
+        <param name="jntPosMax">                     25                 20                 </param>
+        <param name="jntPosMin">                    -25                -20                 </param>
+        <param name="jntVelMax">                     1000               1000               </param>
+        <param name="motorNominalCurrents">          1800               1800               </param>
+        <param name="motorPeakCurrents">             5000               5000               </param>
+        <param name="motorOverloadCurrents">         6500               6500               </param>
+        <param name="motorPwmLimit">                 32000              32000              </param>
     </group>
 
     <group name="TIMEOUTS">
@@ -34,14 +25,14 @@
     </group>
 
     <group name="IMPEDANCE">
-        <param name="stiffness">                    30.0                 30.0                 </param>
-        <param name="damping">                     0.05                0.05                </param>
+        <param name="stiffness">                   0.0                0.0                 </param>
+        <param name="damping">                     0.0                0.0                 </param>
     </group>
 
     <group name="CONTROLS">
-        <param name="positionControl">        POS_PID_DEFAULT       POS_PID_DEFAULT       </param>
-        <param name="velocityControl">        POS_PID_DEFAULT       POS_PID_DEFAULT       </param>
-        <param name="mixedControl">           POS_PID_DEFAULT       POS_PID_DEFAULT       </param>
+        <param name="positionControl">        POS_PID_VIA_VELOCITY       POS_PID_VIA_VELOCITY       </param>
+        <param name="velocityControl">        POS_PID_VIA_VELOCITY       POS_PID_VIA_VELOCITY       </param>
+        <param name="mixedControl">           POS_PID_VIA_VELOCITY       POS_PID_VIA_VELOCITY       </param>
         <param name="torqueControl">          TRQ_PID_OUTPUT_CURR   TRQ_PID_OUTPUT_CURR   </param>
         <param name="currentPid">             2FOC_CUR_CONTROL      2FOC_CUR_CONTROL      </param>
         <param name="speedPid">               2FOC_VEL_CONTROL      2FOC_VEL_CONTROL      </param>
@@ -63,6 +54,21 @@
         <param name="maxInt">                         1000                1000        </param>
         <param name="stictionUp">                     0                   0        </param>
         <param name="stictionDown">                   0                   0        </param>
+    </group>
+
+    <group name="POS_PID_VIA_VELOCITY">
+        <param name="controlLaw">                minjerk          minjerk         </param>
+        <param name="outputType">                velocity         velocity        </param>
+        <param name="fbkControlUnits">           metric_units     metric_units    </param>
+        <param name="outputControlUnits">        machine_units    machine_units   </param>
+        <param name="kp">                        250              500             </param>
+        <param name="kd">                        0                0               </param>
+        <param name="ki">                        0                0               </param>
+        <param name="maxOutput">                 32000            32000           </param>
+        <param name="maxInt">                    32000            32000           </param>
+        <param name="stictionUp">                0                0               </param>
+        <param name="stictionDown">              0                0               </param>
+        <param name="kff">                       1                1               </param>
     </group>
 
     <!-- default position PID: end -->
@@ -95,29 +101,29 @@
     <!-- other default PIDs: begin -->
 
     <group name="2FOC_CUR_CONTROL">
-        <param name="controlLaw">           low_lev_current     </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
-        <param name="kp">                     8                   8                   </param>
-        <param name="kd">                     0                   0                   </param>
-        <param name="ki">                     2                   2                   </param>
-        <param name="shift">                  10                  10                  </param>
-        <param name="maxOutput">              32000               32000               </param>
-        <param name="maxInt">                 32000               32000               </param>
-        <param name="kff">                    0                   0                   </param>
+        <param name="controlLaw">                low_lev_current                    </param>
+        <param name="fbkControlUnits">           machine_units                      </param>
+        <param name="outputControlUnits">        machine_units                      </param>
+        <param name="kp">                        0.000135417     0.000135417        </param>
+        <param name="kd">                        0                0                 </param>
+        <param name="ki">                        0.000703031     0.000703031        </param>
+        <param name="shift">                     0               0                  </param>
+        <param name="maxOutput">                 32000           32000               </param>
+        <param name="maxInt">                    32000           32000               </param>
+        <param name="kff">                       0.07559          0.07559              </param>
     </group>
 
     <group name="2FOC_VEL_CONTROL">
-        <param name="controlLaw">           low_lev_speed       </param>
-        <param name="fbkControlUnits">      machine_units       </param>
-        <param name="outputControlUnits">   machine_units       </param>
-        <param name="kff">              0                   0                   </param>
-        <param name="kp">               12                  12                  </param>
-        <param name="kd">               0                   0                   </param>
-        <param name="ki">               16                  16                  </param>
-        <param name="shift">            10                  10                  </param>
-        <param name="maxOutput">        32000               32000               </param>
-        <param name="maxInt">           32000               32000               </param>
+        <param name="controlLaw">                low_lev_speed                       </param>
+        <param name="fbkControlUnits">           machine_units                       </param>
+        <param name="outputControlUnits">        machine_units                       </param>
+        <param name="kff">                      0.0      0.0         </param>
+        <param name="kp">                        0.07         0.07             </param>
+        <param name="kd">                        0               0                   </param>
+        <param name="ki">                       0.009          0.009             </param>
+        <param name="shift">                     0               0                   </param>
+        <param name="maxOutput">               32000             32000               </param>
+        <param name="maxInt">                  32000             32000               </param>
     </group>
 
     <!-- other default PIDs: end -->

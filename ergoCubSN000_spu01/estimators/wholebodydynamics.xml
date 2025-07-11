@@ -7,7 +7,7 @@
         <param name="nonConsideredAxesPositions">((torso_pitch, 0.1745))</param>
         <param name="modelFile">model.urdf</param>
         <param name="fixedFrameGravity">(0,0,-9.81)</param>
-	<param name="defaultContactFrames">(l_hand_palm,r_hand_palm,root_link,l_foot_front,l_foot_rear,r_foot_front,r_foot_rear,l_upper_leg,r_upper_leg)</param>
+	<param name="defaultContactFrames">(l_hand_palm,r_hand_palm,root_link,l_upper_leg,r_upper_leg)</param>
         <param name="imuFrameName">waist_imu_0</param>
         <param name="publishOnROS">true</param>
 	<param name="forceTorqueEstimateConfidence">2</param>
@@ -29,7 +29,7 @@
 	</group>
 
         <group name="multipleAnalogSensorsNames">
-            <param name="SixAxisForceTorqueSensorsNames">(l_arm_ft, r_arm_ft, l_foot_front_ft, l_foot_rear_ft, r_foot_front_ft, r_foot_rear_ft)</param>
+            <param name="SixAxisForceTorqueSensorsNames">(l_arm_ft, r_arm_ft)</param>
         </group>
 
 
@@ -45,10 +45,6 @@
             <param name="/wholeBodyDynamics/right_arm/cartesianEndEffectorWrench:o">(r_hand_palm,r_hand_palm,root_link)</param>
             <!-- <param name="/wholeBodyDynamics/left_leg/cartesianEndEffectorWrench:o">(l_lower_leg,l_lower_leg,root_link)</param> -->
             <!-- <param name="/wholeBodyDynamics/right_leg/cartesianEndEffectorWrench:o">(r_lower_leg,r_lower_leg,root_link)</param> -->
-            <param name="/wholeBodyDynamics/left_foot_front/cartesianEndEffectorWrench:o">(l_foot_front,l_sole,l_sole)</param>
-            <param name="/wholeBodyDynamics/left_foot_rear/cartesianEndEffectorWrench:o">(l_foot_rear,l_sole,l_sole)</param>
-            <param name="/wholeBodyDynamics/right_foot_front/cartesianEndEffectorWrench:o">(r_foot_front,r_sole,r_sole)</param>
-            <param name="/wholeBodyDynamics/right_foot_rear/cartesianEndEffectorWrench:o">(r_foot_rear,r_sole,r_sole)</param>
         </group>
 
         <action phase="startup" level="15" type="attach">

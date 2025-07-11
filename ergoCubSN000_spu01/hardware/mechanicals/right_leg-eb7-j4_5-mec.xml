@@ -11,16 +11,16 @@
         <param name="Encoder">                        182.044              182.044       </param>
         <param name="fullscalePWM">                  32000               32000           </param>
         <param name="ampsToSensor">                 1000.0              1000.0         </param>
-        <param name="Gearbox_M2J">                  100.0               160.0         </param>
-        <param name="Gearbox_E2J">                  64                       32         </param>
+        <param name="Gearbox_M2J">                  32768               32768         </param>
+        <param name="Gearbox_E2J">                   1                        1         </param>
         <param name="useMotorSpeedFbk">              1                        1            </param>
-        <param name="MotorType">                 "MOOG_C2900580"      "MOOG_C2900576"  </param>
+        <param name="MotorType">                 "wittenstein_d32-p2-s160"      "wittenstein_d32-p2-s160"  </param>
         <param name="Verbose">   0   </param>
     </group>
 
     <group name="LIMITS">
-        <param name="hardwareJntPosMax">          45.94         25.786   </param>
-        <param name="hardwareJntPosMin">         -45.94        -25.786   </param>
+        <param name="hardwareJntPosMax">     30          25   </param>
+        <param name="hardwareJntPosMin">     -70        -25    </param>
         <param name="rotorPosMin">            0             0     </param> 
         <param name="rotorPosMax">            0             0     </param>
     </group>
@@ -33,26 +33,26 @@
         <param name="HasRotorEncoder">                1             1       </param>
         <param name="HasRotorEncoderIndex">           1             1       </param>
         <param name="HasSpeedEncoder">                0             0       </param>
-        <param name="RotorIndexOffset">               166           273     </param>
-        <param name="MotorPoles">                    12             8       </param>
+        <param name="RotorIndexOffset">               270           271     </param>
+        <param name="MotorPoles">                     8             8       </param>
     </group>
 
     <group name="COUPLINGS"> 
                                 
         <param name ="matrixJ2M"> 
-            1.00    0.00    0.00    0.00
-            0.00    1.00    0.00    0.00
-            0.00    0.00    1.00    0.00
-            0.00    0.00    0.00    1.00   
-        </param>
-       
-        <param name ="matrixM2J"> 
-            1.00    0.00    0.00    0.00
-            0.00    1.00    0.00    0.00
-            0.00    0.00    1.00    0.00
-            0.00    0.00    0.00    1.00   
+            -0.0096  -0.0048      0.000    0.000
+            -0.0096  0.0048      0.000    0.000
+            0.000    0.000    1.000    0.000
+            0.000    0.000    0.000    1.000   
         </param>
 
+        <param name ="matrixM2J"> 
+            -50.0    -50.0    0.000    0.000
+            -100.0     100.0      0.000    0.000
+            0.000    0.000    1.000    0.000
+            0.000    0.000    0.000    1.000   
+        </param>
+       
         <param name ="matrixE2J">  
             1.00    0.00    0.00    0.00    0.00    0.00
             0.00    1.00    0.00    0.00    0.00    0.00
@@ -65,18 +65,11 @@
     <group name="JOINTSET_CFG">
         <param name= "numberofsets"> 2 </param>
         <group name="JOINTSET_0">
-            <param name="listofjoints">  0             </param>
+            <param name="listofjoints">  0 1             </param>
             <param name="constraint">    none          </param>
             <param name="param1">        0             </param>
             <param name="param2">        0             </param>
         </group>
-        <group name="JOINTSET_1">
-            <param name="listofjoints">   1             </param>
-            <param name="constraint">     none          </param>
-            <param name="param1">         0             </param>
-            <param name="param2">         0             </param>
-        </group>
-
     </group>
    
 
