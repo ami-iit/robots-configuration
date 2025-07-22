@@ -13,7 +13,7 @@
         <param name="kp">(  0.0, 0.0  )</param>
         <param name="ki">(  0.0, 0.0 )</param>
         <param name="max_curr">(  6.0, 3.0  )</param>
-        <param name="friction_model"> ("FRICTION_PINN", "FRICTION_PINN") </param>
+        <param name="friction_model"> ("", "") </param>
         <!-- <param name="friction_model"> ("", "") </param> -->
         <param name="bwfilter_cutoff_freq"> 1.0 </param>
         <param name="bwfilter_order"> 2 </param>
@@ -23,7 +23,7 @@
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("2_rap_b4979_h10.onnx", "2_rar_b3942_h22.onnx") </param>
+        <param name="model"> ("", "") </param>
         <param name="thread_number"> 1 </param>
     </group>
 
