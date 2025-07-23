@@ -11,10 +11,10 @@
         <param name="Encoder">                        182.044              182.044       </param>
         <param name="fullscalePWM">                  32000               32000           </param>
         <param name="ampsToSensor">                 1000.0              1000.0         </param>
-        <param name="Gearbox_M2J">                  32768               32768         </param>
+        <param name="Gearbox_M2J">                  8192               8192         </param>
         <param name="Gearbox_E2J">                   1                        1         </param>
         <param name="useMotorSpeedFbk">              1                        1            </param>
-        <param name="MotorType">                 "wittenstein_d32-p2-s160"      "wittenstein_d32-p2-s160"  </param>
+        <param name="MotorType">                 "wittenstein_d32-p8-s160"      "wittenstein_d32-p8-s160"  </param>
         <param name="Verbose">   0   </param>
     </group>
 

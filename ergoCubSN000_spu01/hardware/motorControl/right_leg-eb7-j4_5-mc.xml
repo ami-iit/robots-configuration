@@ -118,9 +118,9 @@
         <param name="fbkControlUnits">           machine_units                       </param>
         <param name="outputControlUnits">        machine_units                       </param>
         <param name="kff">                      0.0      0.0         </param>
-        <param name="kp">                        0.07         0.07             </param>
+        <param name="kp">                        0.56         0.56             </param>
         <param name="kd">                        0               0                   </param>
-        <param name="ki">                       0.009          0.009             </param>
+        <param name="ki">                       0.072          0.072            </param>
         <param name="shift">                     0               0                   </param>
         <param name="maxOutput">               32000             32000               </param>
         <param name="maxInt">                  32000             32000               </param>
@@ -155,7 +155,7 @@
     <!-- custom PIDs: end -->
 
     <group name="OTHER_CONTROL_PARAMETERS">
-        <param name="deadZone">                 0.011              0.011              </param>
+        <param name="deadZone">           0.0049      0.0049                      </param>
     </group>
 
   <group name="KALMAN_FILTER">
