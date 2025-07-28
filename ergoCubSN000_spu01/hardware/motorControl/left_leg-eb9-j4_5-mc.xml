@@ -104,13 +104,13 @@
         <param name="controlLaw">                low_lev_current                    </param>
         <param name="fbkControlUnits">           machine_units                      </param>
         <param name="outputControlUnits">        machine_units                      </param>
-        <param name="kp">                        0.000135417     0.000135417        </param>
+        <param name="kp">                        0.1     0.1        </param>
         <param name="kd">                        0                0                 </param>
-        <param name="ki">                        0.000703031     0.000703031        </param>
+        <param name="ki">                        0.0075     0.0075        </param>
         <param name="shift">                     0               0                  </param>
         <param name="maxOutput">                 32000           32000               </param>
         <param name="maxInt">                    32000           32000               </param>
-        <param name="kff">                       0.07559          0.07559              </param>
+        <param name="kff">                       0.09          0.09              </param>
     </group>
 
     <group name="2FOC_VEL_CONTROL">
@@ -118,9 +118,9 @@
         <param name="fbkControlUnits">           machine_units                       </param>
         <param name="outputControlUnits">        machine_units                       </param>
         <param name="kff">                      0.0      0.0         </param>
-        <param name="kp">                        0.56         0.56             </param>
+        <param name="kp">                        0.9         0.9             </param>
         <param name="kd">                        0               0                   </param>
-        <param name="ki">                       0.072          0.072            </param>
+        <param name="ki">                       0.1          0.1            </param>
         <param name="shift">                     0               0                   </param>
         <param name="maxOutput">               32000             32000               </param>
         <param name="maxInt">                  32000             32000               </param>
