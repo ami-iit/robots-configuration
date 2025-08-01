@@ -3,6 +3,7 @@
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="left_leg-eb8-j0_3-jtcvc" type="JointTorqueControlDevice">
     <param name="remote">  /hijackingTrqCrl/l_upper_leg  </param>
     <param name="joint_list"> (  "l_hip_pitch", "l_hip_roll", "l_hip_yaw", "l_knee"  )</param>
+    <param name="publish_status"> true </param>
 
     <group name="TORQUE_CURRENT_PARAMS">
         <param name="kt">(   0.111,  0.047,  0.047,  0.111   )</param>
