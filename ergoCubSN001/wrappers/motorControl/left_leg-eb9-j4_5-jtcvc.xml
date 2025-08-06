@@ -25,7 +25,7 @@
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("7_lap_b256_h42.onnx", "") </param>
+        <param name="model"> ("6_lap_b512_h52.onnx", "") </param>
         <param name="thread_number"> 1 </param>
     </group>
 
