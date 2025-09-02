@@ -25,7 +25,7 @@
     </group>
 
     <group name="FRICTION_PINN">
-        <param name="model"> ("", "1_lhr_b256_h42.onnx", "", "") </param>
+        <param name="model"> ("", "1_lhr_b512_h48.onnx", "", "") </param>
         <param name="thread_number"> 1 </param>
         <param name="multiple_output_PINN"> false </param>
     </group>
