@@ -17,7 +17,7 @@
 
     <module>
         <name>yarpdev</name>
-        <parameters> --device multipleanalogsensorsserver --name /t256 --period 10 --subdevice realsense2Tracking</parameters>
+        <parameters> --device deviceBundler --wrapper_device multipleanalogsensorsserver --attached_device realsense2Tracking --name /t256 --period 10</parameters>
         <node>${generic_node_3}</node>
     </module>
 

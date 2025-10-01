@@ -11,13 +11,13 @@
     <!-- _______________________Webcams related stuff_______________________ -->
 	<module>
 		<name>yarpdev</name>
-		<parameters>--device opencv_grabber --name /image1:o --camera 0 --width 640 --height 480 </parameters>
+		<parameters>--device openCVGrabber --name /image1:o --camera 0 --width 640 --height 480 </parameters>
 		<node>${webcam_station}</node>
 	</module>
 
 	<module>
 		<name>yarpdev</name>
-		<parameters>--device opencv_grabber --name /image2:o --camera 2 --width 640 --height 480 </parameters>
+		<parameters>--device openCVGrabber --name /image2:o --camera 2 --width 640 --height 480 </parameters>
 		<node>${webcam_station}</node>
 	</module>
 
@@ -44,5 +44,5 @@
 		<to>/camera2:i</to>
 		<protocol>mjpeg</protocol>
 	</connection>
-    
+
 </application>
