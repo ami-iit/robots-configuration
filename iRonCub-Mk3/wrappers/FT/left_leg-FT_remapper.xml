@@ -14,7 +14,8 @@
         <action phase="startup" level="5" type="attach">
             <paramlist name="networks">
                 <!--<elem name="left_leg-eb7-j0_2-strain">  left_leg-eb7-j0_2-strain </elem>-->
-                <elem name="left_leg-eb8-j3_5-strain">  left_leg-eb8-j3_5-strain </elem>
+                <elem name="fakeFTLeftFootRearDevice">  fakeFTLeftFootRearDevice </elem>
+                <elem name="fakeFTLeftFootFrontDevice">  fakeFTLeftFootFrontDevice </elem>
             </paramlist>
         </action>
 
