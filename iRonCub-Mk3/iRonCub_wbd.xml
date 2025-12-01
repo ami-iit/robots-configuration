@@ -121,7 +121,7 @@
 
     <!--  CALIBRATORS -->
 
-    <xi:include href="calibrators/head-calib.xml" />
+    <!-- xi:include href="calibrators/head-calib.xml" / -->
     <xi:include href="calibrators/face-calib.xml" />
     <xi:include href="calibrators/left_arm-calib-iRonCub.xml" />
     <xi:include href="calibrators/right_arm-calib-iRonCub.xml" />
