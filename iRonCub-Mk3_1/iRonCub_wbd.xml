@@ -131,10 +131,10 @@
     <xi:include href="calibrators/face-calib.xml" />
     <xi:include href="calibrators/jetpack.xml" />
     <xi:include href="calibrators/left_arm-calib-iRonCub.xml" />
-    <!-- xi:include href="calibrators/right_arm-calib-iRonCub.xml" / -->
+    <xi:include href="calibrators/right_arm-calib-iRonCub.xml" />
     <xi:include href="calibrators/left_leg-calib.xml" />
-    <!-- xi:include href="calibrators/right_leg-calib.xml" / -->
-    <!-- xi:include href="calibrators/torso-calib.xml" / -->
+    <xi:include href="calibrators/right_leg-calib.xml" />
+    <xi:include href="calibrators/torso-calib.xml" />
 
     <!-- estimators -->
     <!-- xi:include href="estimators/wholebodydynamics.xml" /-->
