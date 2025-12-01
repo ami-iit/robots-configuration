@@ -1,0 +1,33 @@
+<application>
+<name>testbench-dumper</name>
+
+<dependencies>
+</dependencies>
+
+    <module>
+		<name>bash</name>
+		<parameters>dumperScript_jet</parameters>
+		<node>localhost</node>
+		<tag>data-dumperJets</tag>
+	</module>
+
+	<connection>
+		<from>/iRonCubJets/body/stateExt:o</from>
+		<to>/dumper/jet/stateControlBoard</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<connection>
+		<from>/JetCatTurbines/data</from>
+		<to>/dumper/jet/data</to>
+		<protocol>udp</protocol>
+	</connection>
+
+	<connection>
+		<from>/iRonCub/jet/state:o</from>
+		<to>/dumper/jet/stateExt</to>
+		<protocol>udp</protocol>
+	</connection>
+
+    
+</application>

@@ -1,0 +1,19 @@
+<application>
+    <description>Refer to the issue https://github.com/dic-iit/component_ironcub/issues/250</description>
+    <authors>
+        <author email="hosameldin.mohamed@iit.it">Hosameldin A. O. Mohamed</author>
+    </authors>
+    <name>iRonCubExpApp-dumper</name>
+
+    <application>
+        <name>iRonCubApp-turbines-dumper</name>
+    </application>
+
+    <application>
+       <name>iRonCubApp-logger</name>
+    </application>
+
+    <application>
+        <name>iRonCubApp-noteTakerGUI</name>
+    </application>
+</application>

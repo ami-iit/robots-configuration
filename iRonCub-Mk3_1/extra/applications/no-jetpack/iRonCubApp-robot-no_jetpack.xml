@@ -1,0 +1,24 @@
+<application>
+<name>iRonCubApp-robot-no_jetpack</name>
+
+  <var name="logging_laptop">ironcub-copilot</var>
+
+        <dependencies>
+        </dependencies>
+
+        <module>
+                <name>yarprobotinterface</name>
+                <parameters>--config iRonCub_wbd_no-jetpack.xml</parameters>
+                <environment>YARP_ROBOT_NAME=iRonCub-Mk3-FT-ARMS</environment>
+                <node>icub-head</node>
+        </module>
+
+          <!-- Logger -->
+          <module>
+            <name>yarprobotinterface</name>
+            <parameters>--config launch-yarp-robot-logger.xml</parameters>
+            <environment>YARP_ROBOT_NAME=iRonCub-Mk3-FT-ARMS</environment>
+            <node>${logging_laptop}</node>
+          </module>
+
+</application>

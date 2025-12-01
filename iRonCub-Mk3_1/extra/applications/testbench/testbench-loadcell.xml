@@ -1,0 +1,14 @@
+<application>
+<name>testbench-loadcell</name>
+
+<dependencies>
+</dependencies>
+
+    <module>
+		<name>yarpdev</name>
+		<parameters>yarpdev --device futekmcc128interface --nLoadCells 1 </parameters>
+		<node>ironpiTestbench</node>
+	</module>
+
+    
+</application>

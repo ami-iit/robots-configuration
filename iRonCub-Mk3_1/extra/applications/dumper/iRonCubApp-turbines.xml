@@ -1,0 +1,18 @@
+<application>
+<name>iRonCubApp-turbines-dumper</name>
+
+<var name="generic_node_1">ironcub-pilot</var>
+<var name="logging_laptop">ironLogger</var>
+<var name="webcam_station">ironpi</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________Turbines related stuff_______________________ -->
+
+	<module>
+		<name>TurbineLoggerModule</name>
+		<node>${logging_laptop}</node>
+	</module>
+
+</application>

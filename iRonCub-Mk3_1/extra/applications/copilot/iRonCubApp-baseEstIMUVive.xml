@@ -1,0 +1,31 @@
+<application>
+    <name>iRonCubApp-baseEstIMUVive</name>
+
+    <var name="generic_node_1">ironcub-pilot</var>
+    <var name="generic_node_2">ironcub-copilot</var>
+    <var name="generic_node_3">icub-head</var>
+
+    <dependencies>
+    </dependencies>
+
+    <!-- _______________________baseEstimatorV1 is in iRonCub-Mk1_______________________ -->
+    <module>
+        <name>yarpdev</name>
+        <parameters> --device multipleanalogsensorsserver --name /icub/xsens_inertial_mas --period 5 --subdevice xsensmt --serial /dev/ttyS0 --xsensmt_period 0.01 --xsensmt_gyro_period 0.005 --xsensmt_euler_period 0.005</parameters>
+        <node>${generic_node_3}</node>
+    </module>
+
+    <module>
+        <name>yarpdev</name>
+        <parameters> --device deviceBundler --wrapper_device multipleanalogsensorsserver --attached_device realsense2Tracking --name /t256 --period 10</parameters>
+        <node>${generic_node_3}</node>
+    </module>
+
+    <module>
+        <name>yarprobotinterface</name>
+        <parameters> --config launch-fbe-imu-vive.xml</parameters>
+        <environment>YARP_ROBOT_NAME=iRonCub-Mk3</environment>
+        <node>icub-head</node>
+    </module>
+
+</application>

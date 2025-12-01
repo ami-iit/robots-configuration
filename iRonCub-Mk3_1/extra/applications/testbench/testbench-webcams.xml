@@ -1,0 +1,30 @@
+<application>
+<name>testbench-webcams</name>
+
+<var name="generic_node_1">ironcub-pilot</var>
+<var name="logging_laptop">alienCub</var>
+<var name="webcam_station">ironpiWebcam</var>
+
+<dependencies>
+</dependencies>
+
+    <!-- _______________________Webcams related stuff_______________________ -->
+	<module>
+		<name>yarpdev</name>
+		<parameters>--device opencv_grabber --name /image1:o --camera 0 --width 640 --height 480 </parameters>
+		<node>ironpiTestbench</node>
+	</module>
+
+    <module>
+		<name>yarpview</name>
+		<parameters>--name /camera1:i </parameters>
+		<node>ironcub-pilot</node>
+	</module>
+
+    <connection>
+		<from>/image1:o</from>
+		<to>/camera1:i</to>
+		<protocol>mjpeg</protocol>
+	</connection>
+    
+</application>

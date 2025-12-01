@@ -1,0 +1,26 @@
+<application>
+    <name>Testbench-exp-app</name>
+    <authors>
+        <author email="davide.gorbani@iit.it">Davide Gorbani</author>
+    </authors>
+
+    <dependencies>
+    </dependencies>
+
+    <application>
+        <name>testbench-dumper</name>
+    </application>
+
+    <application>
+        <name>testbench-loadcell</name>
+    </application>
+
+    <application>
+        <name>testbench-turbine</name>
+    </application>
+
+    <application>
+        <name>testbench-webcams</name>
+    </application>
+
+</application>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
+
+<robot name="@WBD_YARP_ROBOT_NAME@" build="1" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <!-- controlboards -->
+    <device name="torso_mc" type="remote_controlboard">
+        <param name="remote"> /icub/torso </param>
+        <param name="local"> /wholeBodyDynamics-external/torso </param>
+    </device>
+
+    <device name="left_arm_mc" type="remote_controlboard">
+        <param name="remote"> /icub/left_arm </param>
+        <param name="local"> /wholeBodyDynamics-external/left_arm </param>
+    </device>
+
+    <device name="right_arm_mc" type="remote_controlboard">
+        <param name="remote"> /icub/right_arm </param>
+        <param name="local"> /wholeBodyDynamics-external/right_arm </param>
+    </device>
+
+    <device name="left_leg_mc" type="remote_controlboard">
+        <param name="remote"> /icub/left_leg </param>
+        <param name="local"> /wholeBodyDynamics-external/left_leg </param>
+    </device>
+
+    <device name="right_leg_mc" type="remote_controlboard">
+        <param name="remote"> /icub/right_leg </param>
+        <param name="local"> /wholeBodyDynamics-external/right_leg </param>
+    </device>
+
+    <device name="head_mc" type="remote_controlboard">
+        <param name="remote"> /icub/head </param>
+        <param name="local"> /wholeBodyDynamics-external/head </param>
+    </device>
+
+    <!-- imu -->
+    <device name="chest-inertial-client" type="multipleanalogsensorsclient">
+        <param name="remote"> /icub/xsens_inertial_mas </param>
+        <param name="local"> /wholeBodyDynamics-external/imu </param>
+    </device>
+
+    <!-- six axis force torque sensors -->
+    <device name="left_arm_client" type="multipleanalogsensorsclient">
+        <param name="remote"> /icub/left_arm/FT </param>
+        <param name="local"> /wholeBodyDynamics-external/l_arm_ft </param>
+    </device>
+
+    <device name="right_arm_client" type="multipleanalogsensorsclient">
+        <param name="remote"> /icub/right_arm/FT </param>
+        <param name="local"> /wholeBodyDynamics-external/r_arm_ft </param>
+    </device>
+
+    <device name="left_foot_client" type="multipleanalogsensorsclient">
+        <param name="remote"> /icub/left_leg/FT </param>
+        <param name="local"> /wholeBodyDynamics-external/l_foot_ft </param>
+    </device>
+
+    <device name="right_foot_client" type="multipleanalogsensorsclient">
+        <param name="remote"> /icub/right_leg/FT </param>
+        <param name="local"> /wholeBodyDynamics-external/r_foot_ft </param>
+    </device>
+
+    <!-- estimators -->
+    <xi:include href="./estimators/wholebodydynamics-external.xml" />
+</robot>
