@@ -2,7 +2,7 @@
 <!DOCTYPE devices PUBLIC "-//YARP//DTD yarprobotinterface 3.0//EN" "http://www.yarp.it/DTD/yarprobotinterfaceV3.0.dtd">
 
 <device xmlns:xi="http://www.w3.org/2001/XInclude" name="jetpack-mc_nws_yarp" type="controlBoard_nws_yarp">
-  <param name="name"> /icub/vectoring </param>
+  <param name="name"> /icub/jetpack </param>
   <param name="period"> 0.001   </param>
     <action phase="startup" level="10" type="attach">
       <param name="device"> jetpack-mc_remapper </param>

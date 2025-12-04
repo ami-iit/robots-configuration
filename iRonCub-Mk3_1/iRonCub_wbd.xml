@@ -79,14 +79,14 @@
 
     <!-- MAS SENSORS FT -->
 
-   <xi:include href="wrappers/FT/left_arm-FT_remapper.xml" />
-   <xi:include href="wrappers/FT/right_arm-FT_remapper.xml" />
+   <!-- <xi:include href="wrappers/FT/left_arm-FT_remapper.xml" />
+   <xi:include href="wrappers/FT/right_arm-FT_remapper.xml" /> -->
 
    <!-- <xi:include href="wrappers/FT/left_leg-FT_remapper.xml" /> -->
    <xi:include href="wrappers/FT/right_leg-FT_remapper.xml" />
 
-   <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
-   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" />
+   <!-- <xi:include href="wrappers/FT/left_arm-FT_wrapper.xml" />
+   <xi:include href="wrappers/FT/right_arm-FT_wrapper.xml" /> -->
 
    <xi:include href="wrappers/FT/right_leg-FT_wrapper.xml" />
    <!-- <xi:include href="wrappers/FT/left_leg-FT_wrapper.xml" /> -->
@@ -97,8 +97,8 @@
    <xi:include href="hardware/FT/right_leg-eb12-j3_5-strain.xml" />
    <!-- <xi:include href="hardware/FT/left_leg-fakeFTs.xml" /> -->
 
-   <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
-   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" />
+   <!-- <xi:include href="hardware/FT/left_arm-eb1-j0_1-strain.xml" />
+   <xi:include href="hardware/FT/right_arm-eb3-j0_1-strain.xml" /> -->
 
      <!-- INERTIAL SENSOR-->
 <!--    <xi:include href="wrappers/inertials/head-imuFilter_wrapper.xml" />
@@ -115,10 +115,10 @@
     <!-- <xi:include href="wrappers/inertials/right_leg-IMU_wrapper.xml" /> -->
     <xi:include href="hardware/inertials/right_leg-eb12-IMU.xml" />
     <xi:include href="wrappers/inertials/right_foot-IMU_wrapper.xml" />
-    <xi:include href="hardware/inertials/left_arm-eb1-IMU.xml" />
+    <!-- <xi:include href="hardware/inertials/left_arm-eb1-IMU.xml" />
     <xi:include href="wrappers/inertials/left_arm-IMU_wrapper.xml" />
     <xi:include href="hardware/inertials/right_arm-eb3-IMU.xml" />
-    <xi:include href="wrappers/inertials/right_arm-IMU_wrapper.xml" />
+    <xi:include href="wrappers/inertials/right_arm-IMU_wrapper.xml" /> -->
 
     <!-- ANALOG SENSOR CANBATTERY -->
     <xi:include href="wrappers/battery/battery_bat.xml" />
